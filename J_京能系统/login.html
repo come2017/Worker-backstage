@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv = "X-UA-Compatible" content = "IE=edge" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<script src="js/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.placeholder.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/layer.js" type="text/javascript" charset="utf-8"></script>
+		<script src="basics/js/jquery.validate.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/login.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.ipt_red{
+				border:1px solid red;
+			}
+		</style>
+		<script type="text/javascript">
+			$(function(){
+				var winHeight = $(window).height()-182+'px';
+				$('.login_con').height(winHeight);
+				
+				//用户名验证
+				$("#inputForm").validate({
+				rules: {
+					username: {
+						required: true,
+						maxlength:"20"
+					}
+				},
+				messages: {
+					username: {
+						required: "用户名不存在!",
+						maxlength: "名称最多不能超过20个字符!"
+					}
+				},
+				
+			});
+				
+				
+				
+			})
+		</script>
+	</head>
+	<body style="background:none;">
+		<div class="login_head">
+			<img src="imgs/login_logo.png"/>
+			<h1>安全管理数字化标准化管理平台<br /><i>DIGITAL SECURITY MANAGENMENT STANDARDIZATION</i></h1>
+		</div>
+		<div class="login_con">
+			<form class="login_In" id="inputForm">
+				<h2>用户登录</h2>
+				<div class="login_line">
+					<input id="ipt01" type="text" name="username" value="" placeholder="账号" />
+				</div>
+				<div class="login_line login_line02">
+					<input id="ipt02" type="password" value="" placeholder="密码" />
+				</div>
+				<input class="login_sbm" type="submit" name="" id="" value="登　录" />
+			</form>
+		</div>
+		<div class="login_foot">
+			Copyright ©2015 京能集团办公系统v0.1
+		</div>
+	</body>
+</html>

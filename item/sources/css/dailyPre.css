@@ -1,0 +1,16 @@
+.max_table .tr_head td{
+    font-weight: 700;
+}
+.max_table{
+    min-width: 2400px;
+}
+.dailyPreHead{
+    border-bottom: solid 1px #C1CDDD;
+    border-right: solid 1px #C1CDDD;
+}
+.dailyPreHead>li{
+    height: 40px;
+    line-height: 40px;
+    width: 100px;
+    border-right: solid 1px #C1CDDD;
+}

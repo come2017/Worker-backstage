@@ -1,0 +1,16 @@
+.details{
+    padding: 90px 0 50px;
+    margin-top: -90px;
+}
+.fun{
+    border: solid 1px #c1cddd;
+}
+.max_table .tr_head td {
+    font-weight: 700;
+}
+.max_table{
+    min-width: 2000px;
+}
+.timeMergeTabNext .max_table{
+    min-width: 1460px;
+}

@@ -1,0 +1,19 @@
+.coord_tdWidth120{
+    width: 120px;
+}
+.coord_tdWidth140{
+    width: 140px;
+}
+.coord_tdWidth160{
+    width: 160px;
+}
+.coord_input{
+    border: 0;
+}
+.layui-form-select{
+    display: inline-block;
+    vertical-align: middle;
+}
+.min_table .tr_head td{
+    padding-left: 10px;
+}

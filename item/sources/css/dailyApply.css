@@ -1,0 +1,17 @@
+.max_table .tr_head td{
+    font-weight: 700;
+}
+.dailyApplyTabHead{
+    border-bottom: solid 1px #C1CDDD;
+    border-right: solid 1px #C1CDDD;
+}
+.dailyApplyTabHead>li{
+    width: 160px;
+    height: 40px;
+    line-height: 40px;
+    background: #F4F7F8;
+    border-right: solid 1px #C1CDDD;
+}
+.dailyApplyTabBody>div{
+    display: none;
+}

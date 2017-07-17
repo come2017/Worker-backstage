@@ -1,0 +1,6 @@
+.max_table .tr_head td{
+    font-weight: 700;
+}
+.max_table{
+    min-width: 1600px;
+}

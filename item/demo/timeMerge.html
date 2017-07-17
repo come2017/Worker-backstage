@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="../sources/css/timeMerge.css" rel="stylesheet" type="text/css" />
+    <script src="js/timeMerge.js"></script>
+</head>
+<body>
+<div class="switch">
+    <ul class="timeMergeTab clear">
+        <li class="active fl"><a href="javascript:void(0);">合并</a></li>
+        <li class="fl"><a href="javascript:void(0);">流量对比</a></li>
+    </ul>
+</div>
+<div class="fun timeMergeTabFirst bs pl10">
+    <ul class="clear">
+        <li class="fl">
+            <label class="f0 vm">
+                <span class="fb vm f14">管理局&nbsp;:&nbsp;</span>
+                <select class="public_select vm">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </label>
+        </li>
+        <li class="fl">
+            <label class="f0 vm">
+                <a class="timeMergeLook public_btn vm" href="javascript:void(0);">合并预览</a>
+            </label>
+        </li>
+        <li class="fl">
+            <label class="f0 vm">
+                <a class="timeMergeLookNew public_btn vm" href="javascript:void(0);">合并预览最新</a>
+            </label>
+        </li>
+        <li class="fl">
+            <label class="f0 vm">
+                <a class="public_btn vm" href="javascript:void(0);">确定合并</a>
+            </label>
+        </li>
+        <li class="fl">
+            <label class="f0 vm">
+                <a class="public_btn vm" href="javascript:void(0);">初始化合库</a>
+            </label>
+        </li>
+        <li class="fl">
+            <label class="f0 vm">
+                <span class="fb vm f14">航班号&nbsp;:&nbsp;</span>
+                <input class="public_input vm" type="text">
+            </label>
+        </li>
+        <li class="fl">
+            <label class="f0 vm">
+                <a class="public_btn vm" href="javascript:void(0);">查询</a>
+            </label>
+        </li>
+    </ul>
+</div>
+<div class="details timeMergeTabFirst bs">
+    <div class="detailsBox w100 h100 oa oy">
+        <table class="max_table w100" cellpadding="0" cellspacing="0" border="0">
+            <thead></thead>
+            <tbody>
+            <tr>
+                <td class="td_right0 td_bottom0">
+                    <table class="w100" cellspacing="0" cellpadding="0" border="0">
+                        <thead>
+                        <tr class="tr_head">
+                            <td>信息头</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="td_right0 td_bottom0">
+                                <div class="overflow_head">
+                                    <table class="min_table w100 tc" cellpadding="0" cellspacing="0" border="0">
+                                        <colgroup>
+                                            <col class="td_width50">
+                                            <col class="td_width50">
+                                            <col class="td_width80">
+                                            <col class="td_width80">
+                                            <col class="td_width80">
+                                            <col class="td_width140">
+                                            <col class="td_width80">
+                                            <col class="td_width80">
+                                            <col class="td_width80">
+                                            <col class="td_width80">
+                                            <col class="td_width80">
+                                            <col class="td_width80">
+                                            <col class="td_width80">
+                                            <col class="td_width80">
+                                            <col class="td_width80">
+                                            <col class="td_width80">
+                                            <col class="td_width80">
+                                            <col class="td_width80">
+                                            <col class="td_width80">
+                                            <col class="td_width80">
+                                            <col>
+                                        </colgroup>
+                                        <thead>
+                                        <tr class="tr_head">
+                                            <td>行号</td>
+                                            <td>公司</td>
+                                            <td>航班号</td>
+                                            <td>班期</td>
+                                            <td>标记</td>
+                                            <td>有效日期</td>
+                                            <td>航站1</td>
+                                            <td>离站</td>
+                                            <td>到站</td>
+                                            <td>航站2</td>
+                                            <td>离站</td>
+                                            <td>到站</td>
+                                            <td>航站3</td>
+                                            <td>离站</td>
+                                            <td>到站</td>
+                                            <td>航站4</td>
+                                            <td>离站</td>
+                                            <td>到站</td>
+                                            <td>航站5</td>
+                                            <td>机型</td>
+                                            <td>备注</td>
+                                        </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                                <div>
+                                    <table class="table_striped w100 tc" cellpadding="0" cellspacing="0" border="0">
+                                        <colgroup>
+                                            <col class="td_width50">
+                                            <col class="td_width50">
+                                            <col class="td_width80">
+                                            <col class="td_width80">
+                                            <col class="td_width80">
+                                            <col class="td_width140">
+                                            <col class="td_width80">
+                                            <col class="td_width80">
+                                            <col class="td_width80">
+                                            <col class="td_width80">
+                                            <col class="td_width80">
+                                            <col class="td_width80">
+                                            <col class="td_width80">
+                                            <col class="td_width80">
+                                            <col class="td_width80">
+                                            <col class="td_width80">
+                                            <col class="td_width80">
+                                            <col class="td_width80">
+                                            <col class="td_width80">
+                                            <col class="td_width80">
+                                            <col>
+                                        </colgroup>
+                                        <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>MU</td>
+                                            <td>MU5191</td>
+                                            <td>1234567</td>
+                                            <td>已合并</td>
+                                            <td>123123213123</td>
+                                            <td>ZSPD</td>
+                                            <td>0934</td>
+                                            <td>2312</td>
+                                            <td>ZSPD</td>
+                                            <td>离站</td>
+                                            <td>到站</td>
+                                            <td>ZSPD</td>
+                                            <td> </td>
+                                            <td>到站</td>
+                                            <td>ZSPD</td>
+                                            <td> </td>
+                                            <td> </td>
+                                            <td>ZSPD</td>
+                                            <td>319</td>
+                                            <td>啦啦啦啦啦啦</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>MU</td>
+                                            <td>MU5191</td>
+                                            <td>1234567</td>
+                                            <td>已合并</td>
+                                            <td>123123213123</td>
+                                            <td>ZSPD</td>
+                                            <td>0934</td>
+                                            <td>2312</td>
+                                            <td>ZSPD</td>
+                                            <td>离站</td>
+                                            <td>到站</td>
+                                            <td>ZSPD</td>
+                                            <td> </td>
+                                            <td>到站</td>
+                                            <td>ZSPD</td>
+                                            <td> </td>
+                                            <td> </td>
+                                            <td>ZSPD</td>
+                                            <td>319</td>
+                                            <td>啦啦啦啦啦啦</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>MU</td>
+                                            <td>MU5191</td>
+                                            <td>1234567</td>
+                                            <td>已合并</td>
+                                            <td>123123213123</td>
+                                            <td>ZSPD</td>
+                                            <td>0934</td>
+                                            <td>2312</td>
+                                            <td>ZSPD</td>
+                                            <td>离站</td>
+                                            <td>到站</td>
+                                            <td>ZSPD</td>
+                                            <td> </td>
+                                            <td>到站</td>
+                                            <td>ZSPD</td>
+                                            <td> </td>
+                                            <td> </td>
+                                            <td>ZSPD</td>
+                                            <td>319</td>
+                                            <td>啦啦啦啦啦啦</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>MU</td>
+                                            <td>MU5191</td>
+                                            <td>1234567</td>
+                                            <td>已合并</td>
+                                            <td>123123213123</td>
+                                            <td>ZSPD</td>
+                                            <td>0934</td>
+                                            <td>2312</td>
+                                            <td>ZSPD</td>
+                                            <td>离站</td>
+                                            <td>到站</td>
+                                            <td>ZSPD</td>
+                                            <td> </td>
+                                            <td>到站</td>
+                                            <td>ZSPD</td>
+                                            <td> </td>
+                                            <td> </td>
+                                            <td>ZSPD</td>
+                                            <td>319</td>
+                                            <td>啦啦啦啦啦啦</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>MU</td>
+                                            <td>MU5191</td>
+                                            <td>1234567</td>
+                                            <td>已合并</td>
+                                            <td>123123213123</td>
+                                            <td>ZSPD</td>
+                                            <td>0934</td>
+                                            <td>2312</td>
+                                            <td>ZSPD</td>
+                                            <td>离站</td>
+                                            <td>到站</td>
+                                            <td>ZSPD</td>
+                                            <td> </td>
+                                            <td>到站</td>
+                                            <td>ZSPD</td>
+                                            <td> </td>
+                                            <td> </td>
+                                            <td>ZSPD</td>
+                                            <td>319</td>
+                                            <td>啦啦啦啦啦啦</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>MU</td>
+                                            <td>MU5191</td>
+                                            <td>1234567</td>
+                                            <td>已合并</td>
+                                            <td>123123213123</td>
+                                            <td>ZSPD</td>
+                                            <td>0934</td>
+                                            <td>2312</td>
+                                            <td>ZSPD</td>
+                                            <td>离站</td>
+                                            <td>到站</td>
+                                            <td>ZSPD</td>
+                                            <td> </td>
+                                            <td>到站</td>
+                                            <td>ZSPD</td>
+                                            <td> </td>
+                                            <td> </td>
+                                            <td>ZSPD</td>
+                                            <td>319</td>
+                                            <td>啦啦啦啦啦啦</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td>MU</td>
+                                            <td>MU5191</td>
+                                            <td>1234567</td>
+                                            <td>已合并</td>
+                                            <td>123123213123</td>
+                                            <td>ZSPD</td>
+                                            <td>0934</td>
+                                            <td>2312</td>
+                                            <td>ZSPD</td>
+                                            <td>离站</td>
+                                            <td>到站</td>
+                                            <td>ZSPD</td>
+                                            <td> </td>
+                                            <td>到站</td>
+                                            <td>ZSPD</td>
+                                            <td> </td>
+                                            <td> </td>
+                                            <td>ZSPD</td>
+                                            <td>319</td>
+                                            <td>啦啦啦啦啦啦</td>
+                                        </tr>
+                                        <tr>
+                                            <td>8</td>
+                                            <td>MU</td>
+                                            <td>MU5191</td>
+                                            <td>1234567</td>
+                                            <td>已合并</td>
+                                            <td>123123213123</td>
+                                            <td>ZSPD</td>
+                                            <td>0934</td>
+                                            <td>2312</td>
+                                            <td>ZSPD</td>
+                                            <td>离站</td>
+                                            <td>到站</td>
+                                            <td>ZSPD</td>
+                                            <td> </td>
+                                            <td>到站</td>
+                                            <td>ZSPD</td>
+                                            <td> </td>
+                                            <td> </td>
+                                            <td>ZSPD</td>
+                                            <td>319</td>
+                                            <td>啦啦啦啦啦啦</td>
+                                        </tr>
+                                        <tr>
+                                            <td>9</td>
+                                            <td>MU</td>
+                                            <td>MU5191</td>
+                                            <td>1234567</td>
+                                            <td>已合并</td>
+                                            <td>123123213123</td>
+                                            <td>ZSPD</td>
+                                            <td>0934</td>
+                                            <td>2312</td>
+                                            <td>ZSPD</td>
+                                            <td>离站</td>
+                                            <td>到站</td>
+                                            <td>ZSPD</td>
+                                            <td> </td>
+                                            <td>到站</td>
+                                            <td>ZSPD</td>
+                                            <td> </td>
+                                            <td> </td>
+                                            <td>ZSPD</td>
+                                            <td>319</td>
+                                            <td>啦啦啦啦啦啦</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10</td>
+                                            <td>MU</td>
+                                            <td>MU5191</td>
+                                            <td>1234567</td>
+                                            <td>已合并</td>
+                                            <td>123123213123</td>
+                                            <td>ZSPD</td>
+                                            <td>0934</td>
+                                            <td>2312</td>
+                                            <td>ZSPD</td>
+                                            <td>离站</td>
+                                            <td>到站</td>
+                                            <td>ZSPD</td>
+                                            <td> </td>
+                                            <td>到站</td>
+                                            <td>ZSPD</td>
+                                            <td> </td>
+                                            <td> </td>
+                                            <td>ZSPD</td>
+                                            <td>319</td>
+                                            <td>啦啦啦啦啦啦</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="page pl10"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="fun timeMergeTabNext bs pl10 d_none">
+    <ul class="clear">
+        <li class="fl">
+            <label class="f0 vm">
+                <span class="fb vm f14">管理局&nbsp;:&nbsp;</span>
+                <select class="public_select vm">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </label>
+        </li>
+        <li class="fl">
+            <label class="f0 vm">
+                <span class="fb vm f14">库一&nbsp;:&nbsp;</span>
+                <select class="public_select vm">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </label>
+        </li>
+        <li class="fl">
+            <label class="f0 vm">
+                <span class="fb vm f14">库二&nbsp;:&nbsp;</span>
+                <select class="public_select vm">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </label>
+        </li>
+        <li class="fl">
+            <label class="f0 vm">
+                <span class="fb vm f14">公司&nbsp;:&nbsp;</span>
+                <select class="public_select vm">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </label>
+        </li>
+        <li class="fl">
+            <label class="f0 vm">
+                <span class="fb vm f14">机场&nbsp;:&nbsp;</span>
+                <select class="public_select vm">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </label>
+        </li>
+        <li class="fl">
+            <label class="f0 vm">
+                <span class="fb vm f14">类型&nbsp;:&nbsp;</span>
+                <select class="public_select vm">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </label>
+        </li>
+        <li class="fl">
+            <label class="f0 vm">
+                <span class="fb vm f14">日期&nbsp;:&nbsp;</span>
+                <select class="public_select vm">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </label>
+        </li>
+        <li class="fl">
+            <label class="f0 vm">
+                <span class="fb vm f14">时间&nbsp;:&nbsp;</span>
+                <select class="public_select vm">
+                    <option>5分钟</option>
+                    <option>15分钟</option>
+                    <option>30分钟</option>
+                    <option>60分钟</option>
+                </select>
+            </label>
+        </li>
+        <li class="fl">
+            <label class="f0 vm mx5">
+                <input class="" type="radio">
+                <span class="fb vm f14">进港</span>
+            </label>
+            <label class="f0 vm mx5">
+                <input class="" type="radio">
+                <span class="fb vm f14">出港</span>
+            </label>
+            <label class="f0 vm mx5">
+                <input class="" type="radio">
+                <span class="fb vm f14">全部</span>
+            </label>
+        </li>
+        <li class="fl">
+            <label class="f0 vm">
+                <a class="public_btn vm" href="javascript:void(0);">查询</a>
+            </label>
+        </li>
+        <li class="fl">
+            <label class="f0 vm">
+                <a class="public_btn vm" href="javascript:void(0);">差异对比</a>
+            </label>
+        </li>
+    </ul>
+</div>
+<div class="details timeMergeTabNext bs d_none">
+    <div class="detailsBox w100 h100 oa oy">
+        <table class="max_table w100" cellpadding="0" cellspacing="0" border="0">
+            <thead></thead>
+            <tbody>
+            <tr>
+                <td class="td_right0 td_bottom0">
+                    <table class="w100" cellspacing="0" cellpadding="0" border="0">
+                        <thead>
+                        <tr class="tr_head">
+                            <td>流量对比</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="td_right0 td_bottom0">
+                                <div class="overflow_head">
+                                    <table class="min_table w100 tc" cellpadding="0" cellspacing="0" border="0">
+                                        <thead>
+                                        <tr class="tr_head">
+                                            <td>时间</td>
+                                            <td>周一</td>
+                                            <td>周二</td>
+                                            <td>周三</td>
+                                            <td>周四</td>
+                                            <td>周五</td>
+                                            <td>周六</td>
+                                            <td>周日</td>
+                                            <td>总数</td>
+                                        </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                                <div>
+                                    <table class="table_striped w100 tc" cellpadding="0" cellspacing="0" border="0">
+                                        <tbody>
+                                        <tr>
+                                            <td>时间</td>
+                                            <td>周一</td>
+                                            <td>周二</td>
+                                            <td>周三</td>
+                                            <td>周四</td>
+                                            <td>周五</td>
+                                            <td>周六</td>
+                                            <td>周日</td>
+                                            <td>总数</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0000</td>
+                                            <td>123</td>
+                                            <td>123</td>
+                                            <td>123</td>
+                                            <td>123</td>
+                                            <td>123</td>
+                                            <td>123</td>
+                                            <td>12389-0</td>
+                                            <td>12389</td>
+                                        </tr>
+                                        <tr>
+                                            <td>时间</td>
+                                            <td>周一</td>
+                                            <td>周二</td>
+                                            <td>周三</td>
+                                            <td>周四</td>
+                                            <td>周五</td>
+                                            <td>周六</td>
+                                            <td>周日</td>
+                                            <td>总数</td>
+                                        </tr>
+                                        <tr>
+                                            <td>时间</td>
+                                            <td>周一</td>
+                                            <td>周二</td>
+                                            <td>周三</td>
+                                            <td>周四</td>
+                                            <td>周五</td>
+                                            <td>周六</td>
+                                            <td>周日</td>
+                                            <td>总数</td>
+                                        </tr>
+                                        <tr>
+                                            <td>时间</td>
+                                            <td>周一</td>
+                                            <td>周二</td>
+                                            <td>周三</td>
+                                            <td>周四</td>
+                                            <td>周五</td>
+                                            <td>周六</td>
+                                            <td>周日</td>
+                                            <td>总数</td>
+                                        </tr>
+                                        <tr>
+                                            <td>时间</td>
+                                            <td>周一</td>
+                                            <td>周二</td>
+                                            <td>周三</td>
+                                            <td>周四</td>
+                                            <td>周五</td>
+                                            <td>周六</td>
+                                            <td>周日</td>
+                                            <td>总数</td>
+                                        </tr>
+                                        <tr>
+                                            <td>时间</td>
+                                            <td>周一</td>
+                                            <td>周二</td>
+                                            <td>周三</td>
+                                            <td>周四</td>
+                                            <td>周五</td>
+                                            <td>周六</td>
+                                            <td>周日</td>
+                                            <td>总数</td>
+                                        </tr>
+                                        <tr>
+                                            <td>时间</td>
+                                            <td>周一</td>
+                                            <td>周二</td>
+                                            <td>周三</td>
+                                            <td>周四</td>
+                                            <td>周五</td>
+                                            <td>周六</td>
+                                            <td>周日</td>
+                                            <td>总数</td>
+                                        </tr>
+                                        <tr>
+                                            <td>时间</td>
+                                            <td>周一</td>
+                                            <td>周二</td>
+                                            <td>周三</td>
+                                            <td>周四</td>
+                                            <td>周五</td>
+                                            <td>周六</td>
+                                            <td>周日</td>
+                                            <td>总数</td>
+                                        </tr>
+                                        <tr>
+                                            <td>时间</td>
+                                            <td>周一</td>
+                                            <td>周二</td>
+                                            <td>周三</td>
+                                            <td>周四</td>
+                                            <td>周五</td>
+                                            <td>周六</td>
+                                            <td>周日</td>
+                                            <td>总数</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="page pl10"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="page_foot pa bottom10 left0 bs px20">
+
+</div>
+</body>
+</html>

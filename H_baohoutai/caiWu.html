@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/w.css"/>
+		<script src="js/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>	
+		<script type="text/javascript">
+    	$(function(){
+    		    //查询条件收缩
+		    $('.toogle').click(function() {
+		        if ($(this).hasClass('arrow_btn02')) {
+		            $(this).removeClass('arrow_btn02');
+		            $(this).siblings('.con-text').slideDown();
+		        } else {
+		            $(this).addClass('arrow_btn02');
+		            $(this).siblings('.con-text').slideUp();
+		        }
+		    })
+
+    	})
+    </script>
+	</head>
+<body>
+<div id="wrapper">
+    <!--列表页-->
+    <div class="List-con">
+        <section class="CtitTop"> 当前位置：<a href="javascript:;">首页管理 </a> > <a href="javascript:;">导航管理</a></section>
+        <div class="List_top fix">
+        	<div class="pr">
+        		<div class="con-header">查询条件</div>
+        		<div class="toogle"></div>
+				<div class="con-text">
+					<table width="100%" border="0">
+					  <tr>
+					    <td>
+					    	<span>账号：</span>
+					    	<input name="" type="text" />
+					    </td>
+					     <td>
+					    	<span>分类：</span>
+					    	<input name="" type="text" />
+					    </td>
+					     <td>
+					    	<span>时间：</span>
+					    	<input name="" type="text" />
+					    </td>
+					    <td>&nbsp;</td>
+					  </tr>
+					  <tr>
+					     <td>
+					    	<span>账号：</span>
+					    	<input name="" type="text" />
+					    </td>
+					    <td>
+					    	分类：
+					    	<select>
+					    		<option>1</option>
+					    		<option>2</option>
+					    		<option>3</option>
+					    	</select>
+					    </td>
+					     <td class="cwDate">
+					    	<span>时间：</span>
+					    	<input name="" type="text" />
+					    	<i></i>
+					    	<input name="" type="text" />
+					    </td>
+					    <td>
+					    	<a href="javascript:;" class="List_cha di">查询</a>　
+					        <a href="javascript:;" class="List_clear">清除</a>
+					    </td>
+					  </tr>
+					</table>
+				</div>	
+        	</div>
+        </div>
+    	<ul class="cwList">
+    		<li>
+    			<span class="cwTitle">充值总额</span>
+    			<div class="cwCircle">
+    				<span>
+    					<i></i>
+    					<i></i>
+    				</span>
+    			</div>
+    		</li>
+    	</ul>
+    </div>
+</div>
+</body>
+</html>

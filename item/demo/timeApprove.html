@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="../sources/css/timeApprove.css" rel="stylesheet" type="text/css" />
+    <script src="js/timeApprove.js"></script>
+</head>
+<body>
+<div class="fun bs">
+    <ul class="clear">
+        <li class="fl">
+            <label class="f0 vm">
+                <span class="fb vm f14">公司&nbsp;:&nbsp;</span>
+                <select class="public_select vm">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </label>
+        </li>
+        <li class="fl">
+            <label class="f0 vm">
+                <span class="fb vm f14">起飞机场&nbsp;:&nbsp;</span>
+                <select class="public_select vm">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </label>
+        </li>
+        <li class="fl">
+            <label class="f0 vm">
+                <span class="fb vm f14">降落机场&nbsp;:&nbsp;</span>
+                <select class="public_select vm">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </label>
+        </li>
+        <li class="fl">
+            <label class="f0 vm">
+                <span class="fb vm f14">航班号&nbsp;:&nbsp;</span>
+                <input class="public_input" type="text" />
+            </label>
+        </li>
+        <li class="fl">
+            <label class="f0 vm">
+                <span class="fb vm f14">选择类型&nbsp;:&nbsp;</span>
+                <select class="public_select vm">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </label>
+        </li>
+        <li class="fl">
+            <label class="f0 vm">
+                <span class="fb vm f14">航线&nbsp;:&nbsp;</span>
+                <select class="public_select vm">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </label>
+        </li>
+        <li class="fl">
+            <label class="f0 vm">
+                <a class="public_btn vm" href="javascript:void(0);">查询</a>
+            </label>
+        </li>
+        <li class="fl">
+            <label class="f0 vm">
+                <a class="public_btn vm" href="javascript:void(0);">导出流量</a>
+            </label>
+        </li>
+        <li class="fl">
+            <label class="f0 vm">
+                <a class="timeApproveAdd public_btn vm" href="javascript:void(0);">添加</a>
+            </label>
+        </li>
+        <li class="fl">
+            <label class="f0 vm">
+                <a class="public_btn vm" href="javascript:void(0);">下载DB数据</a>
+            </label>
+        </li>
+        <li class="fl">
+            <label class="f0 vm">
+                <a class="public_btn vm" href="javascript:void(0);">运输司导出</a>
+            </label>
+        </li>
+        <li class="fl">
+            <label class="f0 vm">
+                <a class="public_btn vm" href="javascript:void(0);">下载EXCEL</a>
+            </label>
+        </li>
+    </ul>
+</div>
+<div class="details bs">
+    <div class="detailsBox w100 h100 oa oy">
+        <table class="max_table w100" cellpadding="0" cellspacing="0" border="0">
+            <thead></thead>
+            <tbody>
+                <tr>
+                    <td class="td_right0 td_bottom0">
+                        <table class="w100" cellspacing="0" cellpadding="0" border="0">
+                            <thead>
+                                <tr class="tr_head">
+                                    <td>信息头</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="td_right0 td_bottom0">
+                                        <div class="overflow_head">
+                                            <table class="min_table w100 tc" cellpadding="0" cellspacing="0" border="0">
+                                                <colgroup>
+                                                    <col class="td_width50">
+                                                    <col class="td_width50">
+                                                    <col class="td_width140">
+                                                    <col class="td_width80">
+                                                    <col class="td_width80">
+                                                    <col class="td_width80">
+                                                    <col class="td_width80">
+                                                    <col class="td_width80">
+                                                    <col class="td_width80">
+                                                    <col class="td_width80">
+                                                    <col class="td_width80">
+                                                    <col class="td_width80">
+                                                    <col class="td_width80">
+                                                    <col class="td_width80">
+                                                    <col class="td_width80">
+                                                    <col class="td_width80">
+                                                    <col class="td_width80">
+                                                    <col class="td_width80">
+                                                    <col class="td_width80">
+                                                    <col class="td_width80">
+                                                    <col class="td_width80">
+                                                    <col class="td_width140">
+                                                    <col class="">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr class="tr_head">
+                                                        <td>行号</td>
+                                                        <td>全选</td>
+                                                        <td>操作</td>
+                                                        <td>航班号</td>
+                                                        <td>班期</td>
+                                                        <td>标记</td>
+                                                        <td>航站1</td>
+                                                        <td>离站</td>
+                                                        <td>到站</td>
+                                                        <td>航站2</td>
+                                                        <td>离站</td>
+                                                        <td>到站</td>
+                                                        <td>航站3</td>
+                                                        <td>离站</td>
+                                                        <td>到站</td>
+                                                        <td>航站4</td>
+                                                        <td>离站</td>
+                                                        <td>到站</td>
+                                                        <td>航站5</td>
+                                                        <td>机型</td>
+                                                        <td>类型</td>
+                                                        <td>有效期</td>
+                                                        <td>备注</td>
+                                                    </tr>
+                                                </thead>
+                                            </table>
+                                        </div>
+                                        <div>
+                                            <table class="table_striped w100 tc" cellspacing="0" cellpadding="0" border="0" >
+                                                <colgroup>
+                                                    <col class="td_width50">
+                                                    <col class="td_width50">
+                                                    <col class="td_width140">
+                                                    <col class="td_width80">
+                                                    <col class="td_width80">
+                                                    <col class="td_width80">
+                                                    <col class="td_width80">
+                                                    <col class="td_width80">
+                                                    <col class="td_width80">
+                                                    <col class="td_width80">
+                                                    <col class="td_width80">
+                                                    <col class="td_width80">
+                                                    <col class="td_width80">
+                                                    <col class="td_width80">
+                                                    <col class="td_width80">
+                                                    <col class="td_width80">
+                                                    <col class="td_width80">
+                                                    <col class="td_width80">
+                                                    <col class="td_width80">
+                                                    <col class="td_width80">
+                                                    <col class="td_width80">
+                                                    <col class="td_width140">
+                                                    <col class="">
+                                                </colgroup>
+                                                <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td><input type="checkbox" /></td>
+                                                    <td class="action-buttons">
+                                                        <a class="blue f18" href="#"><i class="icon-zoom-in"></i></a>
+                                                        <a class="green f18" href="#"><i class="icon-pencil"></i></a>
+                                                        <a class="red f18" href="#"><i class="icon-trash"></i></a>
+                                                    </td>
+                                                    <td>AAL227</td>
+                                                    <td>1234567</td>
+                                                    <td>已通过</td>
+                                                    <td>KDFW</td>
+                                                    <td>2333</td>
+                                                    <td>3453</td>
+                                                    <td>航站2</td>
+                                                    <td>离站</td>
+                                                    <td>到站</td>
+                                                    <td>航站3</td>
+                                                    <td>离站</td>
+                                                    <td>到站</td>
+                                                    <td>航站4</td>
+                                                    <td>离站</td>
+                                                    <td>到站</td>
+                                                    <td>WWWW</td>
+                                                    <td>555</td>
+                                                    <td>国内</td>
+                                                    <td>20160303-20163432</td>
+                                                    <td>啦啦啦</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td><input type="checkbox" /></td>
+                                                    <td class="action-buttons">
+                                                        <a class="blue f18" href="#"><i class="icon-zoom-in"></i></a>
+                                                        <a class="green f18" href="#"><i class="icon-pencil"></i></a>
+                                                        <a class="red f18" href="#"><i class="icon-trash"></i></a>
+                                                    </td>
+                                                    <td>AAL227</td>
+                                                    <td>1234567</td>
+                                                    <td>已通过</td>
+                                                    <td>KDFW</td>
+                                                    <td>2333</td>
+                                                    <td>3453</td>
+                                                    <td>航站2</td>
+                                                    <td>离站</td>
+                                                    <td>到站</td>
+                                                    <td>航站3</td>
+                                                    <td>离站</td>
+                                                    <td>到站</td>
+                                                    <td>航站4</td>
+                                                    <td>离站</td>
+                                                    <td>到站</td>
+                                                    <td>WWWW</td>
+                                                    <td>555</td>
+                                                    <td>国内</td>
+                                                    <td>20160303-20163432</td>
+                                                    <td>啦啦啦</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td><input type="checkbox" /></td>
+                                                    <td class="action-buttons">
+                                                        <a class="blue f18" href="#"><i class="icon-zoom-in"></i></a>
+                                                        <a class="green f18" href="#"><i class="icon-pencil"></i></a>
+                                                        <a class="red f18" href="#"><i class="icon-trash"></i></a>
+                                                    </td>
+                                                    <td>AAL227</td>
+                                                    <td>1234567</td>
+                                                    <td>已通过</td>
+                                                    <td>KDFW</td>
+                                                    <td>2333</td>
+                                                    <td>3453</td>
+                                                    <td>航站2</td>
+                                                    <td>离站</td>
+                                                    <td>到站</td>
+                                                    <td>航站3</td>
+                                                    <td>离站</td>
+                                                    <td>到站</td>
+                                                    <td>航站4</td>
+                                                    <td>离站</td>
+                                                    <td>到站</td>
+                                                    <td>WWWW</td>
+                                                    <td>555</td>
+                                                    <td>国内</td>
+                                                    <td>20160303-20163432</td>
+                                                    <td>啦啦啦</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td><input type="checkbox" /></td>
+                                                    <td class="action-buttons">
+                                                        <a class="blue f18" href="#"><i class="icon-zoom-in"></i></a>
+                                                        <a class="green f18" href="#"><i class="icon-pencil"></i></a>
+                                                        <a class="red f18" href="#"><i class="icon-trash"></i></a>
+                                                    </td>
+                                                    <td>AAL227</td>
+                                                    <td>1234567</td>
+                                                    <td>已通过</td>
+                                                    <td>KDFW</td>
+                                                    <td>2333</td>
+                                                    <td>3453</td>
+                                                    <td>航站2</td>
+                                                    <td>离站</td>
+                                                    <td>到站</td>
+                                                    <td>航站3</td>
+                                                    <td>离站</td>
+                                                    <td>到站</td>
+                                                    <td>航站4</td>
+                                                    <td>离站</td>
+                                                    <td>到站</td>
+                                                    <td>WWWW</td>
+                                                    <td>555</td>
+                                                    <td>国内</td>
+                                                    <td>20160303-20163432</td>
+                                                    <td>啦啦啦</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td><input type="checkbox" /></td>
+                                                    <td class="action-buttons">
+                                                        <a class="blue f18" href="#"><i class="icon-zoom-in"></i></a>
+                                                        <a class="green f18" href="#"><i class="icon-pencil"></i></a>
+                                                        <a class="red f18" href="#"><i class="icon-trash"></i></a>
+                                                    </td>
+                                                    <td>AAL227</td>
+                                                    <td>1234567</td>
+                                                    <td>已通过</td>
+                                                    <td>KDFW</td>
+                                                    <td>2333</td>
+                                                    <td>3453</td>
+                                                    <td>航站2</td>
+                                                    <td>离站</td>
+                                                    <td>到站</td>
+                                                    <td>航站3</td>
+                                                    <td>离站</td>
+                                                    <td>到站</td>
+                                                    <td>航站4</td>
+                                                    <td>离站</td>
+                                                    <td>到站</td>
+                                                    <td>WWWW</td>
+                                                    <td>555</td>
+                                                    <td>国内</td>
+                                                    <td>20160303-20163432</td>
+                                                    <td>啦啦啦</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td><input type="checkbox" /></td>
+                                                    <td class="action-buttons">
+                                                        <a class="blue f18" href="#"><i class="icon-zoom-in"></i></a>
+                                                        <a class="green f18" href="#"><i class="icon-pencil"></i></a>
+                                                        <a class="red f18" href="#"><i class="icon-trash"></i></a>
+                                                    </td>
+                                                    <td>AAL227</td>
+                                                    <td>1234567</td>
+                                                    <td>已通过</td>
+                                                    <td>KDFW</td>
+                                                    <td>2333</td>
+                                                    <td>3453</td>
+                                                    <td>航站2</td>
+                                                    <td>离站</td>
+                                                    <td>到站</td>
+                                                    <td>航站3</td>
+                                                    <td>离站</td>
+                                                    <td>到站</td>
+                                                    <td>航站4</td>
+                                                    <td>离站</td>
+                                                    <td>到站</td>
+                                                    <td>WWWW</td>
+                                                    <td>555</td>
+                                                    <td>国内</td>
+                                                    <td>20160303-20163432</td>
+                                                    <td>啦啦啦</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td><input type="checkbox" /></td>
+                                                    <td class="action-buttons">
+                                                        <a class="blue f18" href="#"><i class="icon-zoom-in"></i></a>
+                                                        <a class="green f18" href="#"><i class="icon-pencil"></i></a>
+                                                        <a class="red f18" href="#"><i class="icon-trash"></i></a>
+                                                    </td>
+                                                    <td>AAL227</td>
+                                                    <td>1234567</td>
+                                                    <td>已通过</td>
+                                                    <td>KDFW</td>
+                                                    <td>2333</td>
+                                                    <td>3453</td>
+                                                    <td>航站2</td>
+                                                    <td>离站</td>
+                                                    <td>到站</td>
+                                                    <td>航站3</td>
+                                                    <td>离站</td>
+                                                    <td>到站</td>
+                                                    <td>航站4</td>
+                                                    <td>离站</td>
+                                                    <td>到站</td>
+                                                    <td>WWWW</td>
+                                                    <td>555</td>
+                                                    <td>国内</td>
+                                                    <td>20160303-20163432</td>
+                                                    <td>啦啦啦</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td><input type="checkbox" /></td>
+                                                    <td class="action-buttons">
+                                                        <a class="blue f18" href="#"><i class="icon-zoom-in"></i></a>
+                                                        <a class="green f18" href="#"><i class="icon-pencil"></i></a>
+                                                        <a class="red f18" href="#"><i class="icon-trash"></i></a>
+                                                    </td>
+                                                    <td>AAL227</td>
+                                                    <td>1234567</td>
+                                                    <td>已通过</td>
+                                                    <td>KDFW</td>
+                                                    <td>2333</td>
+                                                    <td>3453</td>
+                                                    <td>航站2</td>
+                                                    <td>离站</td>
+                                                    <td>到站</td>
+                                                    <td>航站3</td>
+                                                    <td>离站</td>
+                                                    <td>到站</td>
+                                                    <td>航站4</td>
+                                                    <td>离站</td>
+                                                    <td>到站</td>
+                                                    <td>WWWW</td>
+                                                    <td>555</td>
+                                                    <td>国内</td>
+                                                    <td>20160303-20163432</td>
+                                                    <td>啦啦啦</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td><input type="checkbox" /></td>
+                                                    <td class="action-buttons">
+                                                        <a class="blue f18" href="#"><i class="icon-zoom-in"></i></a>
+                                                        <a class="green f18" href="#"><i class="icon-pencil"></i></a>
+                                                        <a class="red f18" href="#"><i class="icon-trash"></i></a>
+                                                    </td>
+                                                    <td>AAL227</td>
+                                                    <td>1234567</td>
+                                                    <td>已通过</td>
+                                                    <td>KDFW</td>
+                                                    <td>2333</td>
+                                                    <td>3453</td>
+                                                    <td>航站2</td>
+                                                    <td>离站</td>
+                                                    <td>到站</td>
+                                                    <td>航站3</td>
+                                                    <td>离站</td>
+                                                    <td>到站</td>
+                                                    <td>航站4</td>
+                                                    <td>离站</td>
+                                                    <td>到站</td>
+                                                    <td>WWWW</td>
+                                                    <td>555</td>
+                                                    <td>国内</td>
+                                                    <td>20160303-20163432</td>
+                                                    <td>啦啦啦</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td><input type="checkbox" /></td>
+                                                    <td class="action-buttons">
+                                                        <a class="blue f18" href="#"><i class="icon-zoom-in"></i></a>
+                                                        <a class="green f18" href="#"><i class="icon-pencil"></i></a>
+                                                        <a class="red f18" href="#"><i class="icon-trash"></i></a>
+                                                    </td>
+                                                    <td>AAL227</td>
+                                                    <td>1234567</td>
+                                                    <td>已通过</td>
+                                                    <td>KDFW</td>
+                                                    <td>2333</td>
+                                                    <td>3453</td>
+                                                    <td>航站2</td>
+                                                    <td>离站</td>
+                                                    <td>到站</td>
+                                                    <td>航站3</td>
+                                                    <td>离站</td>
+                                                    <td>到站</td>
+                                                    <td>航站4</td>
+                                                    <td>离站</td>
+                                                    <td>到站</td>
+                                                    <td>WWWW</td>
+                                                    <td>555</td>
+                                                    <td>国内</td>
+                                                    <td>20160303-20163432</td>
+                                                    <td>啦啦啦</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="page pl10"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="page_foot pa bottom10 left0 bs px20">
+
+</div>
+</body>
+</html>

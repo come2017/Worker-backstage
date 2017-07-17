@@ -1,0 +1,47 @@
+.timeRefreshA{
+    width: 520px;
+    height: 66px;
+    line-height: 64px;
+    font-size: 18px;
+    padding-left: 75px;
+    display: block;
+    font-weight: bold;
+    color: #000;
+    border: solid 1px #ddd;
+    box-sizing: border-box;
+    float: left;
+    margin-right: 50px;
+    margin-bottom: 15px;
+    font-family: "微软雅黑";
+    transition: border-color .4s 0s;
+}
+.timeRefreshA:hover{
+    border-color:#1990D4;
+}
+.timeRefreshA.active{
+    border-color:#1990D4;
+}
+.refreshAbg1{
+    background: url("img/i01.png") no-repeat;
+}
+.refreshAbg2{
+    background: url("img/i02.png") no-repeat;
+}
+.refreshAbg3{
+    background: url("img/i03.png") no-repeat;
+}
+.refreshAbg4{
+    background: url("img/i04.png") no-repeat;
+}
+.refreshAbg5{
+    background: url("img/i05.png") no-repeat;
+}
+.refreshAbg6{
+    background: url("img/i06.png") no-repeat;
+}
+.refreshAbg7{
+    background: url("img/i07.png") no-repeat;
+}
+.refreshAbg8{
+    background: url("img/i08.png") no-repeat;
+}

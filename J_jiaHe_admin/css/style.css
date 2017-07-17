@@ -1,0 +1,221 @@
+/*************列表页******************/
+.mR40{margin-right: 40px;}
+.mL60{margin-left: 60px;}
+.Cpassword{ime-mode: disabled;}
+@media (max-width: 768px){
+	.List-con{
+		margin-top: 25px;
+	}
+}
+
+.CtitTop{
+	padding-bottom: 15px;
+	border-bottom: 1px solid #d9eaf4;
+	font-size: 12px;
+	color: #004d78;
+	margin-bottom: 20px;
+}
+.CtitTop a{
+	font-size: 12px;
+	color: #004d78;
+}
+.container-fluid{
+	padding-left: 0;
+	padding-right: 0;
+}
+.con-header{
+	height: 32px;
+	line-height: 32px;
+	background-color: #e1eaf6;
+	padding-left: 21px;
+	color: #1381be;
+}
+.con-text{
+	border: 1px solid #dedede;
+	border-top: none;
+	padding: 20px 50px;
+}
+.con-text .sbsj {
+	overflow: hidden;
+}
+.con-text .row{
+	margin-bottom:15px;;
+}
+.btn.focus, .btn:focus, .btn:hover {
+    color: #fff;
+    text-decoration: none;
+}
+.C_table_hover>tbody>tr:hover{
+	background-color: #fef3ec;
+}
+.C_table_hover thead{
+	background-color: #e1eaf6;
+}
+
+.C_table_hover thead th{
+	text-align: center;
+	color: #1381be;
+	font-weight: normal;
+}
+.C_table_hover thead tr>th label{
+	color: #1381be;
+}
+.C_table_hover>tbody>tr th{
+	text-align: center;
+}
+.C_table_hover td:nth-child(2){
+	color: #1381be;
+}
+.Ctable-m5{
+	margin-top: 5px;
+}
+.Clist-AA{
+	margin-right: 15px;
+}
+
+.w100{
+	width: 100%;
+}
+
+@media (min-width: 768px) {
+	.sbsj .form-control{
+		width: 210px;
+	}
+}
+
+.toogle {
+position: absolute;
+width: 24px;
+height:24px;
+right: 0px;
+top: 0px;
+border-radius: 3px;
+background: url(../img/list-jia.png) no-repeat 0 0px;
+cursor: pointer;
+}
+.arrow_btn02 {
+    background: url(../img/list-add.png) no-repeat 0 0px;
+}
+
+
+/*************切换标签页面******************/
+.Cnav-tabs {
+    border-bottom: 2px solid #4396ca;
+    background-color: #f2f2f2;
+}
+.Cnav-tabs>li {
+    float: left;
+    margin-bottom: -2px;
+}
+.Cnav-tab1{
+	
+}
+.Cnav-tabs>li.active>a, .Cnav-tabs>li.active>a:focus, .Cnav-tabs>li.active>a:hover {
+    color: #FFF;
+    cursor: default;
+    background-color: #fff;
+    border-bottom-color: transparent;
+    background-color:#4396ca;
+    border: none;
+    padding: 11px 15px;
+}
+.Cnav-tabs>li>a {
+    margin-right: 2px;
+    line-height: 1.42857143;
+    border: 1px solid transparent;
+    border-radius: 0 0 0 0;
+}
+.tab-content{
+	border: 1px #dedede solid;
+	padding: 30px 30px 30px 30px;
+}
+.redmi{
+	width: 6px;
+	height: 10px;
+	display: inline-block;
+	background: url(../img/redx.jpg) 0px 0px no-repeat;
+	margin-right: 5px;
+}
+.Clable_n label{
+	font-weight: normal;
+}
+.Czi{
+	font-size: 12px;
+	color: #b0b2b1;
+}
+.C_listimg{
+	margin-top: 10px;
+}
+.C_listimg img{
+	margin-right: 10px;
+}
+.C_listimg dl dt{
+	font-size: 14px;
+	font-weight: bold;
+	color: #333;
+}
+.C_listimg dl dd{
+	font-size: 12px;
+	color: #b0b2b1;
+	line-height: 20px;
+	padding-left: 1em;
+}
+.Clable_n .control-group{
+	margin-top: 15px;
+}
+.Cbottom{
+	margin-top: 100px;
+}
+.Cbottom button{
+	margin-right: 40px;
+}
+/*************添加信息页面******************/
+.Add-html{
+	border: 1px #dedede solid;
+    padding: 30px 30px 30px 30px;
+}
+
+/*************订单详情******************/
+.Cli-con-bor{
+	border-right: 1px solid #dedede;
+}
+.Cli-con ul li{
+	color: #808080;
+	line-height: 30px;
+}
+.Cli-con ul li span{
+	color: #000;
+}
+
+.Cbth-width{
+	width: 96px;
+	padding:6px 0;
+}
+
+.C_table_hover_jiu thead {
+    background-color: #e1eaf6;
+}
+.C_table_hover_jiu thead th {
+    text-align: center;
+    color: #1381be;
+    font-weight: normal;
+}
+.C_table_hover_jiu tbody tr td{
+	line-height: 80px;
+}
+.C_table_hover_jiu tbody tr{
+	line-height: 80px;
+}
+
+
+.list-unstyled{
+	padding-left: 9%;
+}
+
+.nav-tabs>li>a:hover {
+	border-color: transparent;
+}
+
+.nav>li>a:focus, .nav>li>a:hover{
+	background: none;
+}

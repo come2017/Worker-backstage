@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/css.css"/>
+		<link rel="stylesheet" type="text/css" href="css/w.css"/>
+		<script src="js/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>	
+		<script type="text/javascript">
+			$(function(){
+				$('.T_table tr td:odd').css('text-align','left');
+				$('.T_table tr td:even').css('text-align','right');
+				
+				$('.Oin_con ul:last-child').css('border-right','none');
+			})
+		</script>
+	</head>
+<body>
+<div id="wrapper">
+	<!--列表页-->
+	<div class="List-con">
+		<section class="CtitTop"> 当前位置：<a href="javascript:;">首页管理 </a> > <a href="javascript:;">导航管理</a></section>
+		<div class="List_top fix">
+			<div class="pr">
+				<div class="con-header">添加产品</div>
+			</div>
+		</div>
+		<ul class="T_nav fix">
+			<li class="nav_cur"><a href="javascript:;">订单详情</a></li>
+			<li><a href="order.html">订单记录详情</a></li>
+			<li><a href="javascript:;">付款记录</a></li>
+			<li><a href="javascript:;">退款记录</a></li>
+			<li><a href="javascript:;">退货记录</a></li>
+			<li><a href="javascript:;">订单操作记录</a></li>
+		</ul>
+		<div class="Oin_con fix">
+			<ul>
+				<li><span>订单编号：</span><i>201510156566</i></li>
+				<li><span>订单状态：</span><i>已确认</i></li>
+				<li><span>支付状态：</span><i>已支付</i></li>
+				<li><span>配送状态：</span><i>已发货</i></li>
+				<li><span>评价状态：</span><i>未评价</i></li>
+				<li><span>支付方式：</span><i>支付宝</i></li>
+				<li><span>支付手续费：</span><i>0</i></li>
+				<li><span>运费：</span><i>0</i></li>
+				<li><span>促销折扣：</span><i>0</i></li>
+			</ul>
+			<ul>
+				<li><span>赠送积分：</span><i>0</i></li>
+				<li><span>收货人：</span><i>赵莹</i></li>
+				<li><span>地址：</span><i>科海街8号</i></li>
+				<li><span>电话：</span><i>15841107320</i></li>
+				<li><span>调整金额：</span><i>0</i></li>
+				<li><span>是否开发票：</span><i>否</i></li>
+				<li><span>是否分配库存：</span><i>是</i></li>
+				<li><span>区域：</span><i>辽宁 大连市 高新园区</i></li>
+				<li><span>创建时间：</span><i>2015-10-15</i></li>
+			</ul>
+			<ul>
+				<li><span>已付金额：</span><i>256</i></li>
+				<li><span>支付方式名称：</span><i>支付宝</i></li>
+				<li><span>配送方式名称：</span><i>顺丰快递</i></li>
+				<li><span>优惠券折扣：</span><i>0</i></li>
+				<li><span>备注：</span><i></i></li>
+				<li><span>邮编：</span><i></i></li>
+				<li><span>税费：</span><i>0</i></li>
+			</ul>
+		</div>
+	</div>
+</div>
+</body>
+</html>

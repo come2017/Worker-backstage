@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/css.css"/>
+		<link rel="stylesheet" type="text/css" href="css/w.css"/>
+		<script src="js/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>	
+		<script type="text/javascript">
+			$(function(){
+				$('.T_table tr td:odd').css('text-align','left');
+				$('.T_table tr td:even').css('text-align','right');
+				
+				$('.O_table thead td:last-child').css('border','none');
+				$('.O_table tbody td:last-child').css('border-right','none');
+			})
+		</script>
+	</head>
+<body>
+<div id="wrapper">
+	<!--列表页-->
+	<div class="List-con">
+		<section class="CtitTop"> 当前位置：<a href="javascript:;">首页管理 </a> > <a href="javascript:;">导航管理</a></section>
+		<div class="List_top fix">
+			<div class="pr">
+				<div class="con-header">添加产品</div>
+			</div>
+		</div>
+		
+		<!--操作成功-->
+		<div class="Tbox mt30">
+			<div class="fix TbCon">
+				<img src="imgs/true.png" width="25" height="25"/>
+				<span>操作成功！</span>
+			</div>
+		</div>
+		
+		<!--操作失败-->
+		<div class="Tbox mt30">
+			<div class="fix TbCon">
+				<img src="imgs/false.png" width="25" height="25"/>
+				<span>操作失败！</span>
+			</div>
+		</div>
+		
+		<!--警告信息-->
+		<div class="Tbox mt30">
+			<div class="fix TbCon">
+				<img src="imgs/warn.png" width="29" height="25"/>
+				<span>警告信息！</span>
+			</div>
+		</div>
+		
+		<!--删除信息-->
+		<div class="SBox mt30">
+			<h2>提示信息</h2>
+			<img src="imgs/close.png" width="14" height="13"/>
+			<div class="SCon">
+				<span>确定删除此信息吗？</span>
+				<a href="javascript:;">确认</a>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

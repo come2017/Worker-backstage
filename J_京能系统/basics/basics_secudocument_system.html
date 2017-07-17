@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>京能集团-安全管理数字化标准化管理平台</title>
+<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+<link href="../css/base.css" rel="stylesheet" type="text/css" />
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="../css/IE_css.css"/><![endif]--> <!--兼容ie浏览器在1024Px时正常显示-->
+<script src="js/jquery-1.8.3.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/layer.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/JN_layer.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+		//不同分辨率页面样式
+		window.onload = function(){
+			var win=$(window).width();
+			$(".St-table tr:even").addClass("even-row"); 
+			$(".St-table tr:odd").addClass("odd-row"); 
+			if(win<1266&&win>1030){
+				$('.w80').css({'width':'88%'});
+				$('.shu li input').css({'width':'150px'});
+				$('.mr05').css({'margin-right':'0px'});
+				$('.mr-10').css({'margin-right':'30px'});
+				$('.pl2').css({'padding-left':'1%'});
+			}else if(win<1030&&win>900){
+				$('.w80').css({'width':'88%'});
+				$('.shu li input').css({'width':'150px'});
+				$('.shu .rongyu').css({'width':'240px'});
+				$('.mr05,.mr-10').css({'margin-right':'0px'});
+				$('.mr-10').css({'margin-right':'10px'});
+				$('.pl2').css({'padding-left':'1%'});
+			}
+		}
+</script>
+</head>
+
+<body>
+	<div class="w100">
+		<div class="innav c11 bg5c pl1">
+			<p>
+				<a href="index.html" target="_blank">首页</a>&gt; 
+				 <a href="javascript:;">基础管理</a>  
+				 <a href="javascript:;">&gt;安全文档</a> 
+			</p>
+		</div>
+		<div class="innav02 of fs14 pl1">
+			<ul>
+				<li><a href="basics_secudocument_report.html">报表分析</a></li>
+				<li><a href="basics_secudocument_guanli.html" >文件管理</a></li>
+				<li class="current"><a href="basics_secudocument_system.html" >制度管理</a></li>
+			</ul>
+		</div>
+		<!--数据录入-->
+		<div class="St-table">
+			<div class="mb15">
+				<div class="shucon01 C_shucon01 w97 bgb3 ma oh">
+					<ul class="shu fl C_special_ipt w80">
+						<li class="rongyu mr-10">
+							<input type="text" class="inputs"/>
+							<span>文号 :</span>
+						</li>
+						<li class="rongyu mr-10">
+							<input type="text" class="inputs"/>
+							<span>文档名称 :</span>
+						</li>
+						<li class="rongyu">
+							<input type="text" class="inputs"/>
+							<span>文档状态 :</span>
+						</li>
+						<li class="rongyu mr-10 juli01">
+							<input type="text" class="inputs"/>
+							<span>发布方 :</span>
+						</li>
+						<li class="rongyu juli01">
+							<input type="text" class="inputs"/>
+							<span>文档来源 :</span>
+						</li>
+					</ul>
+					<div class="fr">
+						<div class="btn fl btn_box03">
+							<a class="cha" href="javascript:;">查询</a>
+						</div>
+					</div>
+				</div>	
+			</div>
+			<script type="text/javascript">
+				var oem=true;
+				$('.shucontop img').click(function(){
+					if(oem){
+						$('.shucon01').hide();
+						oem=false;
+					}else{
+						$('.shucon01').show();
+						oem=true;
+					}
+					return false;
+				})
+			</script>
+			<div class="w97 shucontop fs16 cf ma"> 
+				<span class="shucontop_c di fl">安全制度管理</span>
+				<a class="di fr oh" href="javascript:;">
+					<em class="fr fs16 cf cp">导出</em>
+					<img class="fr img02" src="../imgs/yiji/shu_dao.png"/>
+				</a>
+			</div>
+			<div class="w97 tiao bg1f"></div>
+			<div class="w97 ma">
+				<div class="S_rongyu_list_title">
+					<ul>
+						<li class="S_title_a"><a href="javascript:;">新建</a></li>
+						<li class="S_title_b"><a href="#">修改</a></li>
+						<li class="S_title_c"><a href="#">废除</a></li>
+						<li class="S_title_d"><a href="#">归档</a></li>
+						<li class="S_title_e"><a href="#">查看</a></li>
+					</ul>
+				</div>
+				<table width="100%" border="1">
+					<tr>
+						<td>&nbsp;</td>
+						<td>序号</td>
+						<td>文档名称</td>
+						<td>文档类别</td>
+						<td width="11%">发布方</td>
+						<td width="12%">文档来源</td>
+						<td width="9%">发布日期</td>
+						<td width="8%">生效日期</td>
+						<td width="9%">文档状态</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="cBox_Btn" /></td>
+						<td>1</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="cBox_Btn" /></td>
+						<td>2</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="cBox_Btn" /></td>
+						<td>3</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="cBox_Btn" /></td>
+						<td>4</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+				</table>
+			</div>
+			<div class="paging"> 
+				<a href="javascript:" class="prev01"></a> 
+				<a href="javascript:" class="prev02"></a> 
+				<a href="javascript:" class="selected">1</a> 
+				<a href="javascript:">2</a> <a href="javascript:" class="next02"></a> 
+				<a href="javascript:" class="next01"></a> <span>共232条　每页15条　跳到第<input type="text" value="1" />页</span> 
+				<a href="javascript:" class="go">GO</a> 
+			</div>
+		</div>
+	</div>
+</body>
+</html>

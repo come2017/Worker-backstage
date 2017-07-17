@@ -1,0 +1,214 @@
+/** 
+ * 网站基本样式文件 CSS2.0 
+ */
+
+/**
+ * 样式初始化
+ */
+html, body, div, form, dd, dl, dt, span, font, b, i, input, textarea, select { margin:0; padding:0; font-size:12px; font-family:'微软雅黑'; color:#333} 
+body { padding:10px 20px 70px 20px;min-width:1000px;}
+a { display:-moz-inline-stack; display:inline-block; zoom:1; *display:inline; text-decoration:none; cursor:pointer; color:#29A5F9}
+a:hover { color:#2071F9; text-decoration:underline}
+i { display:-moz-inline-stack; display:inline-block; font-style:normal}
+img { border:none}
+:focus { outline:none}
+select, input[type=text], input[type=password], textarea { width:225px; padding:6px 5px; line-height:1.42857143; color:#555; background:#fff; border:1px solid #dadada; border-radius:4px; -webkit-box-shadow:solid 0 1px 1px rgba(0, 0, 0, .075); box-shadow:solid 0 1px 1px rgba(0, 0, 0, .075); -webkit-transition:border-color ease-in-out .15s, box-shadow ease-in-out .15s; transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s; vertical-align:middle}
+select:focus, input[type=text]:focus, input[type=password]:focus, textarea:focus { border-color:#29A5F9; outline:0; -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6); }
+input[type=submit],input[type=submit] { -webkit-appearance: none}
+select { padding:0px}
+::-webkit-scrollbar-thumb { background:#b0b0ae; -webkit-border-radius:4px}
+::-webkit-scrollbar-thumb:hover { background:#9f9f9f; -webkit-border-radius:4px}
+::-webkit-scrollbar { width:6px}
+::-webkit-scrollbar-track-piece { background:#eaeaea; -webkit-border-radius:0}
+
+/* 数据管理 */
+.manage .line { clear:both; padding:5px 0; margin-top:10px}
+.manage textarea { vertical-align:top; width:300px}
+.manage input[type=text] { width:300px}
+.manage input[type=text].w50 { width:50px}
+.manage input[type=text].w80 { width:70px}
+.manage input[type=text].w100 { width:101px}
+.manage input[type=text].w200 { width:200px}
+.manage select { width:200px; padding:5px 0px} 
+.manage select.w100 { width:100px}
+.manage input[type=radio], .manage input[type=checkbox] { vertical-align:middle; margin-right:3px}
+.manage .btns { clear:both; padding:20px 0 0 140px}
+
+
+/* 数据块 */
+.chunk { height:100%; overflow:hidden;margin:10px 0px 0px;}
+.chunk .title { position:relative; z-index:3; height:30px; border-bottom:1px solid #ddd}
+.chunk .title>i { height:29px; line-height:28px; margin-left:10px; padding:0 20px; font-size:14px; color:#285b88; font-weight:bold; text-align:center; border:1px solid #ddd; border-bottom:none; cursor:pointer; overflow:hidden; background:#fafafa; vertical-align:top; border-radius:2px}
+.chunk .title i.selected { position:relative; height:30px; background:#fff}
+.chunk .data { position:relative; z-index:2; margin-top:-1px; padding:15px 10px; border:1px solid #ddd; background:#fff}
+
+div.tab { height:30px; padding-left:10px; border-bottom:1px solid #ddd; margin-bottom:15px}
+div.tab b { height:24px; padding:0 10px; padding-top:5px; margin-right:5px; color:#444; vertical-align:top; border:1px solid #ddd; border-bottom:none; background:#f3f3f3}
+div.tab b:hover { color:red; cursor:pointer}
+div.tab b.select { position:relative; height:25px; color:#555; background:#fff; z-index:20; cursor:default}
+
+/* 表格列表 */
+table.list { width:100%; min-width:950px; table-layout:fixed; margin-top:15px; border-collapse:collapse; border:1px solid #ddd}
+table.list td { height:30px; text-align:left; border:1px solid #ddd; overflow:hidden; padding:3px 5px; overflow:hidden; word-break:break-all}
+table.list tr.firstTr td, table.list tr.firstTr:hover td { font-size:12px; font-weight:bold; color:#555; background:#f8f9fc}
+table.list tr.grey td { background:#fbfbfb}
+table.list tr:hover td { background:#f9f9f9}
+table.list td img.img { height:50px; margin-top:3px; border:1px solid #dfdfdf; border-radius:5px; padding:2px; background:#fafafa}
+table.list td a.blue { color:#0080C0}
+table.list td a.red { color:#F30}
+table.list td.none { color:#666; padding:8px 0}
+table.list td.manage { text-align:right; padding-right:10px}
+table.list td.manage i { margin:0 3px; color:#555}
+table.list input[type=checkbox] { margin-left:5px; vertical-align:middle}
+div.listtop { margin-top:25px; color:#555}
+
+/* 页面分页 */
+.paging { float:right; margin:0 auto; margin-top:15px;margin-bottom:5px; text-align:right}
+.paging i.link { padding:0px 8px; vertical-align:middle}
+.paging > a { width:20px; height:20px; text-align:center; color:#cdcdcd; line-height:20px; margin:0px 3px; border:1px solid #cdcdcd; vertical-align:middle}
+.paging > a.home { background:url(../images/home_ico.jpg) no-repeat center center} 
+.paging > a.pre { background:url(../images/pre.jpg) no-repeat center center}
+.paging > a.next { background:url(../images/next.jpg) no-repeat center center} 
+.paging > a.end { background:url(../images/end_ico.jpg) no-repeat center center} 
+.paging > a.cur { border:1px solid #3f78aa; color:#3f78aa}
+.paging > a:hover { border:1px solid #3f78aa; color:#3f78aa; text-decoration:none}
+.paging > a.home:hover {border:1px solid #3f78aa; background:url(../images/hover_cur.jpg) no-repeat center center}
+.paging > a.pre:hover { border:1px solid #3f78aa;background:url(../images/prehover.jpg) no-repeat center center}
+.paging > a.next:hover {border:1px solid #3f78aa; background:url(../images/next_hover.jpg) no-repeat center center} 
+.paging > a.end:hover {border:1px solid #3f78aa; background:url(../images/end_hover.jpg) no-repeat center center}
+.paging > .inpTxt {border: 1px solid #cccccc;height: 18px;ime-mode: disabled;line-height: 18px;margin: 2px 5px;padding: 0; text-align: center;vertical-align: top;width: 18px;}
+
+
+/* 内容页面顶部 */
+.phead { min-width:500px; height:32px; }
+.phead .curnav { float:left; height:32px; line-height:32px}
+.phead .curnav label { padding-left:20px; background:url(../images/small_ico.png) no-repeat 0px -60px; height:30px; line-height:30px; font-size:14px; display:-moz-inline-stack; display:inline-block; position:relative; z-index:2; color:#555}
+.phead .curnav a { color:#555}
+.phead .curnav i.url { color:#555; padding-left:25px; background:url(../images/manageico.png) no-repeat 8px -220px}
+.phead .pmang { float:right}
+.phead .pmang a.phead_ref { padding-left:15px; margin:8px 0 0 10px; color:#555; background:url(../images/manageico.png) no-repeat 0 -79px}
+.phead .pmang a.phead_back { padding-left:12px; margin:8px 0 0 10px; color:#555; background:url(../images/manageico.png) no-repeat 0 -105px}
+
+/* 搜索页面 */
+.filter { position:relative; min-width:760px; margin-top:15px; padding:0px 10px 10px 10px; border-radius:3px; border:1px solid #ddd; overflow:hidden; background:#fbfbfb}
+.filter .toggle { position:absolute; width:31px; height:31px; right:-1px; top:-1px; border-radius:3px; background:url(../images/manageico.png) no-repeat 0 -280px; cursor:pointer}
+.filter .showIco { background-position:0 -327px}
+.filter .title { height:36px; line-height:38px; font-size:14px; color:#0ca6f6; cursor:pointer}
+.filter .items { padding:10px 20px; line-height:34px; height:auto; overflow:hidden; border-top:1px dashed #d8d8d8; background:#fff}
+.filter .items i { margin-left:20px}
+.filter .items i:first-child { margin:0px; width:60px}
+.filter .items dd { height:auto}
+.filter .items dd > div { float:left; height:40px; margin-right:20px; display:inline-block}
+.filter .items dd.btns { clear:both; line-height:normal; padding-top:10px; padding-left:60px}
+.filter .items dd.btns a { margin-left:30px}
+.filter .items i.pr10 { margin-left:0px}
+.filter_hide .toggle { padding-bottom:0px; background-position:0 -327px}
+.filter_hide .title { border:none}
+
+/* 按钮样式 */
+.button { overflow:hidden; padding:7px 17px; border:none; border-radius:3px; color:#555; font-size:12px; font-weight:bold; background:#0ca6f6; color:#fff}
+.button:hover { text-decoration:none; background:#139fe7; cursor:pointer}
+.button:active { background-position:0 -184px}
+.buttonDis { overflow:hidden; padding:7px 17px; border:none; border-radius:3px; color:#555; font-size:12px; font-weight:bold; background:#A9DFFC; color:#fff}
+.buttonDis:hover { text-decoration:none; background:#A9DFFC; cursor:pointer}
+.buttonDis:active { background-position:0 -184px}
+.button-sub { padding:7px 30px; border:1px solid #409fef; color:#fff; background-position:0 0px}
+.button-sub:hover { border:1px solid #409fef; color:#fff; background-position:0 -38px}
+.button-sub:active { border:1px solid #409fef; color:#fff; background-position:0 -76px}
+.button-link { background:#ec5d65}
+.button-link:hover { background:#dd5159; color:#fff}
+
+.view-image { margin:10px 0 0 140px}
+.view-image img { float:left; height:75px; padding:3px; border:1px solid #ccc; border-radius:5px; background:#fafafa}
+
+.sectionToggle { height:auto; overflow:hidden}
+.sectionToggle .title { height:auto; font-size:13px; cursor:pointer; margin-bottom:10px; padding:8px 0 8px 20px; border-bottom:1px dashed #ccc; overflow:hidden; background:url(/com/admin-imgs/menuico.png) no-repeat 0 11px}
+.sectionToggle-up .title { background-position:0 -13px}
+.sectionToggle-up .data { display:none}
+
+/*添加菜单*/
+.menu_box { position:absolute; top:10px; bottom:10px; left:10px; width:260px; height:auto; background:#FCFCFC}
+.menu_add { width:550px; height:auto; padding:25px 0px; margin:20px 0px 0px 260px; border:1px solid #d4d8de; background:#fafbfd}
+.menu_add .line { margin-top:10px}
+.menu_add .line input[ type=text] { width:213px}
+.menu_add .line i.label { width:120px; text-align:right}
+.menu_add .btns { text-align:center; margin-top:20px}
+
+/*欢迎页*/
+.welcome { border:1px solid #E7E7E7; margin:45px 100px; min-width:450px; padding:120px 0; text-align:center; font-weight:bold; font-size:34px; color:#5288b8}
+
+/*信息提示*/
+.info_box { position:absolute; border-radius:8px; width:221px; padding:15px 0; text-align:center; line-height:14px; font-size:14px; background:#fff;display:none; z-index:999}
+.info_box i.ico { width:24px; height:24px; margin-right:8px; background:url(../images/small_ico.png) no-repeat 0px -241px; vertical-align:middle}
+.info_box_success { border:1px solid #1fbf86}
+.info_box_success > i { color:#1fbf86}
+.info_box_success:hover { background:#1fbf86;}
+.info_box_error { border:1px solid #e7333b;}
+.info_box_error:hover { background:#e7333b}
+.info_box_error > i { color:#e7333b}
+.info_box_error > i > i.ico{ background-position:0px -280px}
+.info_box_warn { border:1px solid #fbaf4a; color:#fbaf4a;}
+.info_box_warn:hover { background:#fbaf4a;}
+.info_box_warn > i { color:#fbaf4a}
+.info_box_warn > i > i.ico{ background-position:0px -318px }
+.info_box_success:hover > i,.info_box_error:hover > i,.info_box_warn:hover > i {  color:#fff}
+
+/*登录页面*/
+.loginimg { position:relative; width:100%; height:100%; min-height:520px; overflow:hidden}
+.loginimg img.bg { width:100%;}
+.loginimg .logo { position:absolute; width:100%; text-align:center; margin-top:175px}
+.login_form { position:absolute; width:100%; margin:255px auto 0px auto; text-align:center; z-index:5; height:auto;  overflow:hidden}
+.login_form div.line { width:100%; height:auto; overflow:hidden; margin-top:10px;}
+.login_form .line i.tage { color:#fff; font-size:14px; }
+.login_form div.line input[type=text],.login_form div.line input[type=password] { width:213px}
+.login_form div.line input[type=text].w80 { width:107px}
+.login_form div.line img { margin-left:15px; vertical-align:middle}
+.login_form div.btn { margin-top:15px}
+.login_form div.btn input[type=submit]{ width:154px; height:39px; background:url(../images/login_btn.png) no-repeat; border:0 none; cursor:pointer}
+.login_form div.btn input[type=submit]:hover { opacity:0.8}
+.footer { position:fixed; bottom:10px; width:100%; height:auto; text-align:center; color:#666666; overflow:hidden}
+
+/*添加*/
+.pagetitle { height:32px; line-height:32px; background:#f0f3f7; border:1px solid #d1d1d1; font-size:14px; color:#487caa; padding-left:15px }
+.manage .line .sex { width:250px; float:left}
+.manage .line .bm { width:400px; float:left}
+.manage .line input[type=checkbox] { vertical-align:middle}
+
+/**
+ * 工具样式
+ */
+i.label { width:130px; padding:0 5px; text-align:right}
+i.desc { color:#888; margin-left:10px}
+i.error { color:red; margin-left:10px}
+i.x { color:red; font-weight:bold; margin-right:5px; vertical-align:middle}
+i.middle { vertical-align:middle}
+i.red { color:red}
+i.imgPreView { margin-top:5px; width:120px}
+i.i555 { color:#555}
+i.radio, i.checkbox  { vertical-align:middle; cursor:pointer}
+.hide { display:none}
+.clear { clear:both}
+.fl { float:left}
+.fr { float:right}
+.mt5 { margin-top:5px}
+.mt10 { margin-top:10px}
+.mt20 { margin-top:20px}
+.ml0 { margin-left:0px}
+.ml5 { margin-left:5px}
+.ml10 { margin-left:10px}
+.pr10 { padding-right:10px}
+.w500 { width:500px}
+div.line { padding:2px 0}
+input.inppage { width:30px; vertical-align:middle; padding:2px}
+.select_ids { float:left; margin-top:15px}/* 选择 */
+
+/* 图片上传 */
+.rel-imgup { float:left}
+.rel-imgup .view-image { margin-left:0px; float:left}
+.rel-imgup div.desc { float:left; min-width:200px; clear:none; padding-left:10px}
+div.desc { clear:both; min-width:500px; padding-top:10px; line-height:20px}
+div.desc h1 { margin:0px; font-size:14px; color:#555; font-weight:normal}
+div.desc > i { display:block; color:#555; padding-left:5px}
+
+/* 错误页面 */
+.wrong { width:100%; text-align:center; padding:200px 0 0; }

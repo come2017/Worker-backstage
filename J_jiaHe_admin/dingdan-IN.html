@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+<title>珈禾宏业综合管理系统</title>
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/nav.css"/>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<link rel="stylesheet" type="text/css" href="css/responsive-nav.css"/>
+<!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<script src="js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script> 
+<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script> 
+</head>
+<body>
+<div id="wrapper">
+<!--列表页-->
+<div class="List-con">
+  <section class="CtitTop"> 当前位置：<a href="javascript:;">首页管理 </a> > <a href="javascript:;">导航管理</a></section>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span12 cprev">
+        <div class="con-header">添加产品</div>
+        <!--<div class="toogle"></div>-->
+        <div class="bs-example bs-example-tabs mt_px20" data-example-id="togglable-tabs">
+          <ul id="myTabs" class="nav Cnav-tab1 nav-tabs Cnav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#INa" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">订单详情</a></li>
+            <li role="presentation"><a href="#INb" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">订单记录详情</a></li>
+            <li role="presentation"><a href="#INc" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">付款记录</a></li>
+            <li role="presentation"><a href="#INd" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">退款记录</a></li>
+            <li role="presentation"><a href="#INe" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">退货记录</a></li>
+            <li role="presentation"><a href="#INf" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">订单操作日志</a></li>
+          </ul>
+          <div id="myTabContent" class="tab-content">
+            <div role="tabpanel" class="tab-pane fade in active" id="INa" aria-labelledby="home-tab">
+            	<div class="container-fluid">
+            		<div class="row">
+            			<div class="col-xs-12 col-md-4 Cli-con Cli-con-bor dd_list">
+            				<ul class="list-unstyled">
+                                <li>订单编号：<span>201510156566</span></li>
+                                <li>订单状态：<span>已确认</span></li>
+                                <li>支付状态：<span>已支付</span></li>
+                                <li>配送状态：<span>已发货</span></li>
+                                <li>评价状态：<span>未评价</span></li>
+                                <li>支付方式：<span>支付宝</span></li>
+                                <li>支付手续费：<span>0</span></li>
+                                <li>运费：<span>0</span></li>
+                                <li>促销折扣：<span>0</span></li>
+                            </ul>
+            			</div>
+            			<div class="col-xs-12 col-md-4 Cli-con Cli-con-bor dd_list">
+            				<ul class="list-unstyled">
+                                <li>赠送积分：<span>0</span></li>
+                                <li>收货人：<span>赵莹</span></li>
+                                <li>地址：<span>科海街8号</span></li>
+                                <li>电话：<span>15841107320</span></li>
+                                <li>调整金额：<span>0</span></li>
+                                <li>是否开发票：<span>否</span></li>
+                                <li>是否分配库存：<span>是</span></li>
+                                <li>区域：<span>辽宁 大连市 高新园区</span></li>
+                                <li>创建时间：<span>创建时间：2015-10-15</span></li>
+                            </ul>
+            			</div>
+            			<div class="col-xs-12 col-md-4 Cli-con dd_list">
+            				<ul class="list-unstyled">
+                                <li>已付金额：<span>256</span></li>
+                                <li>支付方式名称：<span>支付宝</span></li>
+                                <li>配送方式名称：<span>顺丰快递</span></li>
+                                <li>优惠券折扣：<span>0</span></li>
+                                <li>备注：<span></span></li>
+                                <li>邮编：<span></span></li>
+                                <li>税费：<span>0</span></li>
+                            </ul>
+            			</div>
+            		</div>
+            	</div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="INb" aria-labelledby="profile-tab">
+              <p>
+                <button type="button" class="btn Cbth-width bg1381be cf">完成</button>
+                <button type="button" class="btn Cbth-width bgce77420 cf">打印订单</button>
+              </p>
+              <div class="table-responsive">
+		      <table class="table table-bordered C_table_hover_jiu text-center">
+		        <thead>
+		          <tr>
+		            <th>订单细目编号</th>
+		            <th>产品图片</th>
+		            <th>名称</th>
+		            <th>价格</th>
+		            <th>数量</th>
+		          </tr>
+		        </thead>
+		        <tbody>
+		          <tr>
+		            <td scope="row">201507163842</td>
+		            <td><img src="img/img-jiu.png" width="80" height="80"/></td>
+		            <td>龙抬头珍酿</td>
+		            <td>118</td>
+		            <td>1</td>
+		          </tr>
+		          <tr>
+		            <td scope="row">201507163842</td>
+		            <td><img src="img/img-jiu.png" width="80" height="80"/></td>
+		            <td>龙抬头珍酿</td>
+		            <td>118</td>
+		            <td>1</td>
+		          </tr>
+		        </tbody>
+		      </table>
+    </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="INc" aria-labelledby="dropdown1-tab">
+              <p>3</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="INd" aria-labelledby="dropdown1-tab">
+              <p>4</p>
+            </div>
+           <div role="tabpanel" class="tab-pane fade" id="INe" aria-labelledby="dropdown1-tab">
+              <p>5</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="INf" aria-labelledby="dropdown1-tab">
+              <p>6</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

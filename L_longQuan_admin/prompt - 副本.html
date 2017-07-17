@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>信息提示</title>
+<link type="text/css" rel="stylesheet" href="css/tingyun.css" />
+<script type="text/javascript" src="js/tingyun.js"></script>
+<script type="text/javascript">
+(function($){
+	
+	var _message;
+	var _timer;
+	$.message = function(){
+		
+		var setting = {
+			s:2000,
+			e:"success",
+			c:""	
+		}
+		
+		var cnf = {};
+		
+		if($.isPlainObject(arguments[0])){
+			cnf = $.extend({},setting,arguments[0]);
+		}else if(typeof arguments[0]=="string" && typeof arguments[1]=="string"){
+			cnf.e = arguments[0];
+			cnf.c = arguments[1];
+			cnf.s = 1700;
+		}else{
+			return false;
+		}
+		
+		if(cnf.e==null||cnf.c==null){
+			return false;
+		}
+		
+		if(_message==null){
+			_message = $("body").prepend('<div class="info_box"><i></i></div>').children("div:first");
+		}
+		
+		function tstart(){
+			clearTimeout(_timer);
+			_timer=setTimeout(function(){
+				console.log(new Date());
+				_message.fadeOut();
+			},cnf.s);
+		}
+		
+		clearTimeout(_timer);
+		_message.removeClass("info_box_success info_box_fail info_box_warn");
+		
+		_message.css({
+			left:($(window).width()-228)/2+'px',
+			top:($(window).height()-49)/2*0.6+'px'}
+			).addClass("info_box_"+cnf.e)
+			.show()
+			.hover(function(){
+					clearTimeout(_timer)
+				},function(){
+					tstart()
+				}).children(":last").html('<i class="ico"></i>'+cnf.c);
+		tstart();
+	}
+})(jQuery);
+
+$(document).ready(function(){
+	$("input[val]").each(function(){
+		var _this = $(this);
+		_this.click(function(){
+			$.message(_this.attr("val"),"test" + _this.attr("val") );
+			//$.message({e:null,c:null});	
+		});	
+	});
+});
+
+</script>
+</head>
+<body>
+<input type="button" value="正确提示" onClick="_prompt('正确提示!!')" />
+<input type="button" value="错误提示" onClick="_prompt('错误提示!!',0)" />
+<input type="button" value="警告信息" onClick="_prompt('警告信息!!',2)" />
+
+<input type="button" value="正确提示1" val="success" />
+<input type="button" value="错误提示1" val="warn" />
+<input type="button" value="警告信息1" val="fail" />
+</body>
+</html>

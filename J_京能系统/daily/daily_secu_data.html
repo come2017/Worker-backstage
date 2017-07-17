@@ -1,0 +1,290 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>京能集团-安全管理数字化标准化管理平台</title>
+<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+<link href="../css/base.css" rel="stylesheet" type="text/css" />
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<script src="../basics/js/jquery-1.8.3.js" type="text/javascript" charset="utf-8"></script>
+<script src="../basics/js/JN_layer.js" type="text/javascript" charset="utf-8"></script>
+<script src="../basics/js/layer.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-ui.min.js"></script>
+<script src="../js/select-widget-min.js"></script>
+<script src="../js/laydate.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+		window.onload = function(){
+			var win=$(window).width();
+			$(".St-table tr:even").addClass("even-row"); 
+			$(".St-table tr:odd").addClass("odd-row"); 
+			$('.inline li:even').css('padding-left','0px');
+			if(win<1266&&win>1166){
+				$('.mr13').css({'margin-right':'60px'});
+				$('.mr15').css({'margin-right':'80px'});
+			}
+			if(win<1166){
+				$('.mr13').css({'margin-right':'10px'});
+				$('.mr15').css({'margin-right':'10px'});
+				$('.ml20').css({'margin-left':'0px'});
+				$('.inline li').css({'margin-right':'9px'});
+				$('.mr10').css({'margin-right':'10px'});
+			}
+	}
+
+	//下拉样式
+	$(document).ready(function(){		
+		$(".ui-select").selectWidget({
+			change       : function (changes) {
+				return changes;
+			},
+			effect       : "slide",
+			keyControl   : true,
+			speed        : 200,
+			scrollHeight : 200
+		});
+		
+	});	
+</script> 
+</head>
+
+<body>
+<!--内容-->
+<div class="w100">
+	<div class="innav c11 bg5c pl1">
+		<p>
+			<a href="../index.html" target="_blank">首页</a>&gt; 
+			 <a href="javascript:;">日常管理</a> &gt; 
+			 <a href="javascript:;">安全事件</a> 
+		</p>
+	</div>
+	<div class="innav02 of fs14 pl1">
+		<ul>
+			<li><a href="daily_secu_graph_cicle.html">图形展示</a></li>
+            <li><a href="daily_secu_report.html">报表分析</a></li>
+            <li class="current"><a href="javascript:;">数据查询</a></li>
+		</ul>
+	</div>
+	<div class="St-table">
+		<div class="shucon03 w97 bgb3 ma oh">
+			<ul class="shu fl pl01 w97">
+				<li class="rongyu fl mr13">
+					<div class="S_select">
+						<select name="drop2" class="ui-select ie-css3">
+							<option value="">京能集团</option>
+							<option value="1">京能集团 1</option>
+							<option value="2">京能集团 2</option>
+							<option value="3">京能集团 3</option>
+							<option value="4">京能集团 4</option>
+							<option value="5">京能集团 5</option>
+							<option value="6">京能集团 6</option>
+						</select>
+					</div>
+					<span class="S_title">单位 &nbsp;:</span>
+				</li>
+				<li class="fl mr13 rongyu">
+					<div class="S_select">
+						<select name="drop2" class="ui-select ie-css3">
+							<option value="">京能集团</option>
+							<option value="1">京能集团 1</option>
+							<option value="2">京能集团 2</option>
+							<option value="3">京能集团 3</option>
+							<option value="4">京能集团 4</option>
+							<option value="5">京能集团 5</option>
+							<option value="6">京能集团 6</option>
+						</select>
+					</div>
+					<span class="S_title">违章类型 &nbsp;:</span>
+				</li>
+				<li class="fl rongyu">
+					<div class="S_select">
+						<select name="drop2" class="ui-select ie-css3">
+							<option value="">京能集团</option>
+							<option value="1">京能集团 1</option>
+							<option value="2">京能集团 2</option>
+							<option value="3">京能集团 3</option>
+							<option value="4">京能集团 4</option>
+							<option value="5">京能集团 5</option>
+							<option value="6">京能集团 6</option>
+						</select>
+					</div>
+					<span class="S_title">事件主题 &nbsp;:</span>
+				</li>
+			</ul>
+			<ul class="shu fl pl01 mr13">
+				<li class="fl rongyu juli">
+					<div class="S_select">
+						<select name="drop2" class="ui-select ie-css3">
+							<option value="">京能集团</option>
+							<option value="1">京能集团 1</option>
+							<option value="2">京能集团 2</option>
+							<option value="3">京能集团 3</option>
+							<option value="4">京能集团 4</option>
+							<option value="5">京能集团 5</option>
+							<option value="6">京能集团 6</option>
+						</select>
+					</div>
+					<span class="S_title">事件主题 &nbsp;:</span>
+				</li>
+			</ul>
+			<div>
+				<ul class="inline rili01">
+					<li>编制日期：</li><li class="inline laydate-icon" id="start" style="width:170px; margin-right:10px;">2015-09-01</li>
+					<li class="mr10">至</li><li class="inline laydate-icon" id="end" style="width:170px;">2015-09-01</li>
+				</ul>
+			</div>
+			<div class="fr">
+				<div class="btn fl ie-css3">
+					<a class="cha" id="secu-cha" href="javascript:;">查询</a>
+				</div>
+			</div>
+		</div>
+		<div class="w97 shucontop fs16 cf ma18"> 
+			<span class="shucontop_c di fl">障碍类异常事件查询</span>
+			<a class="di fr oh" href="javascript:;">
+				<em class="fr fs16 cf cp">导出</em>
+				<img class="fr img02" src="../imgs/yiji/shu_dao.png"/>
+			</a>
+		</div>
+		<div class="w97 tiao bg1f"></div>
+		<div class="w97 ma">
+			<table width="100%" border="1">
+  <tr id="S_tablebg">
+    <td width="8%">序号</td>
+    <td width="11%">事故分类</td>
+    <td width="11%">事故简称</td>
+    <td width="11%">事故归属</td>
+    <td width="11%">起始时间</td>
+    <td width="11%">结束时间</td>
+    <td width="11%">责任单位</td>
+    <td width="9%">机组</td>
+    <td width="9%">专业</td>
+    <td width="8%">状态</td>
+    </tr>
+  <tr>
+    <td class="secu_layer">状态</td>
+    <td>状态</td>
+    <td>状态</td>
+    <td>状态</td>
+    <td>状态</td>
+    <td>状态</td>
+    <td>状态</td>
+    <td>状态</td>
+    <td>状态</td>
+    <td>状态</td>
+    </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    </tr>
+</table>
+			<div class="paging">
+				<a href="javascript:;" class="prev01"></a> 
+				<a href="javascript:;" class="prev02"></a> 
+				<a href="javascript:;" class="selected">1</a> 
+				<a href="javascript:;">2</a> <a href="javascript:;" class="next02"></a> 
+				<a href="javascript:;" class="next01"></a> <span>共232条　每页15条　跳到第<input type="text" value="1" />页</span> 
+				<a href="javascript:;" class="go">GO</a> 
+			</div>
+		</div>
+		<script type="text/javascript">
+			!function(){
+				laydate.skin('danlan');//切换皮肤，请查看skins下面皮肤库
+				laydate({elem: '#demo'});//绑定元素
+			}();
+			
+			//日期范围限制
+			var start = {
+				elem: '#start',
+				format: 'YYYY-MM-DD',
+				min: '1099-06-16', //设定最小日期为当前日期
+				max: '2099-06-16', //最大日期
+				istime: true,
+				istoday: false,
+				choose: function(datas){
+					 end.min = datas; //开始日选好后，重置结束日的最小日期
+					 end.start = datas //将结束日的初始值设定为开始日
+				}
+			};
+			
+			var end = {
+				elem: '#end',
+				format: 'YYYY-MM-DD',
+				min: '1099-06-16',
+				max: '2099-06-16',
+				istime: true,
+				istoday: false,
+				choose: function(datas){
+					start.max = datas; //结束日选好后，充值开始日的最大日期
+				}
+			};
+			laydate(start);
+			laydate(end);
+			
+			
+			laydate({
+				choose: function(datas){ //选择日期完毕的回调
+				}
+			});
+			
+		</script>
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>图片列表</title>
+<link rel="stylesheet" type="text/css" href="css/tingyun.css" />
+<script type="text/javascript" src="js/tingyun.js"></script>
+<script type="text/javascript" src="js/jquery-tingyun.js"></script>
+</head>
+
+<body mods="selectValue">
+
+<form action="admin.php" method="get" class="filter manage">
+	<div class="toggle" onClick="_toggleFilter(this)"></div>
+	<div class="title" onClick="_toggleFilter(this)">查询条件</div>
+	<dl class="items">
+		<dd>
+			<div><i>显示顺序：</i><input type="text" name="srh_orderby_s" value="" class="w80" /> - <input type="text" name="srh_orderby_e" value="" class="w80" /></div>
+		</dd>
+		<dd class="btns">
+			<input type="submit" value="筛选结果" class="button" /><a class="ml20" onClick="$(this).closest('form')[0].reset()">清空</a>
+		</dd>
+	</dl>
+</form>
+
+<div class="listtop">
+	<a href="admin.php?a=systemPic&c=showSystemPicSave" class="button button-link">添加信息</a>
+</div>
+<table width="100%" class="cwList" border="0" cellspacing="" cellpadding="">
+	<tr>
+		<td width="50%">
+			<span class="cwTitle">充值总额(元)</span>
+			<div class="cwData">
+				<span>
+					<i class="cw_d">10000</i>
+					<i class="cw_c">充值总额(元)</i>
+				</span>
+			</div>
+		</td>
+		<td width="50%">
+			<span class="cwTitle">提现总额(元)</span>
+			<div class="cwData cwData02">
+				<span>
+					<i class="cw_d">7000000</i>
+					<i class="cw_c">提现总额(元)</i>
+				</span>
+			</div>
+		</td>
+		<tr>
+		<td width="50%">
+			<span class="cwTitle">未领取红包(元)</span>
+			<div class="cwData cwData03">
+				<span>
+					<i class="cw_d">200</i>
+					<i class="cw_c">未领取红包(元)</i>
+				</span>
+			</div>
+		</td>
+		<td width="50%">
+			<span class="cwTitle">账户结余(元)</span>
+			<div class="cwData cwData04">
+				<span>
+					<i class="cw_d">1000000</i>
+					<i class="cw_c">账户结余(元)</i>
+				</span>
+			</div>
+		</td>
+	</tr>
+</table>
+</body>
+</html>

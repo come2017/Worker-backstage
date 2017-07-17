@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh-CN" style="overflow-y: hidden;">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+	<title>珈禾宏业综合管理系统</title>
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/nav.css"/>
+	<link rel="stylesheet" type="text/css" href="css/responsive-nav.css"/>
+	<script src="js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/responsive-nav.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/tingyun.mCustomScrollbar.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/tingyun.mousewheel.min.js" type="text/javascript" charset="utf-8"></script>
+	
+	<!--[if lt IE 9]>
+	<script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<script type="text/javascript">
+		$(function(){
+			
+			//二级导航初始
+			$('.CnavR dt').eq(0).hasClass('Cfoot_click_show');
+			$('.CnavR dd').eq(0).css('display','block');
+		    //二级导航切换事件
+		    $('.Cfoot-click').on('click', function() {
+		        if ($(this).hasClass('Cfoot_click_show')) {
+		            return false;
+		        }
+		        $('.CnavR').find('dd').slideUp();
+		        
+		        
+		        $('.CnavR').find('.Cfoot-click').removeClass('Cfoot_click_show CnavR-curr').addClass('Cfoot_click_hide');
+		        $(this).removeClass('Cfoot_click_hide').addClass('Cfoot_click_show CnavR-curr');
+		        $(this).next().slideDown();
+		    })
+		 			
+			
+			//二级导航点击事件
+			var wnd_width = $(window).width();
+			if(wnd_width < 768 ){
+				$('#navbar .navbar-nav li').click(function(){
+					$(".navbar-toggle").trigger("click");
+				});
+			}
+			
+			//导航滚动条美化
+			window.leftnav = $("#foo");
+			leftnav.mCustomScrollbar("destroy");
+			leftnav.mCustomScrollbar({
+				autoHideScrollbar:true,
+				scrollSpeed:20,
+				scrollInertia:1000, //滚动惯性-滚动缓动效果
+				theme:"leftnav"
+			});
+			
+			//点击一级  二级展示
+			$('.nav li').click(function(){
+				$('.CnavR dt').eq(0).hasClass('Cfoot_click_show');
+				$('.CnavR dd').eq(0).css('display','block');
+				$(this).addClass('navactivebg').siblings().removeClass('navactivebg');
+				var idx = $(this).index();
+				$('#foo dl').eq(idx).css('display','block').siblings().css('display','none');
+				$("#foo").mCustomScrollbar("destroy");
+				$("#foo").mCustomScrollbar({
+					autoHideScrollbar:true,
+					scrollSpeed:20,
+					scrollInertia:1000, //滚动惯性-滚动缓动效果
+					theme:"leftnav"
+				});
+			});
+			
+			//修改密码
+			$('#ques-tan').click(function(){
+				$('.ques_bg').css('display','block');
+				$('.ques_con').css('display','block');
+			});
+			$('#C_close,#C_esc').click(function(){
+				$('.ques_bg').css('display','none');
+			})
+
+		})
+	</script>
+</head>
+<body style="background: #1381BE;">
+	<!--头部-->
+	<div class="bootTOP">
+		<div class="logo fl">
+			<img src="img/logo1.png"/>
+		</div>
+		<div class="logo-zi">
+			<img src="img/logo2.png"/>
+			<ul class="Ctop-R fr">
+				<li><a href="javascript:;">您好！admin</a></li>
+				<li class="Cshu">丨</li>
+				<li id="ques-tan"><a href="javascript:;">修改密码</a></li>
+				<li class="Cshu">丨</li>
+				<li><a href="javascript:;">退出</a></li>
+			</ul>
+		</div>
+	</div>
+	<!--一级导航-->
+	<nav class="Cnav-bg navbar-default" id="container-fluid">
+		<div class="container-fluid">
+			<!--移动端一级Icon-->
+			<div class="navbar-header">
+				<button id="testBtn" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+						aria-expanded="false" aria-controls="navbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<!--pc、pad一级导航样式-->
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right Cnav" id="navbar-nav">
+					<li class="navactivebg"><a href="javascript:;">会员管理 </a></li>
+					<li><a href="javascript:;">产品管理</a></li>
+					<li><a href="javascript:;">系统管理</a></li>
+					<li><a href="javascript:;">权限管理</a></li>
+				</ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+		<!--/.container-fluid -->
+	</nav>
+	<!--中间内容-->
+	<div class="Idx_main" id="Idx_main">
+		
+		<!--二级带三级导航-->
+		<div role="navigation" id="foo" class="nav-collapse">
+			<!--二级 模块1  dt为二级目录  dd为三级目录-->
+			<dl class="CnavR">
+				<dt class="Cfoot_click_show Cfoot-click"><a href="javascript:;">首页管理</a><i></i></dt>
+				<dd>
+					<ul>
+						<li><a href="list.html" target="page">导航管理</a></li>
+						<li><a href="javascript:;">banner管理</a></li>
+						<li><a href="javascript:;">静态化管理</a></li>
+					</ul>
+				</dd>
+				<dt class="Cfoot_click_hide Cfoot-click"><a href="javascript:;">会员管理<i></i></a></dt>
+				<dd style="display: none">
+					<ul>
+						<li><a href="add.html" target="page">会员管理1</a></li>
+						<li><a href="javascript:;">会员管理2</a></li>
+						<li><a href="javascript:;">会员管理3</a></li>
+					</ul>
+				</dd>
+				<dt class="Cfoot_click_hide Cfoot-click"><a href="javascript:;">产品管理<i></i></a></dt>
+				<dd style="display: none">
+					<ul>
+						<li><a href="dingdan-IN.html" target="page">产品管理1</a></li>
+						<li><a href="javascript:;">产品管理2</a></li>
+						<li><a href="javascript:;">产品管理3</a></li>
+					</ul>
+				</dd>
+				<dt class="Cfoot_click_hide Cfoot-click"><a href="javascript:;">促销管理<i></i></a></dt>
+				<dd style="display: none">
+					<ul>
+						<li><a href="tab.html" target="page">促销管理1</a></li>
+						<li><a href="javascript:;">促销管理2</a></li>
+						<li><a href="javascript:;">促销管理3</a></li>
+					</ul>
+				</dd>
+				<dt class="Cfoot_click_hide Cfoot-click"><a href="javascript:;">内容管理<i></i></a></dt>
+				<dd style="display: none">
+					<ul>
+						<li><a href="dingdan-IN.html" target="page">内容管理1</a></li>
+						<li><a href="javascript:;">内容管理2</a></li>
+						<li><a href="javascript:;">内容管理3</a></li>
+					</ul>
+				</dd>
+				<dt class="Cfoot_click_hide Cfoot-click"><a href="javascript:;">栏目管理<i></i></a></dt>
+				<dd style="display: none">
+					<ul>
+						<li><a href="javascript:;">栏目管理1</a></li>
+						<li><a href="javascript:;">栏目管理2</a></li>
+						<li><a href="javascript:;">栏目管理3</a></li>
+					</ul>
+				</dd>
+				<dt class="Cfoot_click_hide Cfoot-click"><a href="javascript:;">广告管理<i></i></a></dt>
+				<dd style="display: none">
+					<ul>
+						<li><a href="javascript:;">广告管理1</a></li>
+						<li><a href="javascript:;">广告管理2</a></li>
+						<li><a href="javascript:;">广告管理3</a></li>
+					</ul>
+				</dd>
+				<dt class="Cfoot_click_hide Cfoot-click"><a href="javascript:;">系统管理<i></i></a></dt>
+				<dd style="display: none">
+					<ul>
+						<li><a href="xitong.html" target="page">系统管理1</a></li>
+					</ul>
+				</dd>
+			</dl>
+			<!--二级 模块2  dt为二级目录  dd为三级目录-->
+			<dl class="CnavR" style="display: none">
+				<dt class="Cfoot_click_show Cfoot-click"><a href="javascript:;">2222<i></i></a></dt>
+				<dd>
+					<ul>
+						<li><a href="javascript:;">333</a></li>
+						<li><a href="javascript:;">333</a></li>
+						<li><a href="javascript:;">333</a></li>
+					</ul>
+				</dd>
+				<dt class="Cfoot_click_hide Cfoot-click"><a href="javascript:;">2222<i></i></a></dt>
+				<dd style="display: none">
+					<ul>
+						<li><a href="javascript:;">333</a></li>
+						<li><a href="javascript:;">333</a></li>
+						<li><a href="javascript:;">333</a></li>
+					</ul>
+				</dd>
+				<dt class="Cfoot_click_hide Cfoot-click"><a href="javascript:;">2222<i></i></a></dt>
+				<dd style="display: none">
+					<ul>
+						<li><a href="javascript:;">333</a></li>
+						<li><a href="javascript:;">333</a></li>
+						<li><a href="javascript:;">333</a></li>
+					</ul>
+				</dd>
+				<dt class="Cfoot_click_hide Cfoot-click"><a href="javascript:;">2222<i></i></a></dt>
+				<dd style="display: none">
+					<ul>
+						<li><a href="javascript:;">333</a></li>
+						<li><a href="javascript:;">333</a></li>
+						<li><a href="javascript:;">333</a></li>
+					</ul>
+				</dd>
+				<dt class="Cfoot_click_hide Cfoot-click"><a href="javascript:;">2222<i></i></a></dt>
+				<dd style="display: none">
+					<ul>
+						<li><a href="javascript:;">333</a></li>
+						<li><a href="javascript:;">333</a></li>
+						<li><a href="javascript:;">333</a></li>
+					</ul>
+				</dd>
+			</dl>
+			<!--二级 模块3  dt为二级目录  dd为三级目录-->
+			<dl class="CnavR" style="display: none">
+				<dt class="Cfoot_click_show Cfoot-click"><a href="javascript:;">系统管理<i></i></a></dt>
+				<dd>
+					<ul>
+						<li><a href="xitong.html" target="page">系统管理</a></li>
+						<li><a href="javascript:;">3333333</a></li>
+						<li><a href="javascript:;">3333333</a></li>
+					</ul>
+				</dd>
+				<dt class="Cfoot_click_hide Cfoot-click"><a href="javascript:;">2333<i></i></a></dt>
+				<dd style="display: none">
+					<ul>
+						<li><a href="javascript:;">3333333</a></li>
+						<li><a href="javascript:;">3333333</a></li>
+						<li><a href="javascript:;">3333333</a></li>
+					</ul>
+				</dd>
+				<dt class="Cfoot_click_hide Cfoot-click"><a href="javascript:;">2333<i></i></a></dt>
+				<dd style="display: none">
+					<ul>
+						<li><a href="javascript:;">3333333</a></li>
+						<li><a href="javascript:;">3333333</a></li>
+						<li><a href="javascript:;">3333333</a></li>
+					</ul>
+				</dd>
+			</dl>	
+			<!--二级 模块4  dt为二级目录  dd为三级目录-->
+			<dl class="CnavR" style="display: none">
+				<dt class="Cfoot_click_show Cfoot-click"><a href="javascript:;">2444<i></i></a></dt>
+				<dd>
+					<ul>
+						<li><a href="javascript:;">3333333</a></li>
+						<li><a href="javascript:;">3333333</a></li>
+						<li><a href="javascript:;">3333333</a></li>
+					</ul>
+				</dd>
+				<dt class="Cfoot_click_hide Cfoot-click"><a href="javascript:;">2444<i></i></a></dt>
+				<dd style="display: none">
+					<ul>
+						<li><a href="javascript:;">3333333</a></li>
+						<li><a href="javascript:;">3333333</a></li>
+						<li><a href="javascript:;">3333333</a></li>
+					</ul>
+				</dd>
+				<dt class="Cfoot_click_hide Cfoot-click"><a href="javascript:;">2444<i></i></a></dt>
+				<dd style="display: none">
+					<ul>
+						<li><a href="javascript:;">3333333</a></li>
+						<li><a href="javascript:;">3333333</a></li>
+						<li><a href="javascript:;">3333333</a></li>
+					</ul>
+				</dd>
+			</dl>	
+			<!--<a href="javascript:;" id="linkNav" class="nav-toggle">Menu</a>-->
+		</div>
+		<!--小分辨率 二级导航样icon-->
+		<a href="javascript:;" id="linkNav" class="nav-toggle">Menu</a>
+		<!--主内容-->
+		<div role="main" class="main">
+			<iframe src="tab.html" name="page" frameborder="0" height="90%" width="100%"></iframe>
+		</div>
+	</div>
+
+	<div class="ques_bg">
+		<div class="ques_con">
+			<div class="ques_close" id="C_close">
+				<span>修改密码</span>
+				<i></i>
+			</div>
+			<div class="Ctan-con">
+				<ul>
+					<li>
+						<span>旧密码</span>
+						<input type="password"/>
+					</li>
+					<li>
+						<span>新密码</span>
+						<input type="password"/>
+					</li>
+					<li>
+						<span>再次输入新密码</span>
+						<input type="password"/>
+					</li>
+				</ul>
+				<div class="text-center clearfix">
+					<button class="btn btn-primary w_px70" type="button">确认</button>
+					<button class="btn btn-primary w_px70" type="button" id="C_esc">取消</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		var navigation = responsiveNav("foo", {customToggle: ".nav-toggle",open:function(){
+				window.setTimeout(function(){
+					$("#foo").mCustomScrollbar("destroy");
+					$("#foo").mCustomScrollbar({
+						autoHideScrollbar:true,
+						scrollSpeed:20,
+						scrollInertia:1000, //滚动惯性-滚动缓动效果
+						theme:"leftnav"
+					});
+				},300);
+			}});
+			
+		$("#foo li a").click(function(){
+			navigation.close();
+		});
+	</script>
+</body>
+</html>

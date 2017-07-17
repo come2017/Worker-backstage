@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>京能集团-安全管理数字化标准化管理平台</title>
+<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+<link href="../css/base.css" rel="stylesheet" type="text/css" />
+<link href="../css/table.css" rel="stylesheet" type="text/css" />
+<!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="../css/IE_css.css"/><![endif]--> <!--兼容ie浏览器在1024Px时正常显示-->
+<script src="js/jquery-1.8.3.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/layer.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/JN_layer.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-ui.min.js"></script>
+<script src="../js/select-widget-min.js"></script>
+<script src="../js/laydate.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+		window.onload = function(){
+			var win=$(window).width();
+			$(".St-table tr:even").addClass("even-row"); 
+			$(".St-table tr:odd").addClass("odd-row"); 
+			if(win<1266){
+				$('.mr05').css({'margin-right':'1%'});
+			}
+			if(win<1166&&win>900){
+				$('.btn_box01').css({'margin-top':'5px'});
+				$('.mr05').css({'margin-right':'0px'});
+				$('.pl2').css({'padding-left':'2px'});
+				$('.shu .rongyu').css({'width':'260px'});
+				
+			}
+	}
+
+		//下拉样式
+		$(document).ready(function(){		
+			$(".ui-select").selectWidget({
+				change       : function (changes) {
+					return changes;
+				},
+				effect       : "slide",
+				keyControl   : true,
+				speed        : 200,
+				scrollHeight : 200
+			});			
+	
+	});	
+</script>
+</head>
+
+<body>
+
+<div class="w100">
+	<div class="innav c11 bg5c pl1">
+		<p>
+			<a href="../index.html" target="_blank">首页</a>&gt; 
+			 <a href="javascript:;" >基础管理</a>  
+			 <a href="javascript:;" >&gt;荣誉管理</a> 
+		</p>
+	</div>
+	<div class="innav02 of fs14 pl1">
+		<ul>
+			<li class="current"><a href="javascript:;" >数据录入</a></li>
+			<li><a href="basics_RYreport_report.html" >报表分析</a></li>
+			<li><a href="basics_type_data.html" >数据查询</a></li>
+		</ul>
+	</div>
+	<!--数据录入-->
+	<div class="St-table">
+		<div class="mb15">
+			<div class="w97 shucontop fs16 cf ma"> 
+				<span class="shucontop_c di fl">荣誉查询</span> 
+				<img class="img01" src="../imgs/yiji/arrdown_w.png"/>
+			</div>
+			<div class="w97 tiao bg1f"></div>
+			<div class="shucon01 w97 bgb3 ma oh">
+				<ul class="shu fl pl2 mr05">
+					<li>
+						<div class="S_select">
+							<select name="drop2" class="ui-select ">
+								<option value="">京能集团</option>
+								<option value="1">京能集团 1</option>
+								<option value="2">京能集团 2</option>
+								<option value="3">京能集团 3</option>
+								<option value="4">京能集团 4</option>
+								<option value="5">京能集团 5</option>
+								<option value="6">京能集团 6</option>
+							</select>
+						</div>
+						<span class="S_title">单位 &nbsp;:</span>
+					</li>
+					<li>
+						<input type="text" class="inputs"/>
+						<span>人员姓名 :</span>
+					</li>
+					<li>
+						<input type="text" class="inputs"/>
+						<span>奖项和荣誉名称 :</span>
+					</li>
+				</ul>
+				<ul class="shu fl mr05">
+					<li class="rongyu">
+						<div class="S_select">
+							<select name="drop2" class="ui-select">
+								<option value="">京能集团</option>
+								<option value="1">京能集团 1</option>
+								<option value="2">京能集团 2</option>
+								<option value="3">京能集团 3</option>
+								<option value="4">京能集团 4</option>
+								<option value="5">京能集团 5</option>
+								<option value="6">京能集团 6</option>
+							</select>
+						</div>
+						<span class="S_title">部门 &nbsp;:</span>
+					</li>
+					<li class="rongyu"> 
+						<input type="text" class="inputs"/>
+						<span>获得主体 :</span>
+					</li>
+					<li class="rongyu">
+						<input type="text" class="inputs"/>
+						<span>颁奖日期 :</span>
+					</li>
+				</ul>
+				<ul class="shu fl pl01">
+					<li>
+						<div class="S_select">
+							<select name="drop2" class="ui-select">
+								<option value="">京能集团</option>
+								<option value="1">京能集团 1</option>
+								<option value="2">京能集团 2</option>
+								<option value="3">京能集团 3</option>
+								<option value="4">京能集团 4</option>
+								<option value="5">京能集团 5</option>
+								<option value="6">京能集团 6</option>
+							</select>
+						</div>
+						<span class="S_title">专业/值 &nbsp;:</span>
+					</li>
+					<li>
+						<div class="S_select">
+							<select name="drop2" class="ui-select">
+								<option value="">京能集团</option>
+								<option value="1">京能集团 1</option>
+								<option value="2">京能集团 2</option>
+								<option value="3">京能集团 3</option>
+								<option value="4">京能集团 4</option>
+								<option value="5">京能集团 5</option>
+								<option value="6">京能集团 6</option>
+							</select>
+						</div>
+						<span class="S_title">奖项和荣誉分类&nbsp;:</span>
+					</li>
+				</ul>
+				<div class="btn_box01 fr">
+					<div class="btn fl">
+						<a class="cha" href="javascript:;" >查询</a>
+					</div>
+					<div class="btn fl">
+						<a class="repeat" href="javascript:;" >重置</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var oem=true;
+			$('.shucontop img').click(function(){
+				if(oem){
+					$('.shucon01').hide();
+					oem=false;
+				}else{
+					$('.shucon01').show();
+					oem=true;
+				}
+				return false;
+			})
+		</script>
+		<div class="w97 shucontop fs16 cf ma"> 
+			<span class="shucontop_c di fl">荣誉查询列表</span>
+			<a class="di fr oh" href="javascript:;" >
+				<em class="fr fs16 cf cp">导出</em>
+				<img class="fr img02" src="../imgs/yiji/shu_dao.png"/>
+			</a>
+		</div>
+		<div class="w97 tiao bg1f"></div>
+		<div class="w97 ma">
+			<div class="S_rongyu_list_title">
+				<ul>
+					<li class="S_title_a"><a href="javascript:;" >新建</a></li>
+					<li class="S_title_b"><a href="javascript:;">修改</a></li>
+					<li class="S_title_c"><a href="javascript:;">废除</a></li>
+					<li class="S_title_d"><a href="javascript:;">归档</a></li>
+					<li class="S_title_e"><a href="javascript:;">查看</a></li>
+				</ul>
+			</div>
+			<table width="100%" border="1">
+				<tr>
+					<td></td>
+					<td>单位</td>
+					<td>部门</td>
+					<td>专业/值</td>
+					<td>人员姓名</td>
+					<td width="11%">获得主体</td>
+					<td width="12%">奖项和荣誉分类</td>
+					<td width="9%">颁奖单位</td>
+					<td width="8%">颁奖和荣誉名称</td>
+					<td width="9%">颁奖和日期</td>
+					<td width="8%">状态</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" class="cBox_Btn" /></td>
+					<td>电厂</td>
+					<td>发电部</td>
+					<td></td>
+					<td>11</td>
+					<td></td>
+					<td>质量类</td>
+					<td>45</td>
+					<td>45</td>
+					<td>2015-08-04</td>
+					<td>未归档</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" class="cBox_Btn"/></td>
+					<td>电厂</td>
+					<td>发电部</td>
+					<td>二期运行五值</td>
+					<td>测试用户1</td>
+					<td></td>
+					<td>质量类</td>
+					<td>11</td>
+					<td>11</td>
+					<td>2015-08-04</td>
+					<td>未归档</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" class="cBox_Btn" /></td>
+					<td>电厂</td>
+					<td>发电部</td>
+					<td>二期运行五值</td>
+					<td>测试用户2</td>
+					<td></td>
+					<td>安全沱工</td>
+					<td>fdfsd</td>
+					<td>11</td>
+					<td>2015-08-04</td>
+					<td>未归档</td>
+				</tr>
+			</table>
+		</div>
+		<div class="paging"> 
+			<a href="javascript:;" class="prev01"></a> 
+			<a href="javascript:;" class="prev02"></a> 
+			<a href="javascript:;" class="selected">1</a> 
+			<a href="javascript:;" >2</a> <a href="javascript:;" class="next02"></a> 
+			<a href="javascript:;" class="next01"></a> <span>共232条　每页15条　跳到第<input type="text" value="1" />页</span> 
+			<a href="javascript:;" class="go">GO</a> 
+		</div>
+	</div>
+	</div>
+</body>
+</html>

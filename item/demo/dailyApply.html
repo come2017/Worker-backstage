@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="../sources/css/dailyApply.css" rel="stylesheet" type="text/css" />
+    <script src="js/dailyApply.js"></script>
+</head>
+<body>
+<div class="fun bs">
+    <ul class="clear">
+        <li class="fl">
+            <label class="f0 vm">
+                <span class="fb vm f14">起飞机场&nbsp;:&nbsp;</span>
+                <select class="public_select vm">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </label>
+        </li>
+        <li class="fl">
+            <label class="f0 vm">
+                <span class="fb vm f14">降落机场&nbsp;:&nbsp;</span>
+                <select class="public_select vm">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </label>
+        </li>
+        <li class="fl">
+            <label class="f0 vm">
+                <span class="fb vm f14">航班号&nbsp;:&nbsp;</span>
+                <input class="public_input vm" type="text" />
+            </label>
+        </li>
+        <li class="fl">
+            <label class="f0 vm">
+                <span class="fb vm f14">执行日期&nbsp;:&nbsp;</span>
+                <input class="date public_input" type="text">
+                <span class="f14 vm mx5">至</span>
+                <input class="date public_input" type="text">
+            </label>
+        </li>
+        <li class="fl">
+            <label class="f0 vm">
+                <a class="public_btn vm" href="javascript:void(0);">查询</a>
+            </label>
+        </li>
+        <li class="fl">
+            <label class="f0 vm">
+                <a class="dailyApplyAdd public_btn vm" href="javascript:void(0);">添加</a>
+            </label>
+        </li>
+        <li class="fl">
+            <label class="f0 vm">
+                <a class="public_btn vm" href="javascript:void(0);">EXCEL导出</a>
+            </label>
+        </li>
+    </ul>
+</div>
+<div class="details bs">
+    <div class="detailsBox w100 h100 oa oy">
+        <table class="max_table w100" cellspacing="0" cellpadding="0" border="0">
+            <thead></thead>
+            <tbody>
+                <tr>
+                    <td class="td_right0 td_bottom0">
+                        <table class="w100" cellpadding="0" cellspacing="0" border="0">
+                            <thead>
+                                <tr class="tr_head">
+                                    <td>信息头</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="td_right0 td_bottom0">
+                                        <ul class="dailyApplyTabHead clear bs">
+                                            <li class="fl tc cp f14 fb">临时班机航线</li>
+                                            <li class="fl tc cp f14 fb">军民合用机场</li>
+                                            <li class="fl tc cp f14 fb">现行班机航线高度</li>
+                                        </ul>
+                                        <div class="dailyApplyTabBody bs">
+                                            <div>
+                                                <div>
+                                                    <table class="min_table w100" cellspacing="0" cellpadding="0" border="0">
+                                                        <colgroup>
+                                                            <col class="td_width50">
+                                                            <col class="td_width140">
+                                                            <col class="td_width80">
+                                                            <col class="td_width80">
+                                                            <col class="td_width80">
+                                                            <col class="td_width80">
+                                                            <col class="">
+                                                            <col class="">
+                                                            <col class="">
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr class="tr_head">
+                                                                <td>行号</td>
+                                                                <td>操作</td>
+                                                                <td>航班号</td>
+                                                                <td>机型</td>
+                                                                <td>起飞机场</td>
+                                                                <td>降落机场</td>
+                                                                <td>航线走向</td>
+                                                                <td>执行日期</td>
+                                                                <td>申请日期</td>
+                                                            </tr>
+                                                        </thead>
+                                                    </table>
+                                                </div>
+                                                <div>
+                                                    <table class="min_talbe tc w100" cellspacing="0" cellpadding="0" border="0">
+                                                        <colgroup>
+                                                            <col class="td_width50">
+                                                            <col class="td_width140">
+                                                            <col class="td_width80">
+                                                            <col class="td_width80">
+                                                            <col class="td_width80">
+                                                            <col class="td_width80">
+                                                            <col class="">
+                                                            <col class="">
+                                                            <col class="">
+                                                        </colgroup>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>1</td>
+                                                                <td class="action-buttons">
+                                                                    <a class="blue f18" href="#"><i class="icon-zoom-in"></i></a>
+                                                                    <a class="green f18" href="#"><i class="icon-pencil"></i></a>
+                                                                    <a class="red f18" href="#"><i class="icon-trash"></i></a>
+                                                                </td>
+                                                                <td>CCA117/8</td>
+                                                                <td>B463</td>
+                                                                <td>ZBAA</td>
+                                                                <td>DAAG</td>
+                                                                <td>sdf；...</td>
+                                                                <td>20161001-20161031</td>
+                                                                <td>2016/11/15 17:05:38</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div>
+                                                    <table class="min_table w100" cellspacing="0" cellpadding="0" border="0">
+                                                        <colgroup>
+                                                            <col class="td_width50">
+                                                            <col class="td_width140">
+                                                            <col class="td_width80">
+                                                            <col class="td_width80">
+                                                            <col class="td_width80">
+                                                            <col class="td_width80">
+                                                            <col class="">
+                                                            <col class="">
+                                                        </colgroup>
+                                                        <thead>
+                                                        <tr class="tr_head">
+                                                            <td>行号</td>
+                                                            <td>操作</td>
+                                                            <td>航班号</td>
+                                                            <td>机型</td>
+                                                            <td>起飞机场</td>
+                                                            <td>降落机场</td>
+                                                            <td>执行日期</td>
+                                                            <td>申请日期</td>
+                                                        </tr>
+                                                        </thead>
+                                                    </table>
+                                                </div>
+                                                <div>
+                                                    <table class="min_table tc w100" cellspacing="0" cellpadding="0" border="0">
+                                                        <colgroup>
+                                                            <col class="td_width50">
+                                                            <col class="td_width140">
+                                                            <col class="td_width80">
+                                                            <col class="td_width80">
+                                                            <col class="td_width80">
+                                                            <col class="td_width80">
+                                                            <col class="">
+                                                            <col class="">
+                                                        </colgroup>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>1</td>
+                                                                <td class="action-buttons">
+                                                                    <a class="blue f18" href="#"><i class="icon-zoom-in"></i></a>
+                                                                    <a class="green f18" href="#"><i class="icon-pencil"></i></a>
+                                                                    <a class="red f18" href="#"><i class="icon-trash"></i></a>
+                                                                </td>
+                                                                <td>CCA115/6</td>
+                                                                <td>100</td>
+                                                                <td>ZBAA</td>
+                                                                <td>UTTT</td>
+                                                                <td>20161001-20161031</td>
+                                                                <td>2016/11/15 09:26:09</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div>
+                                                    <table class="min_table w100" cellspacing="0" cellpadding="0" border="0">
+                                                        <colgroup>
+                                                            <col class="td_width50">
+                                                            <col class="td_width140">
+                                                            <col class="td_width80">
+                                                            <col class="td_width80">
+                                                            <col class="td_width80">
+                                                            <col class="td_width80">
+                                                            <col class="">
+                                                            <col class="">
+                                                            <col class="">
+                                                            <col class="">
+                                                        </colgroup>
+                                                        <thead>
+                                                        <tr class="tr_head">
+                                                            <td>行号</td>
+                                                            <td>操作</td>
+                                                            <td>航班号</td>
+                                                            <td>机型</td>
+                                                            <td>起飞机场</td>
+                                                            <td>降落机场</td>
+                                                            <td>航线走向</td>
+                                                            <td>飞行高度</td>
+                                                            <td>执行日期</td>
+                                                            <td>申请日期</td>
+                                                        </tr>
+                                                        </thead>
+                                                    </table>
+                                                </div>
+                                                <div>
+                                                    <table class="min_table tc w100" cellspacing="0" cellpadding="0" border="0">
+                                                        <colgroup>
+                                                            <col class="td_width50">
+                                                            <col class="td_width140">
+                                                            <col class="td_width80">
+                                                            <col class="td_width80">
+                                                            <col class="td_width80">
+                                                            <col class="td_width80">
+                                                            <col class="">
+                                                            <col class="">
+                                                            <col class="">
+                                                            <col class="">
+                                                        </colgroup>
+                                                        <tbody>
+                                                        <tr>
+                                                            <td>行号</td>
+                                                            <td class="action-buttons">
+                                                                <a class="blue f18" href="#"><i class="icon-zoom-in"></i></a>
+                                                                <a class="green f18" href="#"><i class="icon-pencil"></i></a>
+                                                                <a class="red f18" href="#"><i class="icon-trash"></i></a>
+                                                            </td>
+                                                            <td>CSC200/190</td>
+                                                            <td>CSC200/190</td>
+                                                            <td>ZBAA</td>
+                                                            <td>ZBAA</td>
+                                                            <td>按空军一...</td>
+                                                            <td>9000......</td>
+                                                            <td>20161001-20161031</td>
+                                                            <td>2016/11/15 17:22:06</td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="page pl10"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="page_foot pa bottom10 left0 bs px20">
+
+</div>
+</body>
+</html>

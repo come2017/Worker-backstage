@@ -1,0 +1,488 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>京能集团-安全管理数字化标准化管理平台</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+	<link href="../css/base.css" rel="stylesheet" type="text/css" />
+	<link href="../css/table.css" rel="stylesheet" type="text/css" />
+	<script src="../js/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/jquery-ui.min.js"></script>
+	<script src="../js/select-widget-min.js"></script>
+	<script src="../js/laydate.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		window.onload = function(){
+			var win=$(window).width();
+			$(".St-table tr:even").addClass("even-row"); 
+			$(".St-table tr:odd").addClass("odd-row"); 
+			if(win<1266){
+				
+			}
+	}
+
+	//下拉样式
+	$(document).ready(function(){		
+		$(".ui-select").selectWidget({
+			change       : function (changes) {
+				return changes;
+			},
+			effect       : "slide",
+			keyControl   : true,
+			speed        : 200,
+			scrollHeight : 200
+		});
+		
+	});	
+</script>
+</head>
+
+<body>
+<!--内容-->
+<div class="w100">
+	<div class="innav c11 bg5c pl1">
+		<p>
+			<a href="../index.html" target="_blank">首页</a>&gt; 
+			 <a href="javascript:;">日常管理</a> &gt; 
+			 <a href="javascript:;">应急管理</a> 
+		</p>
+	</div>
+	<div class="innav02 of fs14 pl1">
+		<ul>
+			<li><a href="daily_yingji_graph_line.html">图形展示</a></li>
+			<li class="current"><a href="javascript:;">报表分析</a></li>
+			<li><a href="daily_yingji_data_a.html">数据查询</a></li>
+		</ul>
+	</div>
+	<div class="w97 h130">
+		<ul class="shu fl pl01 mt40">
+			<li class="danwei ml20">
+				<div class="S_select">
+					<select name="drop2" class="ui-select ie-css3">
+						<option value="">京能集团</option>
+						<option value="1">京能集团 1</option>
+						<option value="2">京能集团 2</option>
+						<option value="3">京能集团 3</option>
+						<option value="4">京能集团 4</option>
+						<option value="5">京能集团 5</option>
+						<option value="6">京能集团 6</option>
+					</select>
+				</div>
+				<span class="S_text fr">单位 &nbsp;:</span>
+			</li>
+		</ul>
+		<div class="changepic fr">
+			<dl class="current tac">
+				<dt><a class="di cp con07"></a></dt>
+				<dd class="fs12 cf ta">应急预案</dd>
+			</dl>
+			<dl class="tac">
+				<dt><a class="di cp con08"></a></dt>
+				<dd class="fs12 cf ta">应急物资</dd>
+			</dl>
+		</div>
+	</div>	
+	<script>
+		$('.changepic dl').click(function(){
+			var oQie=$(this).index();
+			$(this).addClass('current').siblings().removeClass('current');
+			$('.St-table').eq(oQie).css({'display':'block'}).siblings().css({'display':'none'});
+		})
+	</script>
+	<!--圆形图内容-->
+	<div class="w97 ma36 of">
+		<div class="St-table">
+			<div class="w100 shucontop fs16 cf"> 
+				<span class="shucontop_c di fl">应急预案信息查询报表</span>
+				<a class="di fr oh" href="javascript:;">
+					<em class="fr fs16 cf cp">导出</em>
+					<img class="fr img02" src="../imgs/yiji/shu_dao.png"/>
+				</a>
+			</div>
+			<div class="w100 tiao bg1f"></div>
+			<table width="100%" border="1">
+			  <tr id="S_tablebg">
+			    <td width="4%">序号</td>
+			    <td width="7%">单位名称</td>
+			    <td width="7%">预案编号</td>
+			    <td width="7%">预案名称</td>
+			    <td width="6%">针对风险类别</td>
+			    <td width="7%">审核评估情况</td>
+			    <td width="7%">评估机构</td>
+			    <td width="7%">评估时间</td>
+			    <td width="7%">备案情况</td>
+			    <td width="7%">演练周期</td>
+			    <td width="6%">上次演练时间</td>
+			    <td width="7%">演练记录</td>
+			    <td width="7%">上次演练计划执行情况</td>
+			    <td width="7%">下次计划演练时间</td>
+			    <td width="7%">下次最迟演练时间</td>
+			    </tr>
+			  <tr>
+			    <td>1</td>
+			    <td>京能集团</td>
+			    <td>类型A</td>
+			    <td>名称A</td>
+			    <td>风险AA</td>
+			    <td>1000000</td>
+			    <td>57892</td>
+			    <td>2015</td>
+			    <td>2015</td>
+			    <td>2</td>
+			    <td>2015</td>
+			    <td>57892</td>
+			    <td>完成</td>
+			    <td>2015</td>
+			    <td>2015</td>
+			    </tr>
+			  <tr>
+			    <td>2</td>
+			    <td>京能集团</td>
+			    <td>类型A</td>
+			    <td>名称A</td>
+			    <td>风险AA</td>
+			    <td>1000000</td>
+			    <td>57892</td>
+			    <td>2015</td>
+			    <td>2015</td>
+			    <td>2</td>
+			    <td>2015</td>
+			    <td>57892</td>
+			    <td>完成</td>
+			    <td>2015</td>
+			    <td>2015</td>
+			    </tr>
+			  <tr>
+			    <td>3</td>
+			    <td>京能集团</td>
+			    <td>类型A</td>
+			    <td>名称A</td>
+			    <td>风险AA</td>
+			    <td>1000000</td>
+			    <td>57892</td>
+			    <td>2015</td>
+			    <td>2015</td>
+			    <td>2</td>
+			    <td>2015</td>
+			    <td>57892</td>
+			    <td>完成</td>
+			    <td>2015</td>
+			    <td>2015</td>
+			    </tr>
+			  <tr>
+			    <td>4</td>
+			    <td>京能集团</td>
+			    <td>类型A</td>
+			    <td>名称A</td>
+			    <td>风险AA</td>
+			    <td>1000000</td>
+			    <td>57892</td>
+			    <td>2015</td>
+			    <td>2015</td>
+			    <td>2</td>
+			    <td>2015</td>
+			    <td>57892</td>
+			    <td>完成</td>
+			    <td>2015</td>
+			    <td>2015</td>
+			    </tr>
+			  <tr>
+			    <td>5</td>
+			    <td>京能集团</td>
+			    <td>类型A</td>
+			    <td>名称A</td>
+			    <td>风险AA</td>
+			    <td>1000000</td>
+			    <td>57892</td>
+			    <td>2015</td>
+			    <td>2015</td>
+			    <td>2</td>
+			    <td>2015</td>
+			    <td>57892</td>
+			    <td>完成</td>
+			    <td>2015</td>
+			    <td>2015</td>
+			    </tr>
+			  <tr>
+			    <td>6</td>
+			    <td>京能集团</td>
+			    <td>类型A</td>
+			    <td>名称A</td>
+			    <td>风险AA</td>
+			    <td>1000000</td>
+			    <td>57892</td>
+			    <td>2015</td>
+			    <td>2015</td>
+			    <td>2</td>
+			    <td>2015</td>
+			    <td>57892</td>
+			    <td>完成</td>
+			    <td>2015</td>
+			    <td>2015</td>
+			    </tr>
+			  <tr>
+			    <td>7</td>
+			    <td>京能集团</td>
+			    <td>类型A</td>
+			    <td>名称A</td>
+			    <td>风险AA</td>
+			    <td>1000000</td>
+			    <td>57892</td>
+			    <td>2015</td>
+			    <td>2015</td>
+			    <td>2</td>
+			    <td>2015</td>
+			    <td>57892</td>
+			    <td>完成</td>
+			    <td>2015</td>
+			    <td>2015</td>
+			    </tr>
+			  <tr>
+			    <td>8</td>
+			    <td>京能集团</td>
+			    <td>类型A</td>
+			    <td>名称A</td>
+			    <td>风险AA</td>
+			    <td>1000000</td>
+			    <td>57892</td>
+			    <td>2015</td>
+			    <td>2015</td>
+			    <td>2</td>
+			    <td>2015</td>
+			    <td>57892</td>
+			    <td>完成</td>
+			    <td>2015</td>
+			    <td>2015</td>
+			    </tr>
+			  <tr>
+			    <td>9</td>
+			    <td>京能集团</td>
+			    <td>类型A</td>
+			    <td>名称A</td>
+			    <td>风险AA</td>
+			    <td>1000000</td>
+			    <td>57892</td>
+			    <td>2015</td>
+			    <td>2015</td>
+			    <td>2</td>
+			    <td>2015</td>
+			    <td>57892</td>
+			    <td>完成</td>
+			    <td>2015</td>
+			    <td>2015</td>
+			    </tr>
+			  <tr>
+			    <td>10</td>
+			    <td>京能集团</td>
+			    <td>类型A</td>
+			    <td>名称A</td>
+			    <td>风险AA</td>
+			    <td>1000000</td>
+			    <td>57892</td>
+			    <td>2015</td>
+			    <td>2015</td>
+			    <td>2</td>
+			    <td>2015</td>
+			    <td>57892</td>
+			    <td>完成</td>
+			    <td>2015</td>
+			    <td>2015</td>
+			    </tr>
+			  <tr>
+			    <td>11</td>
+			    <td>京能集团</td>
+			    <td>类型A</td>
+			    <td>名称A</td>
+			    <td>风险AA</td>
+			    <td>1000000</td>
+			    <td>57892</td>
+			    <td>2015</td>
+			    <td>2015</td>
+			    <td>2</td>
+			    <td>2015</td>
+			    <td>57892</td>
+			    <td>完成</td>
+			    <td>2015</td>
+			    <td>2015</td>
+			    </tr>
+			  <tr>
+			    <td>12</td>
+			    <td>京能集团</td>
+			    <td>类型A</td>
+			    <td>名称A</td>
+			    <td>风险AA</td>
+			    <td>1000000</td>
+			    <td>57892</td>
+			    <td>2015</td>
+			    <td>2015</td>
+			    <td>2</td>
+			    <td>2015</td>
+			    <td>57892</td>
+			    <td>完成</td>
+			    <td>2015</td>
+			    <td>2015</td>
+			    </tr>
+			</table>
+			<div class="paging">
+				<a href="javascript:;" class="prev01"></a> 
+				<a href="javascript:;" class="prev02"></a> 
+				<a href="javascript:;" class="selected">1</a> 
+				<a href="javascript:;">2</a> <a href="javascript:;" class="next02"></a> 
+				<a href="javascript:;" class="next01"></a> <span>共232条　每页15条　跳到第<input type="text" value="1" />页</span> 
+				<a href="javascript:;" class="go">GO</a> 
+			</div>
+		</div>
+			    <!--圆形图内容-->
+		<div class="St-table" style="display:none;">
+			<div class="w100 shucontop fs16 cf"> 
+				<span class="shucontop_c di fl">应急物资信息查询报表</span>
+				<a class="di fr oh" href="javascript:;">
+					<em class="fr fs16 cf cp">导出</em>
+					<img class="fr img02" src="../imgs/yiji/shu_dao.png"/>
+				</a>
+			</div>
+			<div class="w100 tiao bg1f"></div>
+			<table width="100%" border="1">
+			  <tr id="S_tablebg">
+			    <td width="8%">序号</td>
+			    <td width="13%">单位名称</td>
+			    <td width="13%">类型</td>
+			    <td width="12%">物资名称</td>
+			    <td width="12%">数量</td>
+			    <td width="16%">合格率/可利用率</td>
+			    <td width="13%">保管负责人</td>
+			    <td width="13%">联系方式</td>
+			    </tr>
+			  <tr>
+			    <td>1</td>
+			    <td>京能集团</td>
+			    <td>类型A</td>
+			    <td>名称A</td>
+			    <td>12358</td>
+			    <td>100%</td>
+			    <td>赵小青</td>
+			    <td>13813800138</td>
+			    </tr>
+			  <tr>
+			    <td>2</td>
+			    <td>京能集团</td>
+			    <td>类型A</td>
+			    <td>名称A</td>
+			    <td>12358</td>
+			    <td>100%</td>
+			    <td>赵小青</td>
+			    <td>13813800138</td>
+			    </tr>
+			  <tr>
+			    <td>3</td>
+			    <td>京能集团</td>
+			    <td>类型A</td>
+			    <td>名称A</td>
+			    <td>12358</td>
+			    <td>100%</td>
+			    <td>赵小青</td>
+			    <td>13813800138</td>
+			    </tr>
+			  <tr>
+			    <td>4</td>
+			    <td>京能集团</td>
+			    <td>类型A</td>
+			    <td>名称A</td>
+			    <td>12358</td>
+			    <td>100%</td>
+			    <td>赵小青</td>
+			    <td>13813800138</td>
+			    </tr>
+			  <tr>
+			    <td>5</td>
+			    <td>京能集团</td>
+			    <td>类型A</td>
+			    <td>名称A</td>
+			    <td>12358</td>
+			    <td>100%</td>
+			    <td>赵小青</td>
+			    <td>13813800138</td>
+			    </tr>
+			  <tr>
+			    <td>6</td>
+			    <td>京能集团</td>
+			    <td>类型A</td>
+			    <td>名称A</td>
+			    <td>12358</td>
+			    <td>100%</td>
+			    <td>赵小青</td>
+			    <td>13813800138</td>
+			    </tr>
+			    <tr>
+			    <td>7</td>
+			    <td>京能集团</td>
+			    <td>类型A</td>
+			    <td>名称A</td>
+			    <td>12358</td>
+			    <td>100%</td>
+			    <td>赵小青</td>
+			    <td>13813800138</td>
+			    </tr>
+			    <tr>
+			    <td>8</td>
+			    <td>京能集团</td>
+			    <td>类型A</td>
+			    <td>名称A</td>
+			    <td>12358</td>
+			    <td>100%</td>
+			    <td>赵小青</td>
+			    <td>13813800138</td>
+			    </tr>
+			    <tr>
+			    <td>9</td>
+			    <td>京能集团</td>
+			    <td>类型A</td>
+			    <td>名称A</td>
+			    <td>12358</td>
+			    <td>100%</td>
+			    <td>赵小青</td>
+			    <td>13813800138</td>
+			    </tr>
+			    <tr>
+			    <td>10</td>
+			    <td>京能集团</td>
+			    <td>类型A</td>
+			    <td>名称A</td>
+			    <td>12358</td>
+			    <td>100%</td>
+			    <td>赵小青</td>
+			    <td>13813800138</td>
+			    </tr>
+			    <tr>
+			    <td>11</td>
+			    <td>京能集团</td>
+			    <td>类型A</td>
+			    <td>名称A</td>
+			    <td>12358</td>
+			    <td>100%</td>
+			    <td>赵小青</td>
+			    <td>13813800138</td>
+			    </tr>
+			    <tr>
+			    <td>12</td>
+			    <td>京能集团</td>
+			    <td>类型A</td>
+			    <td>名称A</td>
+			    <td>12358</td>
+			    <td>100%</td>
+			    <td>赵小青</td>
+			    <td>13813800138</td>
+			    </tr>
+			</table>
+			<div class="paging">
+				<a href="javascript:;" class="prev01"></a> 
+				<a href="javascript:;" class="prev02"></a> 
+				<a href="javascript:;" class="selected">1</a> 
+				<a href="javascript:;">2</a> <a href="javascript:;" class="next02"></a> 
+				<a href="javascript:;" class="next01"></a> <span>共232条　每页15条　跳到第<input type="text" value="1" />页</span> 
+				<a href="javascript:;" class="go">GO</a> 
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+.layui-form-radio{
+    margin: 0;
+    margin-left: 10px;
+}
+.uploadTitle{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: #3EAFE0 url(img/ico37.png) no-repeat;
+    border-radius: 4px;
+}
+.span_ml40{
+    margin-left: 40px;
+}
+.span_ml50{
+    margin-left: 50px;
+}
+.span_ml54{
+    margin-left: 54px;
+}
+.span_color1{
+    color: #ec0707;
+}

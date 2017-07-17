@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+<title>珈禾宏业综合管理系统</title>
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/nav.css"/>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<link rel="stylesheet" type="text/css" href="css/responsive-nav.css"/>
+<!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<script src="js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body>
+<div id="wrapper">
+<!--列表页-->
+<div class="List-con">
+  <section class="CtitTop"> 当前位置：<a href="javascript:;">首页管理 </a> > <a href="javascript:;">导航管理</a></section>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span12 cprev">
+        <div class="con-header">添加产品</div>
+        <!--<div class="toogle"></div>-->
+        <div class="bs-example bs-example-tabs mt_px20" data-example-id="togglable-tabs">
+          <ul id="myTabs" class="nav Cnav-tab1 nav-tabs Cnav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">基本信息</a></li>
+            <li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">产品图片</a></li>
+            <li role="presentation"><a href="#dropdown" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">产品详情</a></li>
+            <li role="presentation"><a href="#guige" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">规格</a></li>
+          </ul>
+          <div id="myTabContent" class="tab-content">
+            <div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">
+            	<div class="container-fluid">
+            		<from class="form-horizontal sbsj">
+            		<div class="row">
+            			<div class="col-lg-6 col-xs-12 Clable_n">
+
+            				<div class="form-group form-inline">
+	                            <label for="exampleInputName2" class="col-sm-3 control-label"><i class="redmi"></i>产品类型：</label>
+                                <div class="col-sm-9">
+                                    <select class="form-control">
+                                        <option>洞藏产品系列</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group form-inline">
+	                            <label for="exampleInputName2" class="col-sm-3 control-label"><i class="redmi"></i>产品价格：</label>
+                                <div class="col-sm-9">
+	                                <input type="text" class="form-control" id="exampleInputName2">
+                                </div>
+                            </div>
+                            <div class="form-group form-inline">
+	                            <label for="exampleInputName2" class="col-sm-3 control-label">市场价：</label>
+                                <div class="col-sm-9">
+	                                <input type="text" class="form-control" id="exampleInputName2">
+                                </div>
+                            </div>
+                            <div class="form-group form-inline">
+	                            <label for="exampleInputName2" class="col-sm-3 control-label"><i class="redmi"></i>列表图片：</label>
+                                <div class="col-sm-9 col-sm-Cui">
+                                    <input type="text" class="form-control" id="exampleInputName2">
+                                    <button type="button" class="btn bgce77420 cf">上传图片</button>
+                                    <span class="Czi">列表图片大小为335 X 470</span>
+                                    <div class="C_listimg clearfix">
+                                    	<img src="img/img-jiu.png" width="80" height="80" class="img-rounded pull-left"/>
+                                    	<dl class="pull-left">
+			                                <dt>图片大小备注</dt>
+			                                <dd>40*40</dd>
+			                                <dd>50*50</dd>
+			                                <dd>60*60</dd>
+                            			</dl>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group form-inline">
+	                            <label for="exampleInputName2" class="col-sm-3 control-label">单位：</label>
+                                <div class="col-sm-9 ">
+	                                <input type="text" class="form-control" id="exampleInputName2">
+                                </div>
+                            </div>
+                            <div class="form-group form-inline">
+	                            <label for="exampleInputName2" class="col-sm-3 control-label"><i class="redmi"></i>标签：</label>
+                                <div class="col-sm-9">
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" id="inlineCheckbox1" value="option1">
+                                        热销产品
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group form-inline">
+	                            <label for="exampleInputName2" class="col-sm-3 control-label">属性设置：</label>
+                                <div class="col-sm-9">
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" id="inlineCheckbox1" value="option1">
+                                        是否发布
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" id="inlineCheckbox1" value="option1">
+                                        是否置顶
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group form-inline">
+	                            <label for="exampleInputName2" class="col-sm-3 control-label">seo标题：</label>
+                                <div class="col-sm-9">
+	                                <input type="text" class="form-control" id="exampleInputName2">
+                                </div>
+                            </div>
+            			</div>
+            			<div class="col-lg-6 col-xs-12 Clable_n">
+                            <div class="form-group form-inline">
+	                            <label for="exampleInputName2" class="col-sm-3 control-label"><i class="redmi"></i>产品价格：</label>
+                                <div class="col-sm-9">
+	                                <input type="text" class="form-control" id="exampleInputName2">
+                                </div>
+                            </div>
+                            <div class="form-group form-inline">
+	                            <label for="exampleInputName2" class="col-sm-3 control-label">产品编号：</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="exampleInputName2">
+                                    <span class="Czi">若未填写则有系统自动生成</span>
+                                </div>
+                            </div>
+                            <div class="form-group form-inline">
+	                            <label for="exampleInputName2" class="col-sm-3 control-label"><i class="redmi"></i>图片：</label>
+                                <div class="col-sm-9 col-sm-Cui">
+                                    <input type="text" class="form-control" id="exampleInputName2">
+                                    <button type="button" class="btn bgce77420 cf">上传图片</button>
+                                    <span class="Czi">图片大小为200 X 200</span>
+                                </div>
+                            </div>
+                            <div class="form-group form-inline">
+	                            <label for="exampleInputName2" class="col-sm-3 control-label"><i class="redmi"></i>容量：</label>
+                                <div class="col-sm-9">
+	                             <input type="text" class="form-control" id="exampleInputName2">
+                                </div>
+                            </div>
+                            <div class="form-group form-inline">
+	                            <label for="exampleInputName2" class="col-sm-3 control-label"><i class="redmi"></i>重量(kg)：</label>
+                                <div class="col-sm-9">
+	                                <input type="text" class="form-control" id="exampleInputName2">
+                                </div>
+                            </div>
+                            <div class="form-group form-inline">
+	                            <label for="exampleInputName2" class="col-sm-3 control-label"><i class="redmi"></i>库存：</label>
+                                <div class="col-sm-9">
+	                                <input type="text" class="form-control" id="exampleInputName2">
+                                </div>
+                            </div>
+                            <div class="form-group form-inline">
+	                            <label for="exampleInputName2" class="col-sm-3 control-label"><i class="redmi"></i>备注：</label>
+                                <div class="col-sm-9">
+	                                <input type="text" class="form-control" id="exampleInputName2">
+                                </div>
+                            </div>
+                            <div class="form-group form-inline">
+	                            <label for="exampleInputName2" class="col-sm-3 control-label"><i class="redmi"></i>seo关键字：</label>
+                                <div class="col-sm-9">
+	                              <input type="text" class="form-control" id="exampleInputName2">
+                                </div>
+                            </div>
+            			</div>
+            		</div>
+        		    <div class="text-center Cbottom clearfix">
+        				<button class="btn btn-primary w_px70" type="button">保存</button>
+        				<button class="btn btn-primary w_px70" type="button">返回</button>
+        			</div>
+            		</from>
+            	</div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
+              <p>2</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="dropdown" aria-labelledby="dropdown1-tab">
+              <p>3</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="guige" aria-labelledby="dropdown1-tab">
+              <p>4</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

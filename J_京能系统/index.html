@@ -1,0 +1,277 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>京能集团-安全管理数字化标准化管理平台</title>
+		<link type="text/css" rel="stylesheet" href="css/index.css" />
+		<!--[if IE]><link rel="stylesheet" type="text/css" href="css/IE_css.css"/><![endif]--> <!--兼容ie浏览器在1024Px时正常显示-->
+		<script src="js/jquery-1.8.3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/JN.mCustomScrollbar.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/tingyun.mousewheel.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jQuery.fontFlex.js" type="text/javascript" charset="utf-8"></script> <!--非IE浏览器下字体响应式js插件-->
+		<script src="js/layer.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			
+			window.onload = function(){
+				
+				
+				
+				//消息弹出窗 响应显示
+				var win=$(window).width();
+				if(win>1440){
+					
+				}else if(win > 1024){
+					$('.messagein').css({'width':'420'});
+					$('.messagein').css({'right':'0px'});
+				}else{
+					$('.messagein').css({'width':'400px'});
+					$('.messagein li,.messagein a').css({'width':'370px'});
+					$('.messagein li span').css({'margin-right':'10px'});
+					$('.messagein').css({'right':'-2px'});
+				};
+				
+				//一级导航样式
+				window.leftnav = $(".leftNav");
+				leftnav.mCustomScrollbar({
+					autoHideScrollbar:true,
+					scrollSpeed:20,
+					scrollInertia:800, //滚动惯性-滚动缓动效果
+					theme:"leftnav"
+				});
+				
+			}
+			
+			$(function() {
+				
+				//消息弹出框    弹出消息列表
+				$('.msg_more').on('click', function(){
+					layer.open({
+						type: 2,
+						title: ['信息列表','background:#1F578C;color:#fff;border-radius:4px'],
+						maxmin: false, //最大化按钮
+						shadeClose: true, //点击遮罩关闭层
+						area : ['770px' , '400px'], //定义宽高
+						content: ['message.html','no'] //弹出页面
+					});
+				});
+				
+				//消息弹出框    消息列表点击事件
+				$('#Mes').click(function(){
+					$('.messagein').css({'display':'block'});
+				})
+				
+				$('.messagein a,.messagein li').click(function(){
+					$('.messagein').delay(500).hide(0);
+				})
+				//非IE浏览器下字体响应
+				$('.top_txt').fontFlex(26, 50, 18);
+				$('.top_date').fontFlex(13, 100, 10);
+				
+				//二级导航
+					//点击事件 一级
+				$(".navFirst dd a[secMenuId]").click(function(){
+
+					var _this = $(this);
+					var parentLi = _this.closest("dd");
+					var secMenuObj = $("#"+_this.attr("secMenuId"));
+					
+					
+					//导航点击显示、隐藏切换
+					if($(parentLi).hasClass("current")){
+						$(parentLi).removeClass("current");
+						secMenuObj.siblings().hide();
+						secMenuObj.hide();
+						return false;
+					}
+					
+					//二级导航样式
+					var windowHeight = $(".JN_main").height();
+					var top = parentLi.offset().top-$(".JN_leftNav").scrollTop();
+					var y = top-parentLi.outerHeight();
+					secMenuObj.height(secMenuObj.find("li").length*52);
+					//secMenuObj.closest("div").height("");
+					$(parentLi).addClass('current').siblings().removeClass('current');
+					
+					if(y+secMenuObj.height()>windowHeight){
+						if(secMenuObj.height()>windowHeight){
+							y = 0;
+							secMenuObj.height(windowHeight);
+						}else if(top-secMenuObj.height()<0){
+							y = 0;
+						}else{
+							y = top - secMenuObj.height();
+						}
+					}
+					y=y<=0?0:y+25;
+					
+					var x = _this.width() + 'px';
+					secMenuObj.siblings().hide();
+					secMenuObj.closest("div").css({"left":x,'top':y});
+					secMenuObj.show();
+					
+//					secMenuObj.unbind("mCustomScrollbar");
+					secMenuObj.mCustomScrollbar({
+						autoHideScrollbar:true,
+						scrollSpeed:20,
+						scrollInertia:800,
+						theme:"leftNav"
+					});
+					//return false;
+				});
+					//点击事件 二级
+				$('.navSecond li').click(function(){
+					$(this).addClass('current').siblings().removeClass('current');
+				})
+				
+					//鼠标离开事件		[---------如果需要 鼠标离开导航区，二级导航消失，将下面代码注释去掉即可--------]
+				$('.iframeCon').mouseover(function(){
+					$('.messagein').hide();
+					$('.navSecond').hide();
+					$('.navFirst dd').removeClass('current');
+				})
+
+			});
+		</script>
+	</head>
+	<body>
+		<!-- 头部开始 -->
+		<div class="JN_top">
+			<div class="logo">
+				<a href=""><img src="imgs/logo.png"/></a>
+			</div>
+			<dl class="JN_right">
+				<dd class="top_txt">
+					安全管理数字化标准化管理平台 <span class="top_date">2015年8月21日  星期五</span>
+				</dd>
+				<dd class="top_nav">
+					<a class="employee">
+						<img src="imgs/headMan.png"/>
+						<span>
+							<i>您好，王建安</i></br><i class="job">工程部 高级工程师</i>
+						</span>
+					</a>
+					<a href="javascript:;" id="Mes" class="Message">
+						<img src="imgs/headIcon01.png"/><br />消息（125）
+						<span class="Message_num ie-css3">10</span>
+					</a>
+					<a href="javascript:;" target="page" class="nick"><img src="imgs/headIcon02.png"/><br />修改密码 </a>
+					<a class="logout" href=""><img src="imgs/headIcon03.png"/><br />注销</a>
+				</dd>
+			</dl>
+		</div>
+		
+		<!--信息框-->
+		<div class="messagein">
+			<ul>
+				<li>
+					<span>2015-8-3</span>
+					<em>某某电厂获得国家颁发的荣誉证书。</em>
+				</li>
+				<li>
+					<span>2015-8-3</span>
+					<em>您收到一条报送信息，请到信息报送模块查询。</em>
+				</li>
+				<li>
+					<span>2015-8-3</span>
+					<em>某某电厂获得国家颁发的荣誉证书。</em>
+				</li>
+				<li>
+					<span>2015-8-3</span>
+					<em>您收到一条报送信息，请到信息报送模块查询。</em>
+				</li>
+				<li>
+					<span>2015-8-3</span>
+					<em>某某电厂获得国家颁发的荣誉证书。</em>
+				</li>
+			</ul>
+			<a class="msg_more"  href="javascript:;">查看更多</a>
+		</div>
+		<!--头部结束-->
+		
+		<!--中间内容开始-->
+		<div class="JNmainLay">
+			<div class="JN_main">
+				<!-- 左侧 导航-->
+				<div class="JN_leftNav">
+					<div class="leftNav">
+						<div menu>
+							<dl class="navFirst">
+								<dd class="current"><a target="page" href="index_In.html" secMenuId="secMenu_1"><img src="imgs/navIcon01.png"/><br />首页</a></dd>
+								<dd><a target="page" href="javascript:;" secMenuId="secMenu_2"><img src="imgs/navIcon02.png"/><br />日常管理</a></dd>
+								<dd><a target="page" href="javascript:;" secMenuId="secMenu_3"><img src="imgs/navIcon03.png"/><br />专项管理</a></dd>
+								<dd><a target="page" href="javascript:;" secMenuId="secMenu_4"><img src="imgs/navIcon04.png"/><br />决策管理</a></dd>
+								<dd><a target="page" href="JavaScript:;" secMenuId="secMenu_5"><img src="imgs/navIcon05.png"/><br />基础管理</a></dd>
+								<dd><a target="page" href="javascript:;" secMenuId="secMenu_6"><img src="imgs/navIcon06.png"/><br />报表管理</a></dd>
+								<dd><a target="page" href="javascript:;" secMenuId="secMenu_7"><img src="imgs/navIcon07.png"/><br />系统管理</a></dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+				<!--二级导航-->
+				<div id="secMenuDiv">
+					<ul class="navSecond" id="secMenu_1">
+					</ul>				
+					
+					<ul class="navSecond" id="secMenu_2">
+						<li><a class="liFirt" target="page" href="daily/daily_hidden_graph_cicle.html">隐患排查治理</a></li>
+						<li><a target="page" href="daily/daily_report_grapg.html">反违章</a></li>
+						<li><a target="page" href="daily/daily_check_graph_line.html">安全检查</a></li>
+						<li><a target="page" href="daily/daily_secu_graph_cicle.html">安全事件</a></li>
+						<li><a target="page" href="daily/daily_meet_graph_cicle.html">安全会议</a></li>
+						<li><a target="page" href="daily/daily_peixun_graph_column.html">安全培训</a></li>
+						<li><a target="page" href="javascript:;">信息报送</a></li>
+						<li><a target="page" href="daily/daily_yingji_graph_line.html">应急管理</a></li>
+						<li><a target="page" href="daily/daily_anfancuo_graph_cicle.html">安反措</a></li>
+						<li><a class="liLast" target="page"  href="daily/daily_good_grapg_column.html">安全奖惩</a></li>
+					</ul>				
+					<ul class="navSecond" id="secMenu_3">
+						<li><a class="liFirt" target="page" href="special/special_fire_report_a.html">消防管理</a></li>
+						<li><a target="page" href="special/special_tezhong-report_a.html">特种设备及安全工器具</a></li>
+						<li><a target="page" href="special/special_eva_graph.html">安全性评价</a></li>
+						<li><a class="liLast" target="page" href="special/special_month_report.html">安全生产月</a></li>
+					</ul>				
+					<ul class="navSecond" id="secMenu_4">
+						<li><a target="page" href="decision/decision_input_graph_line.html">安全投入</a></li>
+						<li><a target="page" href="decision/decision_mubiao_report.html">安全目标管理</a></li>
+						<li><a class="liLast" target="page" href="decision/decision_hidden_graph.html">安全指标监控</a></li>
+						
+					</ul>				
+					<ul class="navSecond" id="secMenu_5">
+						<li><a class="liFirt" target="page" href="basics/basics_RYreport_report.html">荣誉管理</a></li>
+						<li><a class="liLast" target="page" href="basics/basics_secudocument_report.html">安全文档管理</a></li>
+						<li><a class="liLast" target="page" href="basics/basics_health_graph_line.html">职业健康管理</a></li>
+						<li><a class="liLast" target="page" href="basics/basics_fenxi_report.html">安全分析月报</a></li>
+						<li><a class="liLast" target="page" href="basics/basics_zizhi_graph.html">安全资质管理</a></li>
+						<li><a class="liLast" target="page" href="basics/basics_biaozhun_graph.html">安全生产标准化</a></li>
+					</ul>				
+					<ul class="navSecond" id="secMenu_6">
+						<li><a class="liFirt" href="javascript:;">报表管理</a></li>
+						<li><a href="javascript:;">报表管理</a></li>
+						<li><a href="javascript:;">报表管理</a></li>
+						<li><a href="javascript:;">报表管理</a></li>
+						<li><a href="javascript:;">报表管理</a></li>
+						<li><a href="javascript:;">报表管理</a></li>
+						<li><a href="javascript:;">报表管理</a></li>
+						<li><a href="javascript:;">报表管理</a></li>
+						<li><a class="liLast" href="javascript:;">报表管理</a></li>
+					</ul>				
+					<ul class="navSecond" id="secMenu_7">
+						<li><a class="liFirt" href="javascript:;">系统管理</a></li>
+						<li><a href="javascript:;">系统管理</a></li>
+						<li><a href="javascript:;">系统管理</a></li>
+						<li><a href="javascript:;">系统管理</a></li>
+						<li><a href="javascript:;">系统管理</a></li>
+						<li><a href="javascript:;">系统管理</a></li>
+						<li><a href="javascript:;">系统管理</a></li>
+						<li><a class="liLast" href="javascript:;">系统管理</a></li>
+					</ul>				
+				</div>
+				<!-- 右侧 内容-->
+				<div class="JN_rightBox">
+					<iframe class="iframeCon" src="index_In.html" name="page" frameborder="0"></iframe>
+				</div>
+			</div>
+		</div>
+		<!--中间内容开始-->
+	</body>
+</html>

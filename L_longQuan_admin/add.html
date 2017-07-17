@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>图片编辑</title>
+<link rel="stylesheet" type="text/css" href="css/tingyun.css" />
+<script type="text/javascript" src="js/tingyun.js"></script>
+<script type="text/javascript" src="js/jquery-tingyun.js"></script>
+</head>
+
+<body mods="radio,checkbox">
+<div class="phead">
+	<div class="curnav">
+		<label>当前位置：</label><a>系统管理</a> > 账号管理
+	</div>
+</div>
+<div class="pagetitle">添加信息</div>
+<form action="admin.php?a=systemPic&c=doSystemPicSave" method="post" class="manage mt20" onSubmit="return checkSave(this)">
+	<div class="line">
+		<i class="label"><i class="x">*</i>登录账号 :</i><input type="text" name="dlzh" value="" /><i class="desc">请输入465465465465...</i>
+	</div>
+	<div class="line">
+		<i class="label"><i class="x">*</i>密    码 :</i><input type="password" name="password" value="" />
+	</div>
+	<div class="line">
+		<i class="label"><i class="x">*</i>确认密码 :</i><input type="password" name="qr_password" value="" />
+	</div>
+	<div class="line">
+		<i class="label"><i class="x">*</i>手 机 号 :</i><input type="text" name="mobile" value="" />
+	</div>
+	<div class="line  sex">
+		<div class="sex"><i class="label"><i class="x">*</i>性    别 :</i><input type="radio" name="sex" value="1" /><i class="radio">男</i>　<input type="radio" name="sex" value="2" /><i class="radio">女</i></div>
+        <div class=" bm">
+            <i class="label"><i class="x">*</i>部门 :</i><select name="picclassid" _value=""><option value="">-请选择-</option><option value="1">案例封面图</option><option value="2">案例详情图</option><option value="3">文章背景图</option><option value="4">素材图</option></select>
+        </div>
+	</div>
+
+	<div class="line">
+		<i class="label"><i class="x">*</i>角    色 :</i><input type="checkbox" value="" name="supman"><i class="checkbox">超级管理员</i>　<input type="checkbox" value="" name="lader"><i class="checkbox">部门领导</i>
+	</div>
+	<div class="line">
+		<i class="label">描述 :</i><textarea></textarea>
+	</div>
+
+	<div class="btns">
+	<input type="hidden" name="memid" value="" />
+	<input type="hidden" name="server" value="" />
+	<input type="hidden" name="dir" value="" />
+	<input type="hidden" name="name" value="" />
+	<input type="hidden" name="size" value="" />
+	<input type="hidden" name="width" value="" />
+	<input type="hidden" name="height" value="" />
+	<input type="hidden" name="ext" value="" />
+		<input type="hidden" name="id" value="0" />
+		<input type="submit" class="button button-sub" value="保存" />
+        <input type="submit" class="button button-sub ml10" value="返回" />
+	</div>
+</form>
+<script type="text/javascript">
+
+//验证保存
+function checkSave(form){
+	var form=$(form);
+	if(!_formCheck(form,{
+		"picclassid" : {"label":"图片分类", "none":false},
+		"url" : {"label":"图片文件", "none":false}
+	})) {
+		return false;
+	}
+	form.find("[type='submit']").attr("disabled","disabled");
+	return true;
+}
+
+</script>
+</body>
+</html>

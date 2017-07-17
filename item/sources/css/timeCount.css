@@ -1,0 +1,13 @@
+.details{
+    padding: 90px 0 50px;
+    margin-top: -90px;
+}
+.fun{
+    border: solid 1px #c1cddd;
+}
+.max_table .tr_head td {
+    font-weight: 700;
+}
+.switch li{
+    width: 180px;
+}

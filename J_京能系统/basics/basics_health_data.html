@@ -1,0 +1,863 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>京能集团-安全管理数字化标准化管理平台</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+	<link href="../css/base.css" rel="stylesheet" type="text/css" />
+	<link href="../css/table.css" rel="stylesheet" type="text/css" />
+	<script src="../js/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/jquery-ui.min.js"></script>
+	<script src="../js/select-widget-min.js"></script>
+	<script src="../js/laydate.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		window.onload = function(){
+			var win=$(window).width();
+			$(".St-table tr:even").addClass("even-row"); 
+			$(".St-table tr:odd").addClass("odd-row"); 
+			$('.changepic').css('margin-right','20px');
+			if(win<1166){
+				$('.mr8').css({'margin-right':'20px'});
+				$('.mr15').css({'margin-right':'40px'});
+				$('.ml6').css({'margin-left':'20px'});
+				$('.btn').css({'margin-right':'0px','margin-left':'15px'});
+			}
+	}
+
+	//下拉样式
+	$(document).ready(function(){		
+		$(".ui-select").selectWidget({
+			change       : function (changes) {
+				return changes;
+			},
+			effect       : "slide",
+			keyControl   : true,
+			speed        : 200,
+			scrollHeight : 200
+		});
+		
+	});	
+</script>
+</head>
+
+<body>
+<!--内容-->
+<div class="w100">
+	<div class="innav c11 bg5c pl1">
+		<p>
+			<a href="../index.html" target="_blank">首页</a>&gt; 
+			 <a href="javascript:;" >基础管理</a> &gt; 
+			 <a href="javascript:;" >职业健康管理</a> 
+		</p>
+	</div>
+	<div class="innav02 of fs14 pl1">
+		<ul>
+			<li><a href="basics_health_graph_line.html">图形展示</a></li>
+			<li><a href="basics_health_report.html">报表分析</a></li>
+			<li class="current"><a href="javascript:;" >数据查询</a></li>
+		</ul>
+	</div>
+	<!--报表分析-->
+	<div class="shucon02 w97 ma h111">
+		<ul class="shu fl mt65">
+			<li class="danwei juli01">
+				<div class="S_select">
+					<select name="drop2" class="ui-select ie-css3">
+						<option value="">京能集团</option>
+						<option value="1">京能集团 1</option>
+						<option value="2">京能集团 2</option>
+						<option value="3">京能集团 3</option>
+						<option value="4">京能集团 4</option>
+						<option value="5">京能集团 5</option>
+						<option value="6">京能集团 6</option>
+					</select>
+				</div>
+				<span class="S_text">单位 &nbsp;:</span>
+			</li>
+		</ul>
+		<div class="fl mt65 ml6">
+			<div class="btn fl ie-css3">
+				<a class="cha" href="javascript:;" >查询</a>
+			</div>
+		</div>
+		<div class="changepic fr">
+			<dl class="current tac anquan icon_C">
+				<dt><a class="di cp con34"></a></dt>
+				<dd class="fs12 cf ta">职业病患者</dd>
+			</dl>
+			<dl class="tac anquan icon_C">
+				<dt><a class="di cp con35"></a></dt>
+				<dd class="fs12 cf ta">病危害因素</dd>
+			</dl>
+			<dl class="tac anquan icon_C">
+				<dt><a class="di cp con36"></a></dt>
+				<dd class="fs12 cf ta">护设施一览</dd>
+			</dl>
+			<dl class="tac anquan icon_C">
+				<dt><a class="di cp con37"></a></dt>
+				<dd class="fs12 cf ta">警示标识一览</dd>
+			</dl>
+			<dl class="tac anquan icon_C">
+				<dt><a class="di cp con38"></a></dt>
+				<dd class="fs12 cf ta">个人防护用品</dd>
+			</dl>
+	</div>
+	</div>
+	<script>
+		$('.changepic dl').click(function(){
+			var oQie=$(this).index();
+			$(this).addClass('current').siblings().removeClass('current');
+			$('.St-table').eq(oQie).css({'display':'block'}).siblings().css({'display':'none'});
+		})
+	</script>
+	<div class="w97 ma36">
+		<div class="St-table">
+			<div class="w100 shucontop fs16 cf ma18">
+				<span class="shucontop_c di fl">职业病患者表查询</span> 
+				<a class="di fr oh" href="javascript:;" > 
+					<em class="fr fs16 cf cp">导出</em> 
+					<img class="fr img02" src="../imgs/yiji/shu_dao.png"> 
+				</a> 
+			</div>
+			<div class="w100 tiao bg1f"></div>
+			<table width="100%" border="1">
+				<tr id="S_tableh0">
+					<td width="3%">&nbsp;</td>
+					<td width="7%">人员编号</td>
+					<td width="6%">姓名</td>
+					<td width="4%">性别</td>
+					<td width="6%">单位</td>
+					<td width="5%">部门</td>
+					<td width="5%">班组</td>
+					<td width="6%">岗位</td>
+					<td width="8%">接害工龄</td>
+					<td width="8%">职业病名</td>
+					<td width="8%">诊断机构</td>
+					<td width="8%">诊断日期</td>
+					<td width="8%">处理情况</td>
+					<td width="8%">编制日期</td>
+					<td width="6%">编制人</td>
+					<td width="4%">状态</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" class="cBox_Btn"></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr >
+					<td><input type="checkbox" class="cBox_Btn"></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" class="cBox_Btn"></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" class="cBox_Btn"></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" class="cBox_Btn"></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" class="cBox_Btn"></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" class="cBox_Btn"></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" class="cBox_Btn"></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" class="cBox_Btn"></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+			<div class="paging">
+				<select name="" class="di mr_px05">
+					<option value="">10</option>
+					<option value="">20</option>
+					<option value="">50</option>
+					<option value="">100</option>
+				</select>
+				<a href="javascript:;" class="prev01"></a> 
+				<a href="javascript:;" class="prev02"></a> 
+				<a href="javascript:;" class="selected">1</a> 
+				<a href="javascript:;" >2</a> <a href="javascript:;" class="next02"></a> 
+				<a href="javascript:;" class="next01"></a> <span>共232条　每页15条　跳到第<input type="text" value="1" />页</span> 
+				<a href="javascript:;" class="go">GO</a> 
+		  </div>
+		</div>
+		<div class="St-table" style="display:none;">
+			<div class="w100 shucontop fs16 cf ma18">
+				<span class="shucontop_c di fl">接触职业病危害因素汇总表查询</span> 
+				<a class="di fr oh" href="javascript:;" > 
+					<em class="fr fs16 cf cp">导出</em> 
+					<img class="fr img02" src="../imgs/yiji/shu_dao.png"> 
+				</a> 
+			</div>
+			<div class="w100 tiao bg1f"></div>
+			<table width="100%" border="1">
+			  <tbody>
+			    <tr id="S_tableh0">
+			      <td width="3%">&nbsp;</td>
+			      <td width="4%">序号</td>
+			      <td width="4%">单位</td>
+			      <td width="4%">岗位</td>
+			      <td width="14%">职业病危害因素名称</td>
+			      <td width="7%">危害来源</td>
+			      <td width="7%">接触方式</td>
+			      <td width="16%">接触职业病危害总人数</td>
+			      <td width="16%">接触职业病危害女工数</td>
+			      <td width="10%">工程防护设施</td>
+			      <td width="5%">编制人</td>
+			      <td width="7%">编制日期</td>
+			      <td width="4%">状态</td>
+			    </tr>
+			    <tr>
+					<td><input type="checkbox" class="cBox_Btn"></td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			    </tr>
+			    <tr>
+					<td><input type="checkbox" class="cBox_Btn"></td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			    </tr>
+			    <tr>
+					<td><input type="checkbox" class="cBox_Btn"></td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			    </tr>
+			    <tr>
+					<td><input type="checkbox" class="cBox_Btn"></td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			    </tr>
+			    <tr>
+					<td><input type="checkbox" class="cBox_Btn"></td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			    </tr>
+			    <tr>
+					<td><input type="checkbox" class="cBox_Btn"></td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			    </tr>
+			  </tbody>
+			</table>
+			<div class="paging">
+				<select name="" class="di mr_px05">
+					<option value="">10</option>
+					<option value="">20</option>
+					<option value="">50</option>
+					<option value="">100</option>
+				</select>
+				<a href="javascript:;" class="prev01"></a> 
+				<a href="javascript:;" class="prev02"></a> 
+				<a href="javascript:;" class="selected">1</a> 
+				<a href="javascript:;" >2</a> <a href="javascript:;" class="next02"></a> 
+				<a href="javascript:;" class="next01"></a> <span>共232条　每页15条　跳到第<input type="text" value="1" />页</span> 
+				<a href="javascript:;" class="go">GO</a> 
+		  </div>
+		</div>
+		<div class="St-table" style="display:none;">
+			<div class="w100 shucontop fs16 cf ma18">
+				<span class="shucontop_c di fl">职业病防护设施一览表查询</span> 
+				<a class="di fr oh" href="javascript:;" > 
+					<em class="fr fs16 cf cp">导出</em> 
+					<img class="fr img02" src="../imgs/yiji/shu_dao.png"> 
+				</a> 
+			</div>
+			<div class="w100 tiao bg1f"></div>
+				<table width="100%" border="1">
+				  <tbody>
+				    <tr id="S_tableh0">
+				      <td width="3%">&nbsp;</td>
+				      <td width="4%">序号</td>
+				      <td width="4%">单位</td>
+				      <td width="11%">防护设施编号</td>
+				      <td width="12%">防护设施名称</td>
+				      <td width="5%">型号</td>
+				      <td width="8%">使用车间</td>
+				      <td width="4%">岗位</td>
+				      <td width="8%">防护用途</td>
+				      <td width="15%">生产及安装单位</td>
+				      <td width="8%">验收日期</td>
+				      <td width="8%">编制日期</td>
+				      <td width="6%">编制人</td>
+				      <td width="4%">状态</td>
+				    </tr>
+				    <tr>
+				      <td><input type="checkbox" class="cBox_Btn"></td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				    </tr>
+				    <tr>
+				      <td><input type="checkbox" class="cBox_Btn"></td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				    </tr>
+				    <tr>
+				      <td><input type="checkbox" class="cBox_Btn"></td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				    </tr>
+				    <tr>
+				      <td><input type="checkbox" class="cBox_Btn"></td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				    </tr>
+				    <tr>
+				      <td><input type="checkbox" class="cBox_Btn"></td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				    </tr>
+				    <tr>
+				      <td><input type="checkbox" class="cBox_Btn"></td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				    </tr>
+				  </tbody>
+				</table>			
+				<div class="paging">
+				<select name="" class="di mr_px05">
+					<option value="">10</option>
+					<option value="">20</option>
+					<option value="">50</option>
+					<option value="">100</option>
+				</select>
+				<a href="javascript:;" class="prev01"></a> 
+				<a href="javascript:;" class="prev02"></a> 
+				<a href="javascript:;" class="selected">1</a> 
+				<a href="javascript:;" >2</a> <a href="javascript:;" class="next02"></a> 
+				<a href="javascript:;" class="next01"></a> <span>共232条　每页15条　跳到第<input type="text" value="1" />页</span> 
+				<a href="javascript:;" class="go">GO</a> 
+		  </div>
+		</div>
+		<div class="St-table" style="display:none;">
+			<div class="w100 shucontop fs16 cf ma18">
+				<span class="shucontop_c di fl">工作场所警示标识一览表查询</span> 
+				<a class="di fr oh" href="javascript:;" > 
+					<em class="fr fs16 cf cp">导出</em> 
+					<img class="fr img02" src="../imgs/yiji/shu_dao.png"> 
+				</a> 
+			</div>
+			<div class="w100 tiao bg1f"></div>
+			<table width="100%" border="1">
+			  <tbody>
+			    <tr id="S_tableh0">
+			      <td width="3%">&nbsp;</td>
+			      <td width="4%">序号</td>
+			      <td width="4%">单位</td>
+			      <td width="12%">作业区</td>
+			      <td width="10%">告知项目</td>
+			      <td width="8%">使用车间</td>
+			      <td width="4%">岗位</td>
+			      <td width="8%">防护用途</td>
+			      <td width="15%">生产及安装单位</td>
+			      <td width="8%">验收日期</td>
+			      <td width="8%">编制日期</td>
+			      <td width="6%">编制人</td>
+			      <td width="4%">状态</td>
+			    </tr>
+			    <tr>
+			      <td><input type="checkbox" class="cBox_Btn"></td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			    </tr>
+			    <tr>
+			      <td><input type="checkbox" class="cBox_Btn"></td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			    </tr>
+			    <tr>
+			      <td><input type="checkbox" class="cBox_Btn"></td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			    </tr>
+			    <tr>
+			      <td><input type="checkbox" class="cBox_Btn"></td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			    </tr>
+			    <tr>
+			      <td><input type="checkbox" class="cBox_Btn"></td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			    </tr>
+			    <tr>
+			      <td><input type="checkbox" class="cBox_Btn"></td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			    </tr>
+			  </tbody>
+			</table>			
+			<div class="paging">
+				<select name="" class="di mr_px05">
+					<option value="">10</option>
+					<option value="">20</option>
+					<option value="">50</option>
+					<option value="">100</option>
+				</select>
+				<a href="javascript:;" class="prev01"></a> 
+				<a href="javascript:;" class="prev02"></a> 
+				<a href="javascript:;" class="selected">1</a> 
+				<a href="javascript:;" >2</a> <a href="javascript:;" class="next02"></a> 
+				<a href="javascript:;" class="next01"></a> <span>共232条　每页15条　跳到第<input type="text" value="1" />页</span> 
+				<a href="javascript:;" class="go">GO</a> 
+		  </div>
+		</div>
+		<div class="St-table" style="display:none;">
+			<div class="w100 shucontop fs16 cf ma18">
+				<span class="shucontop_c di fl">年度个人防护用品发放使用记录查询</span> 
+				<a class="di fr oh" href="javascript:;" > 
+					<em class="fr fs16 cf cp">导出</em> 
+					<img class="fr img02" src="../imgs/yiji/shu_dao.png"> 
+				</a> 
+			</div>
+			<div class="w100 tiao bg1f"></div>
+			<table width="100%" border="1">
+			  <tbody>
+			    <tr id="S_tableh0">
+			      <td width="3%">&nbsp;</td>
+			      <td width="4%">单位</td>
+			      <td width="4%">部门</td>
+			      <td width="6%">班组</td>
+			      <td width="20%">接触职业病危害因素</td>
+			      <td width="17%">个人防护用品名称</td>
+			      <td width="6%">型号</td>
+			      <td width="4%">数量</td>
+			      <td width="7%">领取人</td>
+			      <td width="9%">领取日期</td>
+			      <td width="9%">编制日期</td>
+			      <td width="7%">编制人</td>
+			      <td width="4%">状态</td>
+			    </tr>
+			    <tr>
+			      <td><input type="checkbox" class="cBox_Btn"></td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			    </tr>
+			    <tr>
+			      <td><input type="checkbox" class="cBox_Btn"></td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			    </tr>
+			    <tr>
+			      <td><input type="checkbox" class="cBox_Btn"></td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			    </tr>
+			    <tr>
+			      <td><input type="checkbox" class="cBox_Btn"></td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			    </tr>
+			    <tr>
+			      <td><input type="checkbox" class="cBox_Btn"></td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			    </tr>
+			    <tr>
+			      <td><input type="checkbox" class="cBox_Btn"></td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			    </tr>
+			  </tbody>
+			</table>
+			<div class="paging">
+				<select name="" class="di mr_px05">
+					<option value="">10</option>
+					<option value="">20</option>
+					<option value="">50</option>
+					<option value="">100</option>
+				</select>
+				<a href="javascript:;" class="prev01"></a> 
+				<a href="javascript:;" class="prev02"></a> 
+				<a href="javascript:;" class="selected">1</a> 
+				<a href="javascript:;" >2</a> <a href="javascript:;" class="next02"></a> 
+				<a href="javascript:;" class="next01"></a> <span>共232条　每页15条　跳到第<input type="text" value="1" />页</span> 
+				<a href="javascript:;" class="go">GO</a> 
+		  </div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

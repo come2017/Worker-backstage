@@ -1,0 +1,170 @@
+/*弹出层*/
+html { height: 100%; }
+body { background: none; height: 100%;}
+.C_new_file{ width: 100%; height: 100%; }
+/*.C_new_fileT{ height: 40px; padding:0 20px 0 26px; color: #FFFFFF; font-size: 14px; line-height: 40px; background: #1F578C; border-radius: 4px 4px 0 0;}*/
+.C_closeBtn { background: url(../imgs/yiji/closeIcon.png) no-repeat left center ; width: 18px; height: 40px; float: right;  cursor: pointer;}
+.C_new_ul01 { height: 33px; background: #ccf1ff; padding: 3px 0 0 12px; }
+.C_new_ul01 li { cursor: pointer; float: left;padding: 0 16px; height: 33px; line-height: 33px;  }
+.C_new_ul01 li a { color: #1f578c; }
+.C_new_ul01 .current { background: #FFFFFF; color: #000; border-radius: 4px; }
+.C_new_box01{ padding: 25px 66px 44px; background: #FFFFFF;}
+.C_new_ul02, .C_new_ul04 { overflow: hidden; }
+.C_new_box01 li { width: 50%; margin-bottom: 32px; float: left; }
+.C_new_box01 li input{width: 176px; height: 25px; border: 1px solid #DEDEDE; border-radius: 4px; padding: 5px 0 0 10px;}
+.C_new_box01 li select {outline:none; width: 188px; height: 32px; border: 1px solid #DEDEDE; border-radius: 4px; padding: 5px 0 0 10px; line-height: 32px;}
+.C_new_box01 li select option {outline:none; line-height: 24px; color: #666; height: 100px;}
+.C_new_box01 li i  { font-style: normal; color: #ff0000; }
+.C_new_btn  { position: absolute; left: 50%; margin-left: -100px; cursor: pointer; border-radius: 4px; background: #1F578C; width: 80px; height: 34px; text-align: center; line-height: 34px; color: #FFFFFF; }
+.C_new_btn01  { margin-left:20px;}
+.C_new_ul03 { margin-bottom: 30px;}
+
+.C_new_file_Box { height: 100%; }
+.C_new_file_Box iframe { width:100%; height: 100%; }
+
+/*安全生产标准化弹出层*/
+.w245{width:245px;}
+.w300{width:300px;}
+.w265{width:265px;}
+.w307{width:307px;}
+.w330{width:330px;}
+.mr40{margin-right:40px;}
+.mr56{margin-right:56px;}
+.mr23{margin-right:23%;}
+.bdcd{border:1px solid #cdcdcd;}
+.bdr5{border-radius:5px;}
+.fs14{font-size:14px;}
+.bigbox{width:97%;margin:0 auto;}
+.top_layer{width:100%;margin-bottom:15px;padding-bottom:15px;}
+.bottom_layer{width:100%;margin-bottom:15px;}
+.top_title{background-color:#f3f3f3;text-indent:30px;color:#000;line-height:37px;font-weight:normal;}
+.bottom_title{background-color:#ccf1ff;text-indent:30px;color:#000;line-height:40px;font-weight:normal;}
+.contantin{padding-left:17px;}
+
+/*****************下拉框**********************/
+.title1{margin-top:8px;}
+.title1 h2{float:right;color:#333333;font-weight:normal;line-height:30px;font-size:14px;}
+.title1 form{float:right;margin-left:9px;}
+
+i{color:#ff0000;line-height:30px;margin-right:5px;}
+
+.title1 .marginL6{ margin-left: 6px;}
+.diy_select{height:30px;width:190px;position:relative;font-size:14px;color: #cecece;float: left;border:1px solid #cdcdcd;border-radius:5px;}
+.diy_select_btn,.diy_select_txt{float: left;height: 100%;line-height:30px}
+
+.diy_select,.diy_select_list{border:1px solid #cdcdcd;border-radius:5px;}
+.diy_select_txt{width:160px;}
+.diy_select_txt,.diy_select_list li{text-indent: 10px;overflow: hidden}
+.diy_select_btn{width:30px;background:url(../../imgs/yiji/arrdown.png) no-repeat center;}
+.diy_select_list{background-color:#fff;position:absolute;top:31px;left: -1px;z-index: 88888;border-top: none;width: 100%;display: none;_top:29px}
+.diy_select_list li{list-style:none;height:30px;line-height:30px;cursor:default;_background:#fff;color:#333;}
+.diy_select_list li.focus{background: #3399FF;color: #fff}
+.width50{width:50px}
+.width80{width:80px;}
+.inputs{float:right;margin-left:9px;width:182px;text-indent:10px;height:32px;line-height:32px;color: #cecece;}
+.value{color:#333;text-align:center;}
+.title1 a{float:right;display:inline-block;margin-left:9px;width:190px;text-indent: 10px;
+		height:30px;line-height:30px;color: #cecece;
+		background:url(../../imgs/heidian.png) no-repeat 162px center;}
+.contant01{width:100%;padding-bottom:10px;}
+.con_title{width:100%;background-color:#f3f3f3;height:40px;}
+.con_title ul{overflow:hidden;}
+.con_title li{float:left;margin:0 5px;}
+.con_title li a{padding-left:30px;padding-right:20px;line-height:40px;color:#333333;}
+.con_title .li_a{margin-left:30px;background-image:url(../../imgs/yiji/shu_add.png);background-position:left center;background-repeat:no-repeat;}
+.con_title .li_b{background-image:url(../../imgs/yiji/shu_xiu.png);background-position:left center;background-repeat:no-repeat;}
+.con_title .li_c{background-image:url(../../imgs/yiji/shu_cha.png);background-position:left center;background-repeat:no-repeat;}
+.con_title .li_d{background-image:url(../../imgs/yiji/shu_fei.png);background-position:left center;background-repeat:no-repeat;}
+.con_title .li_e{background-image:url(../../imgs/yiji/shu_xia.png);background-position:12px center;background-repeat:no-repeat;}
+.con_title .li_f{background-image:url(../../imgs/yiji/shu_shang.png);background-position:12px center;background-repeat:no-repeat;}
+.con_title .li_g{background-image:url(../../imgs/yiji/shu_dao01.png);background-position:9px center;background-repeat:no-repeat;}
+
+.tab01{border:none;}
+.tab01 td{border-right:1px solid #cdcdcd;border-bottom:1px solid #cdcdcd;border-top:none;border-left:none;
+		height:34px;}
+.tab01 td div{width:150px;text-align:center;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;}
+.tab02 td div{width:140px;}
+.tab01 td input{margin:0 8px;}
+.btnn ul{overflow:hidden;margin:0 auto;width:349px;}
+.btnn li{float:left;}
+.btnn li input{ cursor: pointer; display:inline-block;width:79px;height:34px;background-color:#1f578c;border-radius:5px;color:#fff;text-align:center;line-height:34px;}
+.btnn li a{display:inline-block;width:79px;height:34px;background-color:#1f578c;border-radius:5px;color:#fff;text-align:center;line-height:34px;}
+.btnn01 ul{width:79px;}
+.btnn02 ul{width:240px;}
+.btnn03 ul{width:198px;}
+
+.contant02{border-top:1px solid #cdcdcd;padding:10px 0 10px 25px;}
+.contant03{border-top:1px solid #cdcdcd;padding:10px 0 10px 0px;}
+.contant02 h5{font-weight:normal;line-height:50px;}
+.contant02 textarea{width:85%;margin-left:9px;height:50px;}
+.contant02_left{padding:10px 0 10px 10px;}
+.contant02_top{border-top:none;}
+.contant02_left textarea{width:84%;}
+.top_layer_ma{margin-bottom:10px;padding-bottom:0px;}
+
+
+.contant-text70 textarea{width: 70%;height:40px;}
+.contant-text70-last textarea{width:68%;height:40px;}
+
+
+.padd17{padding:21px 0;}
+.S_listtan_con{width:100%;padding-bottom: 30px;}
+.S_listtan_con table{ text-align:center;color:#333;border:none;}
+.S_listtan_con .table01{margin-left:1px;}
+.S_listtan_con table tr{height:34px;}
+.S_listtan_con table td{border-right:1px solid #cdcdcd;border-bottom:1px solid #cdcdcd;border-top:none;border-left:none;}
+.S_listtan_title{}
+.S_listtan_title{padding:10px 0; width:100%; background-color:#f3f3f3; overflow:hidden;}
+.S_listtan_title ul{margin-left:19px;}
+.S_listtan_title ul li{float:left; margin-right:36px; cursor: pointer;}
+.S_listtan_title ul li a{ font-size:14px; color:#000;}
+.S_listtan_a{ background:url(../../imgs/yiji/Add.png) 0 0 no-repeat; padding-left:25px; margin-top: 5px;}
+.redmi{color:#ff0000;font-style:normal;}
+
+
+
+
+.S_listtan_con1{width:100%;}
+.S_listtan_con1 table{ text-align:right;color:#333;}
+.S_listtan_con1 table textarea{width:100%;height:100%;border: 1px #fff solid;display: inherit; overflow-y: scroll;}
+.S_listtan_con1 table tr td{border-right: 1px #fff solid;}
+.table-bor{border-top:none; border-bottom:none;overflow:scroll; height: 380px;}
+
+
+
+.S_listtan_title1{padding:10px 0; width:100%; background-color:#ccf1ff; overflow:hidden;}
+.S_listtan_title1 ul{margin-left:19px;}
+.S_listtan_title1 ul li{float:left;margin-right:36px; cursor: pointer;}
+.S_listtan_title1 ul li a{ font-size:14px; color:#000;}
+.S_listtan_b{ background:url(../../imgs/yiji/shu_shang.png) 7px 4px no-repeat; padding-left:25px;}
+.redmi{color:#ff0000;font-style:normal;}
+
+
+
+
+
+
+
+.lastboR0{border-right:0 !important;}
+.S_listtan_con_pb0{padding-bottom: 0;}
+.secu-anniu{width:210px; margin-top: 12px;}
+
+
+
+
+
+.secu-anniu .btn{background-color:#1f578c;background-color:#1f578c\9;width:79px;height:34px;line-height:34px;border-radius:4px;margin-right:25px;}
+.secu-anniu .btn .cha{display:block;color:#fff;width:40px;height:34px;line-height:34px;background:url(../../imgs/yiji/shu_cha_w.png) no-repeat 12px center;padding-left:39px;}
+.secu-anniu .btn .repeat{display:block;color:#fff;width:40px;height:34px;line-height:34px;background:url(../../imgs/yiji/shu_repeat.png) no-repeat 12px center;padding-left:39px;}
+
+
+
+.width49{width:49%;}
+.h_260 { height: 260px; }
+
+
+
+
+
+
+

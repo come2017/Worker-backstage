@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>图片列表</title>
+<link rel="stylesheet" type="text/css" href="css/tingyun.css" />
+<script type="text/javascript" src="js/tingyun.js"></script>
+<script type="text/javascript" src="js/jquery-tingyun.js"></script>
+</head>
+
+<body mods="selectValue">
+
+<form action="admin.php" method="get" class="filter manage">
+	<div class="toggle" onClick="_toggleFilter(this)"></div>
+	<div class="title" onClick="_toggleFilter(this)">查询条件</div>
+	<dl class="items">
+		<dd>
+			<div><i>显示顺序：</i><input type="text" name="srh_orderby_s" value="" class="w80" /> - <input type="text" name="srh_orderby_e" value="" class="w80" /></div>
+		</dd>
+		<dd class="btns">
+			<input type="submit" value="筛选结果" class="button" /><a class="ml20" onClick="$(this).closest('form')[0].reset()">清空</a>
+		</dd>
+	</dl>
+</form>
+
+<div class="listtop">
+	<a href="admin.php?a=systemPic&c=showSystemPicSave" class="button button-link">添加信息</a>
+</div>
+
+<table class="list" border=0 cellpadding=0>
+	<tr class="firstTr">
+		<td width="20"><input type="checkbox" name="_ids" value="" onClick="_select_ids('auto',this)" /></td>
+		<td width="200">登录账号</td>
+		<td>手机号</td>
+		<td width="200">部门</td>
+        <td width="180">添加时间</td>
+		<td width="100" class="manage">管理</td>
+	</tr>
+	<tr>
+		<td><input type="checkbox" name="_ids" value="699" /></td>
+		<td>1111</td>
+		<td>1111</td>
+		<td>1111</td>
+        <td>1111</td>
+		<td class="manage">
+			<a href="admin.php?a=systemPic&c=showSystemPicSave&id=699">编辑</a>
+			<i>-</i>
+			<a onclick="_del(this, 'a=systemPic&c=doSystemPicDel', 699)">删除</a>
+		</td>
+	</tr>
+    <tr class="grey">
+		<td><input type="checkbox" name="_ids" value="699" /></td>
+		<td>2222</td>
+		<td>2222</td>
+		<td>2222</td>
+        <td>2222</td>
+		<td class="manage">
+			<a href="admin.php?a=systemPic&c=showSystemPicSave&id=699">编辑</a>
+			<i>-</i>
+			<a onclick="_del(this, 'a=systemPic&c=doSystemPicDel', 699)">删除</a>
+		</td>
+	</tr>
+</table>
+<div class="clear">
+	<div class="paging">
+    	<i class="link">首页</i><a class="home"></a><a class="pre"></a><a class="cur">1</a><a>2</a><a>3</a><i>.........</i><a class="next"></a><a class="end"></a><i class="link">尾页</i>
+	</div>
+</div>
+<script type="text/javascript">
+bindCopy($('[data-clipboard-text]'));
+</script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>珈禾宏业综合管理系统</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/nav.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/responsive-nav.css"/>
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+    	$(function(){
+    		    //查询条件收缩
+		    $('.toogle').click(function() {
+		        if ($(this).hasClass('arrow_btn02')) {
+		            $(this).removeClass('arrow_btn02');
+		            $(this).siblings('.con-text').slideDown();
+		        } else {
+		            $(this).addClass('arrow_btn02');
+		            $(this).siblings('.con-text').slideUp();
+		        }
+		    })
+
+    	})
+    </script>
+
+</head>
+<body>
+<div id="wrapper">
+        <!--列表页-->
+        <div class="List-con">
+            <section class="CtitTop"> 当前位置：<a href="javascript:;">首页管理 </a> > <a href="javascript:;">导航管理</a></section>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span12 cprev">
+                        <div class="con-header">查询条件</div>
+                        <div class="toogle"></div>
+                        <div class="con-text">
+                            <form class="form-inline sbsj">
+                                <div class="row">
+                                    <div class="col-xs-12 col-lg-3 col-md-4">
+                                        <div class="form-group">
+                                            <label for="exampleInputName2">账号：</label>
+                                            <input type="text" class="form-control" id="exampleInputName2">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-lg-3 col-md-4">
+                                        <div class="form-group">
+                                            <label for="exampleInputName2">分类：</label>
+                                            <select class="form-control">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-lg-3 col-md-4">
+                                        <div class="form-group">
+                                            <label for="exampleInputName2">账号：</label>
+                                            <input type="text" class="form-control" id="exampleInputName2">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12 col-lg-3 col-md-4">
+                                        <div class="form-group">
+                                            <label for="exampleInputName2">账号：</label>
+                                            <input type="text" class="form-control" id="exampleInputName2">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-lg-3 col-md-4">
+                                        <div class="form-group">
+                                            <label for="exampleInputName2">分类：</label>
+                                            <select class="form-control">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-lg-3 col-md-4">
+                                        <div class="form-group">
+                                            <label for="exampleInputName2">账号：</label>
+                                            <input type="text" class="form-control" id="exampleInputName2">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-lg-3 col-md-4 list_btn">
+                                        <div>
+                                            <button type="button" class="btn bg1381be cf w_px70 Clist-AA">查询</button>
+                                            <a href="javascript:;">清除</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-fluid mt_px30">
+                    <p>
+                        <button type="button" class="btn bg1381be cf">添加信息</button>
+                        <button type="button" class="btn bgce77420 cf">批量删除</button>
+                    </p>
+                    <div class="table-responsive Ctable-m5">
+                        <table class="C_table_hover table table-bordered table-hover table-striped text-center">
+                            <thead>
+                            <tr>
+                                <th>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" id="inlineCheckbox1" value="option1">
+                                        全选
+                                    </label>
+                                </th>
+                                <th>登录账号</th>
+                                <th>手机号</th>
+                                <th>部门</th>
+                                <th>添加时间</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row"><input type="checkbox"></th>
+                                <td>admin</td>
+                                <td>13256898956</td>
+                                <td>技术部</td>
+                                <td>2015-10-26</td>
+                                <td>
+                                    <a href="javascript:;">修改</a>
+                                    <a href="javascript:;">删除</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><input type="checkbox"></th>
+                                <td>admin</td>
+                                <td>13256898956</td>
+                                <td>技术部</td>
+                                <td>2015-10-26</td>
+                                <td>
+                                    <a href="javascript:;">修改</a>
+                                    <a href="javascript:;">删除</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><input type="checkbox"></th>
+                                <td>admin</td>
+                                <td>13256898956</td>
+                                <td>技术部</td>
+                                <td>2015-10-26</td>
+                                <td>
+                                    <a href="javascript:;">修改</a>
+                                    <a href="javascript:;">删除</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><input type="checkbox"></th>
+                                <td>admin</td>
+                                <td>13256898956</td>
+                                <td>技术部</td>
+                                <td>2015-10-26</td>
+                                <td>
+                                    <a href="javascript:;">修改</a>
+                                    <a href="javascript:;">删除</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><input type="checkbox"></th>
+                                <td>admin</td>
+                                <td>13256898956</td>
+                                <td>技术部</td>
+                                <td>2015-10-26</td>
+                                <td>
+                                    <a href="javascript:;">修改</a>
+                                    <a href="javascript:;">删除</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><input type="checkbox"></th>
+                                <td>admin</td>
+                                <td>13256898956</td>
+                                <td>技术部</td>
+                                <td>2015-10-26</td>
+                                <td>
+                                    <a href="javascript:;">修改</a>
+                                    <a href="javascript:;">删除</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><input type="checkbox"></th>
+                                <td>admin</td>
+                                <td>13256898956</td>
+                                <td>技术部</td>
+                                <td>2015-10-26</td>
+                                <td>
+                                    <a href="javascript:;">修改</a>
+                                    <a href="javascript:;">删除</a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <!--分页-->
+                        <div class="Cpage text-center">
+                            <ul class="pagination">
+                                <li><a href="javascript:;">首页</a></li>
+                                <li>
+                                    <a href="javascript:;" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li><a href="javascript:;">1</a></li>
+                                <li><a href="javascript:;">2</a></li>
+                                <li><a href="javascript:;">3</a></li>
+                                <li><a href="javascript:;">4</a></li>
+                                <li><a href="javascript:;">5</a></li>
+                                <li>
+                                    <a href="javascript:;" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                                <li><a href="javascript:;">尾页</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</body>
+</html>

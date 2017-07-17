@@ -1,0 +1,207 @@
+
+/*一级头部导航*/
+.innav{height:31px;line-height:31px;margin:15px 0;}
+.innav p{background:url(../imgs/yiji/shou.png) no-repeat left center;padding-left:20px;}
+.innav p a{color:#114473;}
+.innav02{height:40px;line-height:40px;background:url(../imgs/yiji/tou_bg.png) repeat-x;margin-bottom:15px;}
+.innav02 li{float:left;width:102px;height:38px;text-align:center;margin-right:10px;}
+.innav02 li a{color:#e5f6fe;}
+.innav02 .current{width:102px;height:38px;background:url(../imgs/yiji/shu_bg01.png) no-repeat left 2px;}
+.shucontop{position:relative;background-color:#1f578c;height:40px;line-height:40px;box-sizing: border-box;border-radius:5px;}
+.shucontop_c{margin-left:15px;}
+.shucontop .img01{float:right;position:absolute;right:15px;top:15px;cursor:pointer;}
+.shucontop a{margin-right:30px;width:60px;}
+.shucontop .img02{margin-top:10px;}
+.shucontop a em{font-style:normal;margin-left:10px;font-weight:normal;}
+.shucon01{display:block;height:190px;box-sizing: border-box;border-radius:5px;border-radius:5px\0;margin-left:15px;}
+.shucon02{display:block;height:85px;box-sizing: border-box;border-radius:5px;border-radius:5px\0;margin-left:15px;}
+.shucon03{display:block;height:142px;box-sizing: border-box;border-radius:5px;border-radius:5px\0;margin-left:15px;}
+.C_shucon01 { height: 150px; }
+
+.tiao{height:5px;box-sizing: border-box;margin:-5px auto 0;}
+
+.shu li{width:300px;height:32px;line-height:32px;margin-bottom:20px;margin-top:25px;}
+.shu li input{width:175px;float:right;margin-left:10px;border:1px solid #89d2f0;padding-left:5px;}
+.shu li span{float:right;color:#333333;font-size:14px;}
+.inputs{width:182px;height:32px;line-height:32px;background-color:#e6f5fe;border-radius:4px;}
+.shu_top{z-index:4;}
+.shu li .text_white{color:#fff;}
+.chaxun{margin-right:120px;}
+
+.rongY_t { margin-right: 73px; }
+
+.shu .nian{width:130px;}
+.shu .danwei{width:240px;} /*2个字*/
+.shu .rongyu{width:265px;} /*4个字*/
+.shu .meet9{ width:331px;} /*8-9个字*/
+.shu .juli{margin-top:0px;*margin-top:25px;}
+.shu .juli01{*margin-top:0px;margin-top:0px;}
+
+/*滚动条非IE下*/
+/*::-webkit-scrollbar{width:0px;}*/
+
+/*按钮*/
+.btn_box01{margin-top:130px;margin-right:5px;}
+.btn_box02{margin-top:25px;margin-right:5px;}
+.btn_box03{margin-top:0px;margin-right:5px;}
+.btn_box03{ margin-top: 90px; margin-right: 5px; }
+.btn{background-color:#1f578c;background-color:#1f578c\9;width:79px;height:34px;line-height:34px;border-radius:4px;margin-right:25px;}
+.btn .cha{display:block;color:#fff;width:40px;height:34px;line-height:34px;background:url(../imgs/yiji/shu_cha_w.png) no-repeat 12px center;padding-left:39px;}
+.btn .repeat{display:block;color:#fff;width:40px;height:34px;line-height:34px;background:url(../imgs/yiji/shu_repeat.png) no-repeat 12px center;padding-left:39px;}
+
+/**********分页*************/
+.paging{padding:30px 0 50px; text-align:center}
+.paging select { height: 23px; }
+.paging a {width:19px; height:19px; line-height:19px;background-color:#fff; text-align:center; font-size:14px; border:1px solid #c0bfbf; margin-right:5px;vertical-align:middle; color:#4d4c4c; display: inline-block;}
+.paging a:hover { border:1px solid #1f578c; color:#1f578c;}
+.paging a.selected { background:#d9edf5; color:#1f578c; border:1px solid #1f578c;}
+.paging a.prev01{background-image:url(../imgs/yiji/arrLS01.png);background-repeat:no-repeat;background-position:center center;}
+.paging a.prev02{background-image:url(../imgs/yiji/arrLD01.png);background-repeat:no-repeat;background-position:center center;}
+.paging a.next02{background-image:url(../imgs/yiji/arrRD02.png);background-repeat:no-repeat;background-position:center center;}
+.paging a.next01{background-image:url(../imgs/yiji/arrRS02.png);background-repeat:no-repeat;background-position:center center;}
+.paging input{width:30px;height:18px;line-height:18px;text-align:center;border:1px solid #1f578c;background-color:#fff;margin:0 5px;}
+.paging a.go{width:40px;height:24px;line-height:24px;text-align:center;color:#fff;background-color:#1f578c;border:none;}
+.paging span{margin:0 17px;font-size:14px;color:#4d4c4c;}
+
+/**********日历************/
+.rili01{padding-top:25px;}
+.inline li{float:left;height:34px;line-height:34px;color:#333;font-size:14px;padding-left:10px;margin-right:9px;}
+.inline .firstli{padding-left:0px;}
+.inline .text_white{color:#fff;}
+.laydate_body .laydate_box, .laydate_body .laydate_box *{margin:0; padding:0;}
+/*li 样式设置*/
+.laydate-icon {height:22px; line-height:22px;border:1px solid #89d2f0; background-repeat:no-repeat; background-position:right center;  background-color:#fff; outline:0;}
+/*日历样式设置*/
+.laydate_body .laydate_box{width:240px; font:12px '\5B8B\4F53'; z-index:99999999; *margin:-2px 0 0 -2px; *overflow:hidden; _margin:0; _position:absolute!important; background-color:#fff;}
+.laydate_body .laydate_box li{list-style:none;}
+.laydate_body .laydate_box .laydate_void{cursor:text!important;}
+.laydate_body .laydate_box a, .laydate_body .laydate_box a:hover{text-decoration:none; blr:expression(this.onFocus=this.blur()); cursor:pointer;}
+.laydate_body .laydate_box a:hover{text-decoration:none;}
+.laydate_body .laydate_box cite, .laydate_body .laydate_box label{position:absolute; width:0; height:0; border-width:5px; border-style:dashed; border-color:transparent; overflow:hidden; cursor:pointer;}
+.laydate_body .laydate_box .laydate_yms, .laydate_body .laydate_box .laydate_time{display:none;}
+.laydate_body .laydate_box .laydate_show{display:block;}
+.laydate_body .laydate_box input{outline:0; font-size:14px; background-color:#fff;}
+.laydate_body .laydate_top{position:relative; height:26px; padding:5px; *width:100%; z-index:99;}
+.laydate_body .laydate_ym{position:relative; float:left; height:24px; cursor:pointer;}
+.laydate_body .laydate_ym input{float:left; height:24px; line-height:24px; text-align:center; border:none; cursor:pointer;}
+.laydate_body .laydate_ym .laydate_yms{position:absolute; left: -1px; top: 24px; height:181px;}
+.laydate_body .laydate_y{width:121px; margin-right:6px;}
+.laydate_body .laydate_y input{width:64px; margin-right:15px;}
+.laydate_body .laydate_y .laydate_yms{width:121px; text-align:center;}
+.laydate_body .laydate_y .laydate_yms a{position:relative; display:block; height:20px;}
+.laydate_body .laydate_y .laydate_yms ul{height:139px; padding:0; *overflow:hidden;}
+.laydate_body .laydate_y .laydate_yms ul li{float:left; width:60px; height:20px; line-height: 20px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
+.laydate_body .laydate_m{width:99px;}
+.laydate_body .laydate_m .laydate_yms{width:99px; padding:0;}
+.laydate_body .laydate_m input{width:42px; margin-right:15px;}
+.laydate_body .laydate_m .laydate_yms span{display:block; float:left; width:42px; margin: 5px 0 0 5px; line-height:24px; text-align:center; _display:inline;}
+.laydate_body .laydate_choose{display:block; float:left; position:relative; width:20px; height:24px;}
+.laydate_body .laydate_choose cite, .laydate_body .laydate_tab cite{left:50%; top:50%;}
+.laydate_body .laydate_chtop cite{margin:-7px 0 0 -5px; border-bottom-style:solid;}
+.laydate_body .laydate_chdown cite, .laydate_body .laydate_ym label{top:50%; margin:-2px 0 0 -5px; border-top-style:solid;}
+.laydate_body .laydate_chprev cite{margin:-5px 0 0 -7px;}
+.laydate_body .laydate_chnext cite{margin:-5px 0 0 -2px;}
+.laydate_body .laydate_ym label{right:28px;}
+.laydate_body .laydate_table{ width:230px; margin:0 5px; border-collapse:collapse; border-spacing:0px; }
+.laydate_body .laydate_table td{width:31px; height:19px; line-height:19px; text-align: center; cursor:pointer; font-size: 12px;}
+.laydate_body .laydate_table thead{height:22px; line-height:22px;}
+.laydate_body .laydate_table thead th{font-weight:400; font-size:12px; text-align:center;}
+.laydate_body .laydate_bottom{position:relative; height:22px; line-height:20px; padding:5px; font-size:12px;}
+.laydate_body .laydate_bottom #laydate_hms{position: relative; z-index: 1; float:left; }
+.laydate_body .laydate_time{ position:absolute; left:5px; bottom: 26px; width:129px; height:125px; *overflow:hidden;}
+.laydate_body .laydate_time .laydate_hmsno{ padding:5px 0 0 5px;}
+.laydate_body .laydate_time .laydate_hmsno span{display:block; float:left; width:24px; height:19px; line-height:19px; text-align:center; cursor:pointer; *margin-bottom:-5px;}
+.laydate_body .laydate_time1{width:228px; height:154px;}
+.laydate_body .laydate_time1 .laydate_hmsno{padding: 6px 0 0 8px;}
+.laydate_body .laydate_time1 .laydate_hmsno span{width:21px; height:20px; line-height:20px;}
+.laydate_body .laydate_msg{left:49px; bottom:67px; width:141px; height:auto; overflow: hidden;}
+.laydate_body .laydate_msg p{padding:5px 10px;}
+.laydate_body .laydate_bottom li{float:left; height:20px; line-height:20px; border-right:none; font-weight:900;}
+.laydate_body .laydate_bottom .laydate_sj{width:33px; text-align:center; font-weight:400;}
+.laydate_body .laydate_bottom input{float:left; width:21px; height:20px; line-height:20px; border:none; text-align:center; cursor:pointer; font-size:12px;  font-weight:400;}
+.laydate_body .laydate_bottom .laydte_hsmtex{height:20px; line-height:20px; text-align:center;}
+.laydate_body .laydate_bottom .laydte_hsmtex span{position:absolute; width:20px; top:0; right:0px; cursor:pointer;}
+.laydate_body .laydate_bottom .laydte_hsmtex span:hover{font-size:14px;}
+.laydate_body .laydate_bottom .laydate_btn{position:absolute; right:5px; top:5px;}
+.laydate_body .laydate_bottom .laydate_btn a{float:left; height:20px; padding:0 6px; _padding:0 5px;}
+.laydate_body .laydate_bottom .laydate_v{position:absolute; left:10px; top:6px; font-family:Courier; z-index:0;}
+
+/*图形切换*/
+.changepic{height:87px;border:1px solid #8dd6f9;border-radius:4px;background-color:#3fccff;margin:20px 0; padding:0 10px;}
+.changepic ul{margin:0 auto;}
+.changepic li{width:71px;height:87px;float:left;}
+.changepic li a{width:50px;height:50px;border:1px solid #34a7e0;border-radius:4px;margin:17.5px 10px;background-color:#def4fe;}
+a.con01{width:50px;height:50px;background:url(../imgs/yiji/con01.png) no-repeat center center;}
+a.con02{width:50px;height:50px;background:url(../imgs/yiji/con02.png) no-repeat center center;}
+a.con03{width:50px;height:50px;background:url(../imgs/yiji/con03.png) no-repeat center center;}
+a.con04{width:50px;height:50px;background:url(../imgs/yiji/con04.png) no-repeat center center;}
+
+.changepic dl{width:71px;height:87px;float:left;text-align:center;}
+.changepic dt{width:50px;height:50px;border:1px solid #34a7e0;border-radius:4px;margin:7px 10px;}
+.changepic dd{width:50px;margin:0px 10px;}
+dt{width:50px;height:50px;background-color:#def4fe;}
+.changepic .anquan{width:81px;}
+.anquan dt{margin:7px 15px;}
+.anquan dd{width:60px;}
+dt a.con05{width:50px;height:50px;background:url(../imgs/yiji/con05.png) no-repeat center center;}
+dt a.con06{width:50px;height:50px;background:url(../imgs/yiji/con06.png) no-repeat center center;}
+.changepic .current{background:#53afe5;}
+.changepic .current01{height:102px;width:inherit;background:#53afe5;}
+dt a.con07{width:50px;height:50px;background:url(../imgs/yiji/con07.png) no-repeat center center;}
+dt a.con08{width:50px;height:50px;background:url(../imgs/yiji/con08.png) no-repeat center center;}
+dt a.con09{width:50px;height:50px;background:url(../imgs/yiji/con09.png) no-repeat center center;}
+dt a.con10{width:50px;height:50px;background:url(../imgs/yiji/con10.png) no-repeat center center;}
+dt a.con11{width:50px;height:50px;background:url(../imgs/yiji/con11.png) no-repeat center bottom;}
+dt a.con12{width:50px;height:50px;background:url(../imgs/yiji/con12.png) no-repeat center center;}
+dt a.con13{width:50px;height:50px;background:url(../imgs/yiji/con13.png) no-repeat center center;}
+dt a.con14{width:50px;height:50px;background:url(../imgs/yiji/con14.png) no-repeat center center;}
+dt a.con15{width:50px;height:50px;background:url(../imgs/yiji/con15.png) no-repeat center center;}
+dt a.con16{width:50px;height:50px;background:url(../imgs/yiji/con16.png) no-repeat center center;}
+dt a.con17{width:50px;height:50px;background:url(../imgs/yiji/con17.png) no-repeat center center;}
+dt a.con18{width:50px;height:50px;background:url(../imgs/yiji/con18.png) no-repeat center center;}
+dt a.con19{width:50px;height:50px;background:url(../imgs/yiji/con19.png) no-repeat center center;}
+dt a.con20{width:50px;height:50px;background:url(../imgs/yiji/con20.png) no-repeat center center;}
+dt a.con30{width:50px;height:50px;background:url(../imgs/yiji/con30.png) no-repeat center center;}
+dt a.con31{width:50px;height:50px;background:url(../imgs/yiji/con31.png) no-repeat center center;}
+dt a.con32{width:50px;height:50px;background:url(../imgs/yiji/con32.png) no-repeat center center;}
+dt a.con33{width:50px;height:50px;background:url(../imgs/yiji/con33.png) no-repeat center center;}
+dt a.con34{width:50px;height:50px;background:url(../imgs/yiji/con34.png) no-repeat center center;}
+dt a.con35{width:50px;height:50px;background:url(../imgs/yiji/con35.png) no-repeat center center;}
+dt a.con36{width:50px;height:50px;background:url(../imgs/yiji/con36.png) no-repeat center center;}
+dt a.con37{width:50px;height:50px;background:url(../imgs/yiji/con37.png) no-repeat center center;}
+dt a.con38{width:50px;height:50px;background:url(../imgs/yiji/con38.png) no-repeat center center;}
+
+
+.shu .fancuo{width:206px;}
+.input-3{height:0;margin-top: -20px;}
+.input-3 li{ height:0;}
+
+/*基础管理-职业健康-数据查询*/
+.changepic .icon_C{width:87px;}
+.changepic .icon_C dt{margin:7px 17px;}
+.changepic .icon_C dd { margin:0px 8px; width:72px; }
+
+/*******消息框******/
+.message00 a{
+	color:#fff;
+	background-image:url(../imgs/w_add.png);
+	background-repeat:no-repeat;
+	background-position:left center;
+	padding-left:25px;}
+.message_nav{height:36px;line-height:36px;background-color:#ccf1ff;}
+.message_nav ul{margin-left:20px;}
+.message_nav li{float:left;margin-right:10px;text-align:center;width:102px;height:36px;}
+.message_nav li a{font-size:14px;color:#1f578c;width:55px;height:32px;line-height:30px;margin:0 auto;display:inline-block;padding-left:15px;}
+.message_nav li .message_nav01{background-image:url(../imgs/w_nodu.png);background-repeat:no-repeat;background-position:left center;}
+.message_nav li .message_nav02{background-image:url(../imgs/w_yidu.png);background-repeat:no-repeat;background-position:left center;}
+.message_nav li .message_nav03{background-image:url(../imgs/yiji/shu_fei.png);background-repeat:no-repeat;background-position:left center;}
+.message_nav .current{width:102px;height:30px;background-color:#fff;border-radius:5px;margin-top:3px;line-height:30px;}
+
+
+
+
+
+
+
+
+

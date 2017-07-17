@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="../sources/css/coord.css" rel="stylesheet" type="text/css" />
+    <script src="js/coord.js"></script>
+</head>
+<body>
+<div class="fun bs">
+    <ul>
+        <li class="fl">
+            <label class="f0 vm">
+                <span class="fb vm f14">起飞机场&nbsp;:&nbsp;</span>
+                <select class="public_select d_ilb vm">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </label>
+        </li>
+        <li class="fl">
+            <label class="f0 vm">
+                <span class="fb vm f14">降落机场&nbsp;:&nbsp;</span>
+                <select class="public_select d_ilb vm">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </label>
+        </li>
+        <li class="fl">
+            <label class="f0 vm">
+                <span class="fb f14 vm">航班号&nbsp;:&nbsp;</span>
+                <input class="public_input" type="text" />
+            </label>
+        </li>
+        <li class="fl">
+            <label class="f0 vm">
+                <a class="public_btn applyHTML d_ilb vm" href="javascript:void(0);">Query</a>
+            </label>
+        </li>
+        <li class="fl">
+            <label class="f0 vm">
+                <a class="public_btn coordHTML d_ilb vm" href="javascript:void(0);">Apply</a>
+            </label>
+        </li>
+    </ul>
+</div>
+<div class="details bs">
+    <div class="detailsBox w100 h100 oa oy">
+        <form class="layui-form" action="" method="get">
+            <table class="max_table" id="validate" width="100%" cellspacing="0" cellpadding="0" border="0">
+                <thead></thead>
+                <tbody>
+                <tr>
+                    <td class="td_right0 td_bottom0">
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                            <thead>
+                            <tr class="tr_head">
+                                <td colspan="12">Header</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td colspan="3">
+                                    <label class="f14 ml20">Message:&nbsp;&nbsp;<input class="public_input" type="text" value="SCR" disabled="disabled"></label>
+                                </td>
+                                <td colspan="3">
+                                    <label class="f14 ml20">Season:&nbsp;&nbsp;<input class="public_input" type="text" value="S08" disabled="disabled"></label>
+                                </td>
+                                <td colspan="3">
+                                    <label class="f14 ml20">Date Of Message:&nbsp;&nbsp;<input class="tt public_input" type="text" placeholder="20APR" lay-verify="twoDigitNumver" name="aa" ></label>
+                                </td>
+                                <td colspan="3">
+                                    <label class="f14 ml20">Clearance Airport Concerned:&nbsp;&nbsp;<input class="tt public_input" type="text" placeholder="BRU" lay-verify="required"></label>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_right0">
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                            <thead>
+                            <tr class="tr_head">
+                                <td>
+                                    Data Lines
+                                    <a class="btn_add" data-Table="add~coord_table" href="javascript:void(0);"></a>
+                                </td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="td_bottom0">
+                                    <div class="overflow_head">
+                                        <table class="tc min_table" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                            <colgroup>
+                                                <col class="td_width120">
+                                                <col class="td_width160">
+                                                <col class="td_width180">
+                                                <col class="td_width80">
+                                                <col class="td_width80">
+                                                <col class="td_width80">
+                                                <col class="td_width140">
+                                                <col class="">
+                                                <col class="">
+                                                <col class="">
+                                                <col class="">
+                                                <col class="">
+                                            </colgroup>
+                                            <thead>
+                                            <tr class="fb tr_head">
+                                                <td class="px10">Action Code</td>
+                                                <td class="px10">Arrival FlightNumber</td>
+                                                <td class="px10">Departure Flight Bumber</td>
+                                                <td class="px10">Start</td>
+                                                <td class="px10">End</td>
+                                                <td class="px10">Days</td>
+                                                <td class="px10">Seats&amp;Aircraft type</td>
+                                                <td class="px10">Arriving From</td>
+                                                <td class="px10">Arrival  Time</td>
+                                                <td class="px10">Depature Time</td>
+                                                <td class="px10">Departure To</td>
+                                                <td class="td_right0 px10">Flight Type</td>
+                                            </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                    <div>
+                                        <table class="coord_table tc" id="coord_table"  width="100%" cellspacing="0" cellpadding="0" border="0">
+                                            <colgroup>
+                                                <col class="td_width120">
+                                                <col class="td_width160">
+                                                <col class="td_width180">
+                                                <col class="td_width80">
+                                                <col class="td_width80">
+                                                <col class="td_width80">
+                                                <col class="td_width140">
+                                                <col class="">
+                                                <col class="">
+                                                <col class="">
+                                                <col class="">
+                                                <col class="">
+                                            </colgroup>
+
+                                            <tbody>
+                                            <tr>
+                                                <td class="px10">
+                                                    <select class="public_select" lay-verify="required" name="rr">
+                                                        <option value=""></option>
+                                                        <option>N</option>
+                                                        <option>D</option>
+                                                        <option>C</option>
+                                                        <option>R</option>
+                                                        <option>A</option>
+                                                        <option>P</option>
+                                                        <option>Z</option>
+                                                    </select>
+                                                </td>
+                                                <td class="px10"><input class="tt public_input" type="text" placeholder="XY123" lay-verify="required"></td>
+                                                <td class="px10"><input class="tt public_input" type="text" placeholder="XY234" lay-verify="required"></td>
+                                                <td class="px10"><input class="tt w100" type="text" placeholder="01JUL" lay-verify="required"></td>
+                                                <td class="px10"><input class="tt w100" type="text" placeholder="30SEP" lay-verify="required"></td>
+                                                <td class="px10"><input class="tt w100" type="text" placeholder="1234500" lay-verify="required"></td>
+                                                <td class="px10"><input class="tt public_input w100" type="text" placeholder="120319" lay-verify="required"></td>
+                                                <td><input class="tt public_input px10" type="text" placeholder="CDG" lay-verify="required"></td>
+                                                <td><input class="tt public_input px10" type="text" placeholder="0700" lay-verify="required"></td>
+                                                <td><input class="tt public_input px10" type="text" placeholder="0750" lay-verify="required"></td>
+                                                <td><input class="tt public_input px10" type="text" placeholder="CDG" lay-verify="required"></td>
+                                                <td><input class="tt public_input px10" type="text" placeholder="JJ" lay-verify="required" name="bb"></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_right0">
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                            <thead>
+                            <tr class="tr_head">
+                                <td colspan="12">Footer</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="coord_tdWidth120 tr" colspan="1">SI:&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                <td class="px20" colspan="11"><input class="coord_input w100" type="text" /></td>
+                            </tr>
+                            <tr>
+                                <td class="coord_tdWidth120 td_bottom0 tr" colspan="1">GI:&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                <td class="td_bottom0 px20" colspan="11"><input class="coord_input w100" type="text" lay-verify="required"/></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_right0">
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                            <thead>
+                            <tr class="tr_head">
+                                <td>Flight Routes</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="td_bottom0">
+                                    <p class="py5 ti10">PEK-BRU&nbsp;&nbsp;:&nbsp;&nbsp;<select><option></option><option>ZBAA-AGAVO-01</option></select></p>
+                                    <p class="py5 ti10">PEK-BRU&nbsp;&nbsp;:&nbsp;&nbsp;<select><option></option><option>ZBAA-AGAVO-01</option></select></p>
+                                    <p class="py5 ti10">PEK-BRU&nbsp;&nbsp;:&nbsp;&nbsp;<select><option></option><option>ZBAA-AGAVO-01</option></select></p>
+                                    <p class="py5 ti10">PEK-BRU&nbsp;&nbsp;:&nbsp;&nbsp;<select><option></option><option>ZBAA-AGAVO-01</option></select></p>
+                                    <p class="py5 ti10">PEK-BRU&nbsp;&nbsp;:&nbsp;&nbsp;<select><option></option><option>ZBAA-AGAVO-01</option></select></p>
+                                    <p class="py5 ti10">PEK-BRU&nbsp;&nbsp;:&nbsp;&nbsp;<select><option></option><option>ZBAA-AGAVO-01</option></select></p>
+                                    <p class="py5 ti10">PEK-BRU&nbsp;&nbsp;:&nbsp;&nbsp;<select><option></option><option>ZBAA-AGAVO-01</option></select></p>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tc py10">
+                        <button class="layui-btn" lay-submit lay-filter="*">立即提交</button>
+                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>
+<div class="page_foot pa bottom10 left0 bs px20">
+
+</div>
+</body>
+</html>

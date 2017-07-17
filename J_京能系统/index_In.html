@@ -1,0 +1,235 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>京能集团-安全管理数字化标准化管理平台</title>
+	<link href="css/base.css" rel="stylesheet" type="text/css" />
+	<script src="js/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery.superslide.2.1.1.js" type="text/javascript" charset="utf-8"></script>
+	<script id="src" type="text/javascript" src="js/jquery.flipcountdown01.js"></script>	
+	<script type="text/javascript">
+		var win=$(window).width();
+		var sScript = '<script type="text\/javascript" src="js/jquery.flipcountdown01.js"><\/script>';
+		var sScript01= '<script type="text\/javascript" src="js/jquery.flipcountdown.js"><\/script>';
+		if( win<1025){
+			document.write((sScript01));
+		}else
+		{ 
+			document.write((sScript));
+			
+		}
+		window.onload = function(){
+			var win=$(window).width();
+			if(win>1440){
+				$('.slider .bd li img').css({'width':'100%'});
+			}else if(win > 1024){
+			
+			}else{
+				
+			}
+			
+			
+			
+	}
+	</script>
+</head>
+
+<body>
+	<!--内容-->
+	<div class="idxCon">
+		<!--banner-->
+		<div class="slider h160 m1 pr ie-css3">
+			<div class="bd w100 bdr0"  style="behavior: url(ie-css3.htc);">
+				<ul>
+					<li>
+						<img src="imgs/banner01.jpg" />
+						<p class="p1">稳中求进　优化调整　提升增效　融合发展</p>
+					</li>
+					<li>
+						<img src="imgs/banner02.jpg" />
+						<p class="p2">承载首都能源供给和环境责任</p>
+					</li>
+					<li>
+						<img src="imgs/banner03.jpg" />
+						<p class="p3">通过企业的可持续发展　服务与回馈社会</p>
+					</li>
+					<li>
+						<img src="imgs/banner04.jpg" />
+						<p class="p4">稳中求进　优化调整　提升增效　融合发展</p>
+						
+					</li>
+					<li>
+						<img src="imgs/banner05.jpg" />
+						<p class="p5">为圆满完成京能集团“十二五”规划目标而努力奋斗</p>
+					</li>
+				</ul>
+			</div>
+			<div class="hd">
+				<ul></ul>
+			</div>
+			<script type="text/javascript">
+				jQuery(".slider .bd li").first().before(jQuery(".slider .bd li").last());
+				jQuery(".slider").slide({
+					titCell:".hd ul", 
+					mainCell:".bd ul",
+					effect:"fold",
+					interTime:5000,
+					autoPlay:true,
+					vis:1, 
+					autoPage:true,
+					trigger:"click"
+				});
+			</script>
+		</div>	
+		<!--data-->
+		<div class="w97 of pr ma">
+			<div class="fl h260 w67 bdr0 bg3 ie-css3" style="border:solid 1px #E7F5FF;">
+				<div class="dataBox fl h100 w34">
+					<div class="dataBox_top ta">
+						<img src="imgs/dateIcon.png"/>
+						<p class="dTxt">安全无事故生产天数</p>
+						<p class="dDays">3,154</p>
+					</div>
+					<div class="dataBox_bottom" style="padding-top: 10px;">
+						<table style="border:0px;">
+							<tr class="d_text">
+								<td id="d_Days">天(D)</td>
+								<td>时(S)</td>
+								<td>分(M)</td>
+								<td id="d_Seconds">秒(S)</td>
+							</tr>
+							<tr>
+								<td colspan="4"><span id="new_year"></span></td>
+							</tr>
+						</table>
+					</div>
+					<script>
+						$(function(){
+							var NY = Math.round((new Date('1/01/2015 00:00:01')).getTime()/1000);
+							$('#new_year').flipcountdown({
+								tick:function(){
+									var nol = function(h){
+										h = Math.abs(h);
+										return h>9?h:'0'+h;
+									}
+									var	range  	= NY-Math.round((new Date()).getTime()/1000),
+										secday = 86400, sechour = 3600,
+										days 	= parseInt(range/secday),
+										hours	= parseInt((range%secday)/sechour),
+										min		= parseInt(((range%secday)%sechour)/60),
+										sec		= ((range%secday)%sechour)%60;
+									return nol(days)+' '+nol(hours)+' '+nol(min)+' '+nol(sec);
+								}
+							});
+						});
+					</script>
+				</div>
+				<div class="fl h100 w66">
+					<div class="fl w50 h130 bs btb0 pr">
+						<span class="dateSp dateSp1 bg4 ta ie-css3">2344</span>
+						<p class="dataP pa">
+							集团累计<br />培安全训人次数
+					 	</p>
+					</div>
+					<div class="fl w50 h130 bs btb0 pr">
+						<span class="dateSp dateSp2 bg4 ta ie-css3">2344</span>
+						<p class="dataP pa">
+							集团累计<br />培安全训人次数
+						</p>
+					</div>
+					<div class="fl w50 h130 bs btb1 pr">
+						<span class="dateSp dateSp3 bg4 ta ie-css3">2344</span>
+						<p class="dataP pa">
+							集团累计<br />培安全训人次数
+						</p>
+					</div>
+					<div class="fl w50 h130 bs btb1 pr">
+						<span class="dateSp dateSp4 bg4 ta ie-css3">2344</span>
+						<p class="dataP pa">
+							集团累计<br />培安全训人次数
+						</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="fr h260 w31 bdr0 bg3" style=" behavior: url(ie-css3.htc);">
+				<h4 class="dataH4 h40 ie-css3">
+					<span class="dataSpa fl wp9 hp9 bg1 bdr50 ie-css3"></span>
+				    <span class="dataSn cf">安全事件指标达成情况表</span>
+				</h4>               
+				<table width="100%" border="0" cellpadding="16">
+					<tr class="trB">
+						<th class="tr114 tabB" scope="col">&nbsp;</th>
+						<th class="trL" scope="col">目标值</th>
+						<th class="trL" scope="col">实际值</th>
+					</tr>
+					<tr class="trB">
+						<th class="tr114" scope="row">安全事故</th>
+						<td class="trL ta">3</td>
+						<td class="trL ta">4</td>
+					</tr>
+					<tr class="trB">
+						<th class="tr114" scope="row">Ⅰ类障碍</th>
+						<td class="trL ta">3</td>
+						<td class="trL ta">4</td>
+					</tr>
+					<tr>
+						<th class="tr114" scope="row">Ⅱ类障碍</th>
+						<td class="trL ta">4</td>
+						<td class="trL ta">4</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<!--数据-->
+		<div class="w97 pr ma mt15">
+			<h4 class="dataH4 h40 ie-css3">
+				<span class="dataSpa fl wp9 hp9 bg1 bdr50 ie-css3"></span>
+				<span class="dataSn cf">隐患排查</span>
+			</h4>
+			<div class="data-index fix ie-css3 data-index-a">
+            	<div class="data-left">
+                	<span class="data-span ie-css3">京能集团隐患类别分布图</span>
+                    <img src="imgs/bing-tu.png"/>
+                </div>
+                <div class="data-right">
+                	<span class="data-span ie-css3">京能集团近12个月发生隐患数量趋势图</span>
+                    <img src="imgs/line-tu.png"/>
+                </div>
+            </div>                                         
+		</div>
+        <div class="w97 pr ma mt15">
+			<h4 class="dataH4 h40 ie-css3">
+				<span class="dataSpa fl wp9 hp9 bg1 bdr50 ie-css3"></span>
+				<span class="dataSn cf">未整改隐患</span>
+			</h4>
+			<div class="data-index fix ie-css3 data-index-b">
+            	<div class="data-left">
+                	<span class="data-span ie-css3">京能集团隐患类别分布图</span>
+                    <img src="imgs/bing-tu.png"/>
+                </div>
+                <div class="data-right">
+                	<span class="data-span ie-css3">京能集团近12个月发生隐患数量趋势图</span>
+                    <img src="imgs/line-tu.png"/>
+                </div>
+            </div>                                         
+		</div>
+        <div class="w97 pr ma mt15 mb15">
+			<h4 class="dataH4 h40 ie-css3">
+				<span class="dataSpa fl wp9 hp9 bg1 bdr50 ie-css3"></span>
+				<span class="dataSn cf">反违章</span>
+			</h4>
+			<div class="data-index fix ie-css3 data-index-c">
+            	<div class="data-left">
+                	<span class="data-span ie-css3">京能集团隐患类别分布图</span>
+                    <img src="imgs/bing-tu.png"/>
+                </div>
+                <div class="data-right">
+                	<span class="data-span ie-css3">京能集团近12个月发生隐患数量趋势图</span>
+                    <img src="imgs/line-tu.png"/>
+                </div>
+            </div>                                         
+		</div>
+	</div>	
+</body>
+</html>

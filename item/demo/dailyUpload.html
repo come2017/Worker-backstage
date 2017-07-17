@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="../sources/css/dailyUpload.css" rel="stylesheet" type="text/css">
+    <script src="js/dailyUpload.js"></script>
+</head>
+<body>
+<div class="uploadTitle">
+    <span class="ml20 span_color1 f14 fb">批复计划上传步骤:</span>
+    <span class="span_ml40 span_color1 f14 fb">1计划导入</span>
+    <span class="span_ml54 span_color1 f14 fb">2数据处理</span>
+    <span class="span_ml50 span_color1 f14 fb">3导入日志</span>
+</div>
+<ul class="layui-form">
+    <li class="py20">
+        <span class="d_ilb vm">导入格式&nbsp;:&nbsp;</span>
+        <input type="radio" name="sex" value="1" title="DB(阳光系统)" checked="">
+        <input type="radio" name="sex" value="2" title="Excel" checked="">
+    </li>
+    <li class="py20">
+        <div class="layui-box layui-upload-button ml10">
+            <form target="layui-upload-iframe" method="post" key="set-mine" enctype="multipart/form-data" action="">
+                <input type="file" name="file" class="layui-upload-file" lay-title="添加文件">
+            </form>
+            <span class="layui-upload-icon"><i class="layui-icon"></i>添加文件</span>
+        </div>
+    </li>
+    
+    <li class="py20">
+        <a class="public_btn d_ilb vm" href="javascript:void(0);">读取计划数据</a>
+    </li>
+</ul>
+</body>
+</html>

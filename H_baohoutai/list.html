@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/w.css"/>
+		<script src="js/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>	
+		<script type="text/javascript">
+    	$(function(){
+    		    //查询条件收缩
+		    $('.toogle').click(function() {
+		        if ($(this).hasClass('arrow_btn02')) {
+		            $(this).removeClass('arrow_btn02');
+		            $(this).siblings('.con-text').slideDown();
+		        } else {
+		            $(this).addClass('arrow_btn02');
+		            $(this).siblings('.con-text').slideUp();
+		        }
+		    })
+
+    	})
+    </script>
+	</head>
+<body>
+<div id="wrapper">
+    <!--列表页-->
+    <div class="List-con">
+        <section class="CtitTop"> 当前位置：<a href="javascript:;">首页管理 </a> > <a href="javascript:;">导航管理</a></section>
+        <div class="List_top fix">
+        	<div class="pr">
+        		<div class="con-header">查询条件</div>
+        		<div class="toogle"></div>
+				<div class="con-text">
+					<table width="100%" border="0">
+					  <tr>
+					    <td>
+					    	<span>账号：</span>
+					    	<input name="" type="text" />
+					    </td>
+					     <td>
+					    	<span>分类：</span>
+					    	<input name="" type="text" />
+					    </td>
+					     <td>
+					    	<span>时间：</span>
+					    	<input name="" type="text" />
+					    </td>
+					    <td>&nbsp;</td>
+					  </tr>
+					  <tr>
+					     <td>
+					    	<span>账号：</span>
+					    	<input name="" type="text" />
+					    </td>
+					    <td>
+					    	分类：
+					    	<select>
+					    		<option>1</option>
+					    		<option>2</option>
+					    		<option>3</option>
+					    	</select>
+					    </td>
+					     <td>
+					    	<span>时间：</span>
+					    	<input name="" type="text" />
+					    </td>
+					    <td>
+					    	<a href="javascript:;" class="List_cha di">查询</a>　
+					        <a href="javascript:;" class="List_clear">清除</a>
+					    </td>
+					  </tr>
+					</table>
+				</div>	
+        	</div>
+        </div>
+        <div class="List_table fix">
+        	<ul class="List_but fix">
+        		<li>
+        			<a href="javascript:;">添加信息</a>
+        		</li>
+        		<li>
+        			<a href="javascript:;">批量删除</a>
+        		</li>
+        	</ul>
+        	<table width="100%" border="0" cellpadding="0" cellspacing="0">
+				<thead>
+			      <tr>
+			        <td><label><input name="" type="checkbox" value="" />　全选</label></td>
+			        <td>登录账号</td>
+			        <td>手机号</td>
+			        <td>部门</td>
+			        <td>添加时间</td>
+			        <td>操作</td>
+			      </tr>
+  				</thead>
+				<tbody>
+				      <tr>
+				        <td><input name="" type="checkbox" value="" /></td>
+				        <td>admin</td>
+				        <td>13256898956</td>
+				        <td>技术部</td>
+				        <td>2015-10-26</td>
+				        <td><a href="javascript:;">修改</a>　<a href="javascript:;">删除</a></td>
+				      </tr>
+				      <tr>
+				        <td><input name="" type="checkbox" value="" /></td>
+				        <td>admin</td>
+				        <td>13256898956</td>
+				        <td>技术部</td>
+				        <td>2015-10-26</td>
+				        <td><a href="javascript:;">修改</a>　<a href="javascript:;">删除</a></td>
+				      </tr>
+				      <tr>
+				        <td><input name="" type="checkbox" value="" /></td>
+				        <td>admin</td>
+				        <td>13256898956</td>
+				        <td>技术部</td>
+				        <td>2015-10-26</td>
+				        <td><a href="javascript:;">修改</a>　<a href="javascript:;">删除</a></td>
+				      </tr>
+				      <tr>
+				        <td><input name="" type="checkbox" value="" /></td>
+				        <td>admin</td>
+				        <td>13256898956</td>
+				        <td>技术部</td>
+				        <td>2015-10-26</td>
+				        <td><a href="javascript:;">修改</a>　<a href="javascript:;">删除</a></td>
+				      </tr>
+				      <tr>
+				        <td><input name="" type="checkbox" value="" /></td>
+				        <td>admin</td>
+				        <td>13256898956</td>
+				        <td>技术部</td>
+				        <td>2015-10-26</td>
+				        <td><a href="javascript:;">修改</a>　<a href="javascript:;">删除</a></td>
+				      </tr>
+				  </tbody>
+			</table>
+			<!--分页-->
+			<div class="paging">
+				<a href="javascript:" class="prev">首页</a>
+				<a href="javascript:;" class="arrl01"></a>
+				<a href="javascript:;" class="arrl02"></a>
+				<a href="javascript:">1</a>
+				<a href="javascript:" class="selected">2</a>
+				<a href="javascript:" class="dis3">3</a>
+				<a href="javascript:;" class="arrr02"></a>
+				<a href="javascript:;" class="arrr01"></a>
+				<a href="javascript:" class="prev">尾页</a>
+			</div>
+			<!--分页end-->
+        </div>
+    </div>
+</div>
+</body>
+</html>

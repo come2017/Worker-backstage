@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<script src="js/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		window.onload=function(){oLjs();}
+		window.onresize=function(){oLjs();}
+			function oLjs(){
+				var oW = $(window).width();
+				var oH = $(window).height();
+//				$('.main').width(oW-180);
+				$('.Idx_main').height(oH-95);
+				$('.navL').height(oH-95);
+				//二级导航初始
+				$('.nav_list dt').eq(0).hasClass('Cfoot_click_show');
+				$('.nav_list dd').eq(0).css('display','block');
+				
+				$('.nav_list dd').eq(0).children().children().eq(0).find('a').css('color','#f5b125');
+			    //二级导航切换事件
+			    $('.Cfoot-click').on('click', function() {
+			        if ($(this).hasClass('Cfoot_click_show')) {
+			            $('.nav_list').find('dd').stop().slideUp();
+						$(this).removeClass('Cfoot_click_show').addClass('Cfoot_click_hide');
+			        } else {
+			        	$('.nav_list').find('dd').stop().slideUp();
+			        
+				        $('.nav_list').find('.Cfoot-click').removeClass('Cfoot_click_show').addClass('Cfoot_click_hide');
+				        $(this).removeClass('Cfoot_click_hide').addClass('Cfoot_click_show');
+				        $(this).next().slideDown();
+			        }
+
+			        
+			    })	
+			    
+			    
+			    //一级导航切换事件
+			    $('.HB_top02 li').click(function(){
+			    	var num = $(this).index();
+			    	$(this).addClass('navactivebg').siblings().removeClass('navactivebg');
+			    	$('.nav_list').hide();
+			    	$('.nav_list').eq(num).css('display','block');
+			    })
+			    
+			    //二级导航颜色变换
+			    $('.nav_list dd ul li a').click(function(){
+			    	$('.nav_list a').css('color','#cae9fa');
+			    	$(this).css('color','#f5b125');
+			    })
+			}
+		</script>
+	</head>
+	<body class="bg138">
+		<div class="HBtop_big w100">
+			<div class="HB_top oh">
+				<div class="logo fl">
+					<a href="javascript:;">
+						<img src="imgs/logo.png"/>
+					</a>
+				</div>
+				<div class="fr">
+					<ul class="Ctop-R fr">
+						<li><a href="javascript:;">您好！admin</a></li>
+						<li class="Cshu">丨</li>
+						<li id="ques-tan"><a href="javascript:;">修改密码</a></li>
+						<li class="Cshu">丨</li>
+						<li><a href="javascript:;">退出</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="HB_top02 fix">
+				<ul class="fix">
+					<li class="navactivebg">
+						<a href="javascript:;">会员管理</a>
+					</li>
+					<li>
+						<a href="javascript:;">产品管理</a>
+					</li>
+					<li>
+						<a href="javascript:;">系统管理</a>
+					</li>
+					<li>
+						<a href="javascript:;">权限管理</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="Idx_main">
+			<div class="navL">
+				<!--会员管理-->
+				<dl class="nav_list">
+					<dt class="Cfoot_click_show Cfoot-click"><a href="javascript:;">首页管理</a><i></i></dt>
+					<dd>
+						<ul>
+							<li><a href="list.html" target="page">导航管理</a></li>
+							<li><a href="add_mess.html" target="page">banner管理</a></li>
+							<li><a href="order.html" target="page">静态化管理</a></li>
+						</ul>
+					</dd>
+					<div class="partition_line">
+						<span></span>
+					</div>
+					<dt class="Cfoot_click_hide Cfoot-click"><a href="javascript:;">会员管理</a><i></i></dt>
+					<dd class="dn">
+						<ul>
+							<li><a href="orderin.html" target="page">会员管理1</a></li>
+							<li><a href="system.html" target="page">会员管理2</a></li>
+						</ul>
+					</dd>
+					<div class="partition_line">
+						<span></span>
+					</div>
+					<dt class="Cfoot_click_hide Cfoot-click"><a href="javascript:;">产品管理</a><i></i></dt>
+					<dd class="dn">
+						<ul>
+							<li><a href="change_tab.html" target="page">产品管理1</a></li>
+							<li><a href="javascript:;">产品管理2</a></li>
+						</ul>
+					</dd>
+					<div class="partition_line">
+						<span></span>
+					</div>
+					<dt class="Cfoot_click_hide Cfoot-click"><a href="javascript:;">促销管理</a><i></i></dt>
+					<dd class="dn">
+						<ul>
+							<li><a href="javascript:;">促销管理1</a></li>
+							<li><a href="javascript:;">促销管理2</a></li>
+						</ul>
+					</dd>
+					<div class="partition_line">
+						<span></span>
+					</div>
+					<dt class="Cfoot_click_hide Cfoot-click"><a href="javascript:;">内容管理</a><i></i></dt>
+					<dd class="dn">
+						<ul>
+							<li><a href="javascript:;">内容管理1</a></li>
+							<li><a href="javascript:;">内容管理2</a></li>
+						</ul>
+					</dd>
+					<div class="partition_line">
+						<span></span>
+					</div>
+					<dt class="Cfoot_click_hide Cfoot-click"><a href="javascript:;">栏目管理</a><i></i></dt>
+					<dd class="dn">
+						<ul>
+							<li><a href="javascript:;">栏目管理1</a></li>
+							<li><a href="javascript:;">栏目管理2</a></li>
+						</ul>
+					</dd>
+					<div class="partition_line">
+						<span></span>
+					</div>
+					<dt class="Cfoot_click_hide Cfoot-click"><a href="javascript:;">广告管理</a><i></i></dt>
+					<dd class="dn">
+						<ul>
+							<li><a href="javascript:;">广告管理1</a></li>
+							<li><a href="javascript:;">广告管理2</a></li>
+						</ul>
+					</dd>
+					<div class="partition_line">
+						<span></span>
+					</div>
+					<dt class="Cfoot_click_hide Cfoot-click"><a href="javascript:;">系统管理</a><i></i></dt>
+					<dd class="dn">
+						<ul>
+							<li><a href="javascript:;">系统管理1</a></li>
+							<li><a href="javascript:;">系统管理2</a></li>
+						</ul>
+					</dd>
+					<div class="partition_line">
+						<span></span>
+					</div>
+				</dl>
+				
+				<!--产品管理-->
+				<dl class="nav_list dn">
+					<dt class="Cfoot_click_show Cfoot-click"><a href="javascript:;">首页管理</a><i></i></dt>
+					<dd>
+						<ul>
+							<li><a href="javascript:;">导航管理</a></li>
+							<li><a href="javascript:;">banner管理</a></li>
+							<li><a href="javascript:;">静态化管理</a></li>
+						</ul>
+					</dd>
+					<div class="partition_line">
+						<span></span>
+					</div>
+					<dt class="Cfoot_click_hide Cfoot-click"><a href="javascript:;">会员管理</a><i></i></dt>
+					<dd class="dn">
+						<ul>
+							<li><a href="javascript:;">会员管理1</a></li>
+							<li><a href="javascript:;">会员管理2</a></li>
+						</ul>
+					</dd>
+					<div class="partition_line">
+						<span></span>
+					</div>
+					<dt class="Cfoot_click_hide Cfoot-click"><a href="javascript:;">产品管理</a><i></i></dt>
+					<dd class="dn">
+						<ul>
+							<li><a href="change_tab.html" target="page">产品管理1</a></li>
+							<li><a href="javascript:;">产品管理2</a></li>
+						</ul>
+					</dd>
+					<div class="partition_line">
+						<span></span>
+					</div>
+				</dl>
+				
+				<!--系统管理-->
+				<dl class="nav_list dn">
+					<dt class="Cfoot_click_show Cfoot-click"><a href="javascript:;">首页管理</a><i></i></dt>
+					<dd>
+						<ul>
+							<li><a href="javascript:;">导航管理</a></li>
+							<li><a href="javascript:;">banner管理</a></li>
+							<li><a href="javascript:;">静态化管理</a></li>
+						</ul>
+					</dd>
+					<div class="partition_line">
+						<span></span>
+					</div>
+					<dt class="Cfoot_click_hide Cfoot-click"><a href="javascript:;">会员管理</a><i></i></dt>
+					<dd class="dn">
+						<ul>
+							<li><a href="javascript:;">会员管理1</a></li>
+							<li><a href="javascript:;">会员管理2</a></li>
+						</ul>
+					</dd>
+					<div class="partition_line">
+						<span></span>
+					</div>
+				</dl>
+				
+				<!--权限管理-->
+				<dl class="nav_list dn">
+					<dt class="Cfoot_click_show Cfoot-click"><a href="javascript:;">首页管理</a><i></i></dt>
+					<dd>
+						<ul>
+							<li><a href="javascript:;">导航管理</a></li>
+							<li><a href="javascript:;">banner管理</a></li>
+							<li><a href="javascript:;">静态化管理</a></li>
+						</ul>
+					</dd>
+					<div class="partition_line">
+						<span></span>
+					</div>
+				</dl>
+			</div>
+			<div class="main">
+				<iframe src="list.html" name="page" frameborder="0" height="100%" width="100%"></iframe>
+			</div>
+		</div>
+	</body>
+</html>
